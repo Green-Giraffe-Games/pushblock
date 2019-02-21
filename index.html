@@ -11,7 +11,7 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="1 Push Block Puzzle" startnode="4" creator="Twine" creator-version="2.2.1" ifid="1E098D58-04AB-4F91-9066-80D005EE945A" zoom="1" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css?family=Lato|Special+Elite|ZCOOL+KuaiLe');
+<tw-storydata name="1 Push Block Puzzle" startnode="4" creator="Twine" creator-version="2.2.1" ifid="1E098D58-04AB-4F91-9066-80D005EE945A" zoom="0.6" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css?family=Lato|Special+Elite|ZCOOL+KuaiLe');
 
 .transition-in[data-t8n^=dissolve] {
 	-webkit-animation:appear 0ms step-start;
@@ -360,8 +360,7 @@ h3 {
 /* Shame */
 
 .shame {
-  background-color: #DAE6ED;
-  color: #D7CF07;
+  background-color: #000000;
 }
 
 .shame tw-link {
@@ -371,6 +370,7 @@ h3 {
 .shame tw-link:hover, enchantment-link:hover{
   color: #A40606 !important;
 }
+
 
 
 
@@ -390,6 +390,13 @@ Array.prototype.sample = function(){
   return this[Math.floor(Math.random()*this.length)];
 }
 
+window.getStoragePrefix = function () {
+	return "(Saved Game " + Engine.options.ifid + ") ";
+}
+
+window.deleteSaveSlot = function (slotName) {
+	localStorage.removeItem(getStoragePrefix() + slotName);
+}
 
 
 
@@ -411,11 +418,9 @@ Array.prototype.sample = function(){
 
 &lt;div class = &quot;card&quot;&gt;&lt;h3&gt;Observation&lt;/h3&gt;|observe&gt;[]&lt;/div&gt;
 
-&lt;div class = &quot;card&quot;&gt;&lt;h3&gt;Sight&lt;/h3&gt;|display&gt;[]&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;card2&quot;&gt;&lt;h3&gt;Location&lt;/h3&gt;(display: &quot;flavour&quot;)&lt;/div&gt;&lt;div class=&quot;card2&quot;&gt;&lt;h3&gt;Elements&lt;/h3&gt;(display: &quot;elements&quot;)&lt;/div&gt;&lt;/div&gt;\
+&lt;div class = &quot;card lore&quot;&gt;|lore&gt;[&lt;h3&gt;Sight&lt;/h3&gt;|display&gt;[]]&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;card2&quot;&gt;&lt;h3&gt;Location&lt;/h3&gt;(display: &quot;flavour&quot;)&lt;/div&gt;&lt;div class=&quot;card2&quot;&gt;&lt;h3&gt;Elements&lt;/h3&gt;(display: &quot;elements&quot;)&lt;/div&gt;&lt;/div&gt;\
 (replace: ?display)[(display: &quot;look&quot;)]\
 (replace: ?observe)[(display: &quot;observe&quot;)]
-
-(print: $ahead)
 (print: $slide)
 (print: $location)
 (for: each _row, ...$map)[
@@ -459,16 +464,16 @@ Array.prototype.sample = function(){
 		&quot;immobile&quot;, true,
 		&quot;closeup&quot;, &quot;The bridge is beginning to fall apart, but it will probably bear your weight.&quot;,
 		&quot;onText&quot;, &quot;The ropes sway and creak underfoot.&quot;,
-		&quot;description&quot;, &quot;strong enough to hold you, but impossible to push anything across&quot;),
+		&quot;description&quot;, &quot;strong enough to hold you, but impossible to push anything across of&quot;),
 	&#39;5&#39;, (dm:
 		&quot;name&quot;, &quot;anti-bridge&quot;,
 		&quot;determiner&quot;, &quot;an&quot;,
 		&quot;solid&quot;, false,
 		&quot;immobile&quot;, true,
 		&quot;closeup&quot;, &quot;The anti-bridge is beginning to fall apart, but it will probably bear a push-block&#39;s weight.&quot;,
-		&quot;description&quot;, &quot;not strong enough to hold you, but strong enough to push something across&quot;),
+		&quot;description&quot;, &quot;impossible to cross, but strong enough to push something across of&quot;),
 	&#39;7&#39;, (dm:
-		&quot;name&quot;, &quot;pit&quot;,
+		&quot;name&quot;, &quot;somewhat bottomless pit&quot;,
 		&quot;determiner&quot;, &quot;a&quot;,
 		&quot;closeup&quot;, &quot;A dry, sour breeze rises from the pit. You can&#39;t see the bottom.&quot;,
 		&quot;solid&quot;, true,
@@ -617,6 +622,27 @@ Array.prototype.sample = function(){
 
 (set: $shame to 0)
 
+(set: $hints to (a: 
+	&quot;You can push the push blocks by walking into them.&quot;,
+	&quot;Glancing lets you look around without changing the orientation of your body.&quot;, 
+	&quot;The Black-Robed Cultist commands the respect of most, but not all, of the other cultists.&quot;,  
+	&quot;The game&#39;s plot is allegorical.&quot;,  
+	&quot;The arrows on the left of the page allow you to travel to the past.&quot;, 
+	&quot;Overcoming adversity builds resilience.&quot;, 
+	&quot;Technically, pushing a somewhat sentient push-block into a pit constitutes murder.&quot;,
+	&quot;Lore books are hidden in some of the rooms of the dungeons.&quot;, 
+	&quot;Your observations are recorded on the &#39;Observation&#39; card.&quot;, 
+	&quot;You can skip any level, but doing so will cause you to accrue shame.&quot;,
+	&quot;You might need to reset the puzzle if you push a push-block into the wrong place.&quot;,
+	&quot;Most puzzles can be solved by pushing something onto the pressure plate.&quot;,
+	&quot;The Archivist archives in the Archives.&quot;,
+	&quot;Some rooms have decorations that span an entire wall. You can use these to get your bearings.&quot;,
+	&quot;Technically, mapping the room using pen and paper constitutes cheating.&quot;,
+	&quot;Most of these hints aren&#39;t actually helpful.&quot;,
+	&quot;The game saves automatically at the beginning of each level.&quot;,
+	&quot;Clicking &#39;hint:&#39; will display hints&quot;,
+	&quot;Most (but not all) rooms are rectangular&quot;))
+
 (set: $levelNames to (dm:
 	1, &#39;The Library&#39;,
 	2, &#39;Still the Library&#39;,
@@ -670,6 +696,7 @@ Array.prototype.sample = function(){
 	21, &#39;&lt;img src=&quot;bat.png&quot;&gt;&#39;,
 	22, &#39;&lt;img src=&quot;salamander.png&quot;&gt;&#39;))
 }</tw-passagedata><tw-passagedata pid="3" name="1" tags="" position="25,525" size="100,200">{&lt;script&gt;var style = &quot;library&quot;;&lt;/script&gt;
+(if: (history:) contains (text: $level))[(goto: $variant)]
 (set: $map to (a: 
 (a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;), 
 (a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;), 
@@ -679,29 +706,27 @@ Array.prototype.sample = function(){
 (set: $location to (a: 4,3))
 (set: $orientation to (a: (a: 1,0), (a: 0,1), (a: -1, 0), (a: 0,-1)))
 (set: $level to 1)
+(save-game: &quot;A&quot;, (text: $level))
 (set: $room to $defaultRoom + (dm: &quot;name&quot;, &quot;library&quot;, &quot;text&quot;, &quot;Books are contained here.&quot;, &quot;curses&quot;, false))
 (set: $elements to (a: &#39;1&#39;, &#39;9&#39;))
 (set: $variant to &quot;Main&quot;)
-(if: (history:) contains &quot;1&quot;)[(goto: $variant)]
 (display: &quot;talk&quot;)
 	(replace: ?dialogue)[&#39;&#39;Black-robed Cultist: &#39;&#39;Oh. It&#39;s you.]
 	(replace: ?reply)[[[The same could be said about you.|1B]]
-[[*Ignore the black-robed cultist.*|1E]]]
-}</tw-passagedata><tw-passagedata pid="4" name="Intro" tags="" position="25,150" size="200,100">{
-	
+[[*Ignore the black-robed cultist.*|1E]]]}</tw-passagedata><tw-passagedata pid="4" name="Intro" tags="" position="25,150" size="200,100">{
 	(set: _images to (shuffled: ...(datavalues: $speakers)))
 
 &lt;script&gt;$(&quot;.card, .card2&quot;).addClass(&quot;lurid&quot;);&lt;/script&gt;
 
 }&lt;h1&gt;Push: Block&lt;/h1&gt;&lt;div class=&quot;row&quot;&gt;&lt;div class = &quot;card sink&quot;&gt;(print: _images&#39;s 1st)(set: _images to it - (a: _images&#39;s 1st))
-&lt;/h3&gt;[[Begin playing|1]]&lt;/h3&gt;&lt;/div&gt;
+&lt;/h3&gt;(link: &quot;Begin playing&quot;)[(if: (saved-games:) contains &quot;A&quot;)[This will erase your save file. (link: &quot;Continue?&quot;)[(save-game: &quot;Shame&quot;, &quot;0&quot;)(goto: &quot;1&quot;)]](else:)[(goto: &quot;1&quot;)]]&lt;/h3&gt;&lt;/div&gt;
 &lt;div class = &quot;card sink&quot;&gt;(print: _images&#39;s 1st)(set: _images to it - (a: _images&#39;s 1st))
-&lt;/h3&gt;(link: &quot;Continue playing&quot;)[(if: (saved-games:) contains &quot;saved&quot;)[(load-game:&quot;saved&quot;)](else:)[&#39;&#39;Error:&#39;&#39; Error occured.]]&lt;/h3&gt;&lt;/div&gt;
+&lt;/h3&gt;(link: &quot;Continue playing&quot;)[(if: (saved-games:) contains &quot;Shame&quot;)[(set: $shame to (num: (saved-games:)&#39;s &quot;Shame&quot;))](if: (saved-games:) contains &quot;A&quot;)[(goto: (saved-games:)&#39;s &quot;A&quot;)](else:)[&#39;&#39;Error:&#39;&#39; Error occured.]]&lt;/h3&gt;&lt;/div&gt;
 &lt;div class = &quot;card sink&quot;&gt;(print: _images&#39;s 1st)(set: _images to it - (a: _images&#39;s 1st))
 &lt;/h3&gt;(link: &quot;Stop playing&quot;)[&lt;script&gt;window.close()&lt;/script&gt;]&lt;/h3&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;div class=&quot;row&quot;&gt;
-	&lt;div class=&quot;card2 imageLeft&quot;&gt;&lt;div class = &quot;speaker&quot;&gt;(print: _images&#39;s 1st)&lt;/div&gt;&lt;div class = &quot;dialogue&quot;&gt;&#39;&#39;Hint: &#39;&#39;You need to click on the words to do things, which is awkward and I&#39;m sorry.&lt;/div&gt;&lt;/div&gt;
-	&lt;div class = &quot;card2 imageLeft&quot;&gt;&lt;div class = &quot;speaker&quot;&gt;&lt;img src=&quot;greenGiraffe.png&quot;&gt;&lt;/div&gt;&lt;div class = &quot;dialogue&quot;&gt;Made by Green Giraffe Games, more text forthcoming.&lt;/div&gt;&lt;/div&gt;
+	&lt;div class=&quot;card2 imageLeft&quot;&gt;&lt;div class = &quot;speaker&quot;&gt;(print: _images&#39;s 1st)&lt;/div&gt;&lt;div class = &quot;dialogue&quot;&gt;(link-repeat: &quot;&#39;&#39;Hint: &#39;&#39;&quot;)[(replace: ?hint)[(print: 1st of (shuffled: ...$hints))]]|hint&gt;[You need to click on the words to do things, which is awkward and I&#39;m sorry.] &lt;/div&gt;&lt;/div&gt;
+	&lt;div class = &quot;card2 imageLeft&quot;&gt;&lt;div class = &quot;speaker&quot;&gt;&lt;img src=&quot;greenGiraffe.png&quot;&gt;&lt;/div&gt;&lt;div class = &quot;dialogue&quot;&gt;Made by Green Giraffe Games in honour of Jared Marrick&#39;s 30th birthday.&lt;/div&gt;&lt;/div&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="look" tags="" position="375,275" size="100,200">{
 
 (set: $track to (a:))(set: $ahead to (a:))
@@ -814,6 +839,7 @@ Glance (link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$o
 (set: $location to (a: 3,5))
 (set: $orientation to (a: (a: 1,0), (a: 0,1), (a: -1, 0), (a: 0,-1)))
 (set: $variant to &quot;Main&quot;)
+(save-game: &quot;A&quot;, (text: $level))
 (set: $level to 3)
 (set: $room to $defaultRoom + (dm: &quot;name&quot;, &quot;archives&quot;, &quot;text&quot;, &quot;The air is thick with tome-dust.&quot;, &quot;curses&quot;, false))
 (set: $elements to (a: &#39;1&#39;, &#39;9&#39;))
@@ -843,6 +869,8 @@ Glance (link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$o
 (a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;)))
 (set: $location to (a: 2,3))
 (set: $orientation to (a: (a: 1,0), (a: 0,1), (a: -1, 0), (a: 0,-1)))
+(save-game: &quot;A&quot;, (text: $level))
+(save-game: &quot;Shame&quot;, (text: $shame))
 (set: $level to 2)
 (set: $room to $defaultRoom + (dm: 
 	&quot;name&quot;, &quot;lower library&quot;, 
@@ -869,6 +897,7 @@ Glance (link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$o
 (a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;o&#39;,&#39;9&#39;,&#39;w&#39;), 
 (a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;)))
 (set: $location to (a: 3,5))
+(save-game: &quot;A&quot;, (text: $level))
 (set: $level to 4)
 (set: $orientation to (a: (a: 1,0), (a: 0,1), (a: -1, 0), (a: 0,-1)))
 (set: $room to $defaultRoom + (dm: &quot;name&quot;, &quot;lower archives&quot;, &quot;text&quot;, &quot;You are alone. Only your footsteps break the silence.&quot;, &quot;curses&quot;, false))
@@ -968,6 +997,7 @@ Glance (link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$o
 	&quot;text&quot;, &quot;It is a cozy room filled with wooden barrels. The sommelier wanders from barrel to barrel, pressing his ears against them with a look of concentration on his face.&quot;,
 	&quot;flavour&quot;, &quot;The sommelier mutters that a particular wine would pair wonderfully with watermelon.&quot;))
 (set: $elements to (a: &#39;1&#39;, &#39;b&#39;,&#39;9&#39;))
+(save-game: &quot;A&quot;, (text: $level))
 (set: $level to 6)
 (set: $variant to &quot;Main&quot;)
 (if: (history:) contains (text: $level))[(goto: $variant)]
@@ -995,15 +1025,20 @@ Glance (link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$o
 (set: $orientation to (a: (a: 1,0), (a: 0,1), (a: -1, 0), (a: 0,-1)))
 (set: $room to $defaultRoom + (dm: &quot;name&quot;, &quot;restricted wing&quot;, &quot;text&quot;, &quot;The books here mutter among themselves. You feel uneasy, and also dizzy.&quot;))
 (set: $elements to (a: &#39;1&#39;, &#39;9&#39;, &#39;o&#39;))
+(save-game: &quot;A&quot;, (text: $level))
 (set: $level to 5)
 (set: $variant to &quot;spin&quot;)
 (if: (history:) contains (text: $level))[(goto: $variant)]
 (display: &quot;talk&quot;)
 	(replace: ?img)[&lt;img src=&quot;cultistFish.png&quot;&gt;]
 	(replace: ?dialogue)[&#39;&#39;Waterlogged cultist: &#39;&#39; ...]
-	(replace: ?reply)[[[... hello?|5B]]]}</tw-passagedata><tw-passagedata pid="30" name="skip" tags="" position="1000,275" size="100,200">&lt;script&gt;
+	(replace: ?reply)[[[... hello?|5B]]]}</tw-passagedata><tw-passagedata pid="30" name="skip" tags="" position="1000,275" size="100,200">{&lt;script&gt;
     $(&quot;.card&quot;).addClass(style);
-&lt;/script&gt;(set: $level to it + 1)(set: $shame to it + 1)&lt;div class = &quot;card cardLong&quot;&gt;&lt;div class = &quot;speaker&quot;&gt;&lt;img src = &quot;shame.png&quot;&gt;&lt;/div&gt;&lt;div class = &quot;dialogue&quot;&gt;You have gained &#39;&#39;1&#39;&#39; shame point.(if: $shame &gt; 1)[
+&lt;/script&gt;
+(set: $level to it + 1)
+(set: $shame to it + 1)
+(save-game: &quot;Shame&quot;, (text: $shame))
+}&lt;div class = &quot;card cardLong&quot;&gt;&lt;div class = &quot;speaker&quot;&gt;&lt;img src = &quot;shame.png&quot;&gt;&lt;/div&gt;&lt;div class = &quot;dialogue&quot;&gt;You have gained &#39;&#39;1&#39;&#39; shame point.(if: $shame &gt; 1)[
 Shamefully, you now have &#39;&#39;(print: $shame)&#39;&#39; shame points.]&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class = &quot;card shame&quot;&gt;(link: &quot;*Feel ashamed.*&quot;)[(goto: (text:  $level))]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="31" name="3B" tags="" position="325,1000" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?dialogue)[&#39;&#39;Archivist: &#39;&#39; Ah. I take it the Order are gathering upstairs tonight?]
 	(replace: ?reply)[[[They are.|3C]]
@@ -1048,6 +1083,7 @@ I ask again: what are you doing in the archives?]
 	&quot;text&quot;, &quot;It has been repurposed as an extra storeroom. Barrels crowd the floor.&quot;, 
 	&quot;flavour&quot;, &quot;A rat darts from behind a barrel to behind another.&quot;))
 (set: $elements to (a: &#39;b&#39;, &#39;B&#39;,&#39;d&#39;))
+(save-game: &quot;A&quot;, (text: $level))
 (set: $level to 7)
 (set: $variant to &quot;Main&quot;)
 (if: (history:) contains (text: $level))[(goto: $variant)]
@@ -1116,6 +1152,7 @@ Words]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="46" name="6A" tags="" po
 	&quot;text&quot;, &quot;The sommelier stands nearby, scowling. He won&#39;t help you.&quot;, 
 	&quot;flavour&quot;, &quot;The sommelier sighs, pointedly.&quot;))
 (set: $elements to (a: &#39;1&#39;, &#39;b&#39;, &#39;9&#39;))
+(save-game: &quot;A&quot;, (text: $level))
 (set: $level to 8)
 (set: $variant to &quot;Main&quot;)
 (if: (history:) contains (text: $level))[(goto: $variant)]
@@ -1132,6 +1169,7 @@ Words]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="46" name="6A" tags="" po
 (set: $orientation to (a: (a: 1,0), (a: 0,1), (a: -1, 0), (a: 0,-1)))
 (set: $room to $defaultRoom + (dm: &quot;name&quot;, &quot;somewhere&quot;, &quot;text&quot;, &quot;&quot;))
 (set: $elements to (a: &#39;d&#39;))
+(save-game: &quot;A&quot;, (text: $level))
 (set: $level to 9)
 (set: $variant to &quot;semiblind&quot;)
 (if: (history:) contains (text: $level))[(goto: $variant)]
@@ -1151,6 +1189,7 @@ Words]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="46" name="6A" tags="" po
 (set: $orientation to (a: (a: 0,-1), (a: 1,0), (a: 0,1), (a: -1, 0)))
 (set: $room to $defaultRoom + (dm: &quot;name&quot;, &quot;crowded storeroom&quot;, &quot;text&quot;, &quot;The barrels leave little room to maneuver.&quot;))
 (set: $elements to (a: &#39;1&#39;, &#39;b&#39;, &#39;9&#39;))
+(save-game: &quot;A&quot;, (text: $level))
 (set: $level to 10)
 (set: $variant to &quot;Main&quot;)
 (if: (history:) contains (text: $level))[(goto: $variant)]
@@ -1159,6 +1198,7 @@ Words]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="46" name="6A" tags="" po
 	(replace: ?dialogue)[&#39;&#39;King Rat: &#39;&#39;Hello.]
 	(replace: ?reply)[[[Hello.|10A]]
 	[[You can talk!!|10A]]]}&lt;script&gt;var style = &quot;cellar&quot;;&lt;/script&gt;</tw-passagedata><tw-passagedata pid="56" name="11" tags="" position="25,3025" size="100,200">{&lt;script&gt;var style = &quot;catacombs&quot;;&lt;/script&gt;
+(display: &quot;progress&quot;)
 (set: $map to (a: 
 (a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;), 
 (a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;), 
@@ -1174,6 +1214,7 @@ Words]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="46" name="6A" tags="" po
 	&quot;text&quot;, &quot;It&#39;s cold here, and almost lightless. Torches line the walls, but most have gone out.&quot;,
 	&quot;flavour&quot;, &quot;You shiver, just slightly, in the chill.&quot;))
 (set: $elements to (a: &#39;2&#39;, &#39;9&#39;))
+(save-game: &quot;A&quot;, (text: $level))
 (set: $level to 11)
 (set: $variant to &quot;Main&quot;)
 (if: (history:) contains (text: $level))[(goto: $variant)]
@@ -1293,16 +1334,7 @@ Glance (link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$o
 	x.className = &quot;show&quot;;
 	setTimeout(function(){ x.className = x.className.replace(&quot;show&quot;, &quot;&quot;); }, 5000);
 &lt;/script&gt;
-&lt;div id = &quot;snackbar&quot;&gt;You have left the (print: $chapterNames&#39;s (abs: $level - (floor: ($level-1)/5) * 5)), and are entering the (print: $chapterNames&#39;s (abs: $level - ((floor: ($level-1)/5) * 5) - 1)).&lt;/div&gt;</tw-passagedata><tw-passagedata pid="85" name="Untitled Passage" tags="" position="1775,400" size="100,100">{(set: $ahead to (a: &quot;2&quot;, &quot;0&quot;, &quot;9&quot;, &quot;0&quot;, &quot;w&quot;, &#39;0&#39;))
-(if: (all-pass: _tile where solid of _tile of $tiles is false, ...$ahead))[All unsolid](else:)[Not all unsolid]
-
-
-(set: $slide to 0)	
-(for: each _metre, ...(range: 2, $ahead&#39;s length))
-	[
-	(if: (all-pass: _tile where solid of _tile of $tiles is false, ...$ahead&#39;s (range: 2, _metre)))[(set: $slide to it + 1)]
-	]
-(print: $slide)}</tw-passagedata><tw-passagedata pid="86" name="sentient" tags="" position="1650,400" size="100,100">(set: _forwards3 to (a: (_forwards2&#39;s 1st + 1st of $orientation&#39;s 1st), (_forwards2&#39;s 2nd + 2nd of $orientation&#39;s 1st)))
+&lt;div id = &quot;snackbar&quot;&gt;You have left the (print: $chapterNames&#39;s (abs: $level - (floor: ($level-1)/5) * 5)), and are entering the (print: $chapterNames&#39;s (abs: $level - ((floor: ($level-1)/5) * 5) - 1)).&lt;/div&gt;</tw-passagedata><tw-passagedata pid="85" name="lore" tags="" position="1775,398" size="100,100">(replace: ?observe)[The lore-book is old and dusty. You could (link-repeat: &quot;read it&quot;)[&lt;script&gt;$(&quot;.lore&quot;).addClass(&quot;imageLeft&quot;);&lt;/script&gt;(replace: ?lore)[&lt;div class = &quot;speaker&quot;&gt;&lt;img src = &quot;lore.png&quot;&gt;&lt;/div&gt;&lt;div class = &quot;dialogue&quot;&gt;Lorewords! (link: &quot;*Look up.*&quot;)[(goto: $variant)]].&lt;/div&gt;]]</tw-passagedata><tw-passagedata pid="86" name="sentient" tags="" position="1650,400" size="100,100">(set: _forwards3 to (a: (_forwards2&#39;s 1st + 1st of $orientation&#39;s 1st), (_forwards2&#39;s 2nd + 2nd of $orientation&#39;s 1st)))
 (set: _forwards4 to (a: (_forwards2&#39;s 1st + 1st of $orientation&#39;s 2nd), (_forwards2&#39;s 2nd + 2nd of $orientation&#39;s 2nd)))
 (set: _forwards5 to (a: (_forwards2&#39;s 1st + 1st of $orientation&#39;s 4th), (_forwards2&#39;s 2nd + 2nd of $orientation&#39;s 4th)))
 (set: _pushToAdjacent1 to _forwards3&#39;s 1st of _forwards3&#39;s 2nd of $map)
@@ -1350,6 +1382,7 @@ Glance (link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$o
 	&quot;name&quot;, &quot;high-ceilinged cavern&quot;,
 	&quot;text&quot;, &quot;You can&#39;t make out the ceiling, likely because it is so high up.&quot;))
 (set: $elements to (a:  &#39;1&#39;, &#39;2&#39;, &#39;9&#39;))
+(save-game: &quot;A&quot;, (text: $level))
 (set: $level to 12)
 (set: $variant to &quot;Main&quot;)
 (if: (history:) contains (text: $level))[(goto: $variant)]
@@ -1371,6 +1404,7 @@ Glance (link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$o
 	&quot;text&quot;, &quot;You can see very little here&quot;,
 	&quot;flavour&quot;, &quot;The candle&#39;s flame flickers and revives.&quot;))
 (set: $elements to (a: &#39;1&#39;, &#39;2&#39;, &#39;9&#39;,&#39;S&#39;))
+(save-game: &quot;A&quot;, (text: $level))
 (set: $level to 13)
 (set: $variant to &quot;Main&quot;)
 (if: (history:) contains (text: $level))[(goto: $variant)]
@@ -1409,6 +1443,7 @@ Glance (link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$o
 	&quot;text&quot;, &quot;You can barely see the hands in front of your face.&quot;,
 	&quot;flavour&quot;, &quot;Your eyes struggle and fail to adjust to the darkness.&quot;))
 (set: $elements to (a: &#39;2&#39;, &#39;9&#39;,&#39;S&#39;,&#39;7&#39;))
+(save-game: &quot;A&quot;, (text: $level))
 (set: $level to 14)
 (set: $variant to &quot;dark&quot;)
 (if: (history:) contains (text: $level))[(goto: $variant)]
@@ -1497,6 +1532,7 @@ You can make out nothing beyond that.]]</tw-passagedata><tw-passagedata pid="105
 	&quot;text&quot;, &quot;The Burning Cultist stands in the corner, burning. Skulls are piled in fastidious rows. Strange symbols are carved on all the walls.&quot;,
 	&quot;flavour&quot;, &quot;The Burning Cultist burns merrily.&quot;))
 (set: $elements to (a: &#39;2&#39;, &#39;9&#39;))
+(save-game: &quot;A&quot;, (text: $level))
 (set: $level to 15)
 (set: $variant to &quot;Main&quot;)
 (if: (history:) contains (text: $level))[(goto: $variant)]
@@ -1556,6 +1592,7 @@ You can make out nothing beyond that.]]</tw-passagedata><tw-passagedata pid="105
 }(display: &quot;talk&quot;)
 	(replace: ?dialogue)[Have it your way.]
 	(replace: ?reply)[(link: &quot;Bye, Burning Cultist!&quot;)[(goto: $variant)]]</tw-passagedata><tw-passagedata pid="117" name="16" tags="" position="25,4275" size="100,200">{&lt;script&gt;var style = &quot;mines&quot;;&lt;/script&gt;
+(display: &quot;progress&quot;)
 (set: $map to (a: 
 (a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;), 
 (a: &#39;w&#39;,&#39;7&#39;,&#39;7&#39;,&#39;7&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;), 
@@ -1570,6 +1607,7 @@ You can make out nothing beyond that.]]</tw-passagedata><tw-passagedata pid="105
 	&quot;name&quot;, &quot;mineshaft A&quot;,
 	&quot;text&quot;, &quot;Tools and hardhats lay abandoned in the dirt. A thick blanket of dust covers everything in the room.&quot;))
 (set: $elements to (a: &#39;1&#39;, &#39;7&#39;, &#39;M&#39;,&#39;d&#39;))
+(save-game: &quot;A&quot;, (text: $level))
 (set: $level to 16)
 (set: $variant to &quot;Main&quot;)
 (if: (history:) contains (text: $level))[(goto: $variant)]
@@ -1597,6 +1635,7 @@ You can make out nothing beyond that.]]</tw-passagedata><tw-passagedata pid="105
 	&quot;text&quot;, &quot;Rough-hewn pushblocks are piled in the corners, and some have been left half-extracted from the earth.&quot;,
 	&quot;flavour&quot;, &quot;The hairs on the back of your neck stand on end. You feel you are being watched.&quot;))
 (set: $elements to (a: &#39;3&#39;, &#39;7&#39;, &#39;p&#39;, &#39;9&#39;))
+(save-game: &quot;A&quot;, (text: $level))
 (set: $level to 17)
 (set: $variant to &quot;Main&quot;)
 (if: (history:) contains (text: $level))[(goto: $variant)]
@@ -1624,11 +1663,11 @@ You can make out nothing beyond that.]]</tw-passagedata><tw-passagedata pid="105
 	(replace: ?reply)[(link: &quot;*Leave*&quot;)[(goto: $variant)]]</tw-passagedata><tw-passagedata pid="127" name="18" tags="" position="25,4775" size="100,200">{&lt;script&gt;var style = &quot;mines&quot;;&lt;/script&gt;
 (set: $map to (a: 
 (a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;), 
-(a: &#39;w&#39;,&#39;p&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;3&#39;,&#39;7&#39;,&#39;w&#39;), 
+(a: &#39;w&#39;,&#39;p&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;7&#39;,&#39;w&#39;), 
 (a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;), 
 (a: &#39;w&#39;,&#39;0&#39;,&#39;M&#39;,&#39;3&#39;,&#39;9&#39;,&#39;3&#39;,&#39;w&#39;), 
 (a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;), 
-(a: &#39;w&#39;,&#39;p&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;3&#39;,&#39;7&#39;,&#39;w&#39;), 
+(a: &#39;w&#39;,&#39;p&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;7&#39;,&#39;w&#39;), 
 (a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;)))
 (set: $location to (a: 2,4))
 (set: $orientation to (a: (a: 1,0), (a: 0,1), (a: -1, 0), (a: 0,-1)))
@@ -1636,6 +1675,7 @@ You can make out nothing beyond that.]]</tw-passagedata><tw-passagedata pid="105
 	&quot;name&quot;, &quot;pushblock storage room A&quot;,
 	&quot;text&quot;, &quot;Rough-hewn pushblocks are piled in the corners, and some have been left half-extracted from the earth. You&#39;re having trouble focusing, and sometimes when you come back to yourself you wonder where you were.&quot;))
 (set: $elements to (a: &#39;3&#39;, &#39;7&#39;, &#39;p&#39;, &#39;9&#39;))
+(save-game: &quot;A&quot;, (text: $level))
 (set: $level to 18)
 (set: $variant to &quot;spin&quot;)
 (if: (history:) contains (text: $level))[(goto: $variant)]
@@ -1687,6 +1727,7 @@ You can make out nothing beyond that.]]</tw-passagedata><tw-passagedata pid="105
 	&quot;text&quot;, &quot;The room is filled with empty crates.&quot;,
 	&quot;flavour&quot;, &quot;You think you hear something moving in the distance. But it might just be cave-wind.&quot;))
 (set: $elements to (a: &#39;m&#39;, &#39;3&#39;, &#39;7&#39;, &#39;9&#39;))
+(save-game: &quot;A&quot;, (text: $level))
 (set: $level to 18)
 (set: $variant to &quot;Main&quot;)
 (if: (history:) contains (text: $level))[(goto: $variant)]
@@ -1716,6 +1757,7 @@ You can make out nothing beyond that.]]</tw-passagedata><tw-passagedata pid="105
 	&quot;name&quot;, &quot;mineshaft C&quot;,
 	&quot;text&quot;, &quot;The entrance to the caves is just ahead.&quot;))
 (set: $elements to (a: &#39;3&#39;, &#39;7&#39;, &#39;M&#39;, &#39;9&#39;))
+(save-game: &quot;A&quot;, (text: $level))
 (set: $level to 20)
 (set: $variant to &quot;Main&quot;)
 (if: (history:) contains (text: $level))[(goto: $variant)]
@@ -1751,6 +1793,7 @@ You can make out nothing beyond that.]]</tw-passagedata><tw-passagedata pid="105
 	(link: &quot;Ew. Also, bye.&quot;)[(goto: $variant)]]</tw-passagedata><tw-passagedata pid="151" name="20J" tags="" position="1025,5400" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?dialogue)[&#39;&#39;Sentient Push-Block:&#39;&#39; Good luck, meat-person.]
 	(replace: ?reply)[(link: &quot;To you too!&quot;)[(goto: $variant)]]</tw-passagedata><tw-passagedata pid="152" name="21" tags="" position="1700,550" size="100,200">{&lt;script&gt;var style = &quot;mines&quot;;&lt;/script&gt;
+(display: &quot;progress&quot;)
 (set: $map to (a: 
 (a: &#39;w&#39;,&#39;t&#39;,&#39;t&#39;,&#39;t&#39;,&#39;w&#39;), 
 (a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;), 
@@ -1766,6 +1809,7 @@ You can make out nothing beyond that.]]</tw-passagedata><tw-passagedata pid="105
 	&quot;text&quot;, &quot;A natural stone structure forms the shape of a door. Nature is amazing.&quot;,
 	&quot;flavour&quot;, &quot;Somewhere in the darkness, a drop of water plinks into a pool&quot;))
 (set: $elements to (a: &#39;3&#39;, &#39;7&#39;, &#39;M&#39;, &#39;9&#39;))
+(save-game: &quot;A&quot;, (text: $level))
 (set: $level to 20)
 (set: $variant to &quot;Main&quot;)
 (if: (history:) contains (text: $level))[(goto: $variant)]
@@ -1773,7 +1817,7 @@ You can make out nothing beyond that.]]</tw-passagedata><tw-passagedata pid="105
 	(replace: ?dialogue)[&#39;&#39;Cave Bat:&#39;&#39; Screeech.]
 	(replace: ?reply)[[[Hi, Cave Bat!|21A]]
 	[[*Screeeeech*|21A]]]
-}</tw-passagedata><tw-passagedata pid="153" name="22" tags="" position="1700,800" size="100,200">{&lt;script&gt;var style = &quot;mines&quot;;&lt;/script&gt;
+}</tw-passagedata><tw-passagedata pid="153" name="22" tags="" position="1700,798" size="100,200">{&lt;script&gt;var style = &quot;mines&quot;;&lt;/script&gt;
 (set: $map to (a: 
 (a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;), 
 (a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;T&#39;,&#39;t&#39;), 
@@ -1789,6 +1833,7 @@ You can make out nothing beyond that.]]</tw-passagedata><tw-passagedata pid="105
 	&quot;name&quot;, &quot;slimy cave&quot;,
 	&quot;text&quot;, &quot;The walls ooze with slime&quot;))
 (set: $elements to (a: &#39;3&#39;, &#39;7&#39;, &#39;M&#39;, &#39;9&#39;))
+(save-game: &quot;A&quot;, (text: $level))
 (set: $level to 20)
 (set: $variant to &quot;Main&quot;)
 (if: (history:) contains (text: $level))[(goto: $variant)]
@@ -1799,10 +1844,13 @@ You can make out nothing beyond that.]]</tw-passagedata><tw-passagedata pid="105
 	(replace: ?reply)[(link: &quot;Bye, Cave Salamander!&quot;)[(goto: $variant)]]</tw-passagedata><tw-passagedata pid="155" name="21A" tags="" position="1850,550" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?dialogue)[*The cave bat flies away.*]
 	(replace: ?reply)[(link: &quot;Bye, Cave Bat!&quot;)[(goto: $variant)]
-	(link: &quot;Screeeech&quot;)[(goto: $variant)]]</tw-passagedata><tw-passagedata pid="156" name="Untitled Passage 2" tags="" position="1053.5,765" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="157" name="18C2" tags="" position="475,4900" size="100,100">(display: &quot;talk&quot;)
+	(link: &quot;Screeeech&quot;)[(goto: $variant)]]</tw-passagedata><tw-passagedata pid="156" name="Untitled Passage 2" tags="" position="1053,765" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="157" name="18C2" tags="" position="475,4900" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?dialogue)[&#39;&#39;Fear-Crazed Cultist:&#39;&#39; You can&#39;t stop me from talking.]
 	(replace: ?reply)[	[[Yes.|18C]]
-	[[No.|18C]]]</tw-passagedata></tw-storydata>
+	[[No.|18C]]]</tw-passagedata><tw-passagedata pid="158" name="Untitled Passage" tags="" position="800,525" size="100,100"></tw-passagedata><tw-passagedata pid="159" name="save" tags="" position="2175,275" size="100,100">(save-game: &quot;A&quot;, (text: $level))</tw-passagedata><tw-passagedata pid="160" name="saveOld" tags="" position="2300,275" size="100,100">&lt;script&gt;
+for (const x of Array(31).keys()){deleteSaveSlot(x)}
+&lt;/script&gt;
+(save-game: (text: $level))</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
