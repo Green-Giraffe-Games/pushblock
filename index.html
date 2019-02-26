@@ -18,6 +18,13 @@
 	animation:appear 0ms step-start
 }
 
+tw-sidebar tw-icon.redo {
+	display: none;
+}
+tw-sidebar tw-icon.undo {
+	display: none;
+}
+
 body, tw-story {
 	width: 96%;
 	padding-left: 4em;
@@ -371,6 +378,8 @@ h3 {
   color: #A40606 !important;
 }
 
+#audio-overlay{position:fixed;top:0;right:0;left:0;bottom:0;z-index:100000;background:#111}.lds-ring{display:block;position:relative;top:20%;margin:auto;width:20em;height:20em}.lds-ring div{box-sizing:border-box;display:block;position:absolute;width:18em;height:18em;margin:6px;border:6px solid #fff;border-radius:50%;-webkit-animation:lds-ring 1.2s cubic-bezier(.5,0,.5,1) infinite;animation:lds-ring 1.2s cubic-bezier(.5,0,.5,1) infinite;border-color:#fff transparent transparent transparent}.lds-ring div:nth-child(1){-webkit-animation-delay:-.45s;animation-delay:-.45s}.lds-ring div:nth-child(2){-webkit-animation-delay:-.3s;animation-delay:-.3s}.lds-ring div:nth-child(3){-webkit-animation-delay:-.15s;animation-delay:-.15s}@-webkit-keyframes lds-ring{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes lds-ring{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}input#audio-volume{width:100%;padding:2em 0}span#vol-title{position:relative;bottom:-2em;font-size:1rem;float:left}tw-link#audio-mute{display:inline-block;padding:.3em;width:90%;text-decoration:none;color:#111;background:#eee;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;border:1px solid #000}tw-link#audio-mute:hover{opacity:.8}tw-link#audio-mute:active{opacity:.6}tw-link#audio-mute span{display:inline-block;width:1em;position:relative;height:1em;top:.2em;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAABF0lEQVR4Ae2VJVREYRSEB3ftuFUaLhF6I22iF7TgLr1XvAc849CwiBac9Xtm3e97cefp/Pec7+mdH0mZrGtMoBomyAEHfjGHXKg07gNxeUS3BuMAqGZswE7YcOIYgqgG7BFlSQgTAgKysC2jNjQmghFQCOpMxq+QmQgmFATU4kcq/YlgfKB1lALUqFSukRIbEwpy4BTZPM/Bu9TaQ362KAsl56sAtSR+Sgv6RCFdr/gjBYiuj65c3J0eNEmXz95TgybocvmoJj3avf5l59L1iD/WglZCP7/uh8zgeQ6epdahaZENFIPCCFvEYNPW4JdNazBGzhkj6caCbSc02DRRu0+8RR/+rb7wx6D505HxCVKvG0zpp+yknHe8MBDkT/s8AAAAAElFTkSuQmCC);background-size:contain}tw-link#audio-mute.muted span{right:4px;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAASElEQVR4Ae3WsQ0AMAjAsJ7ez9MTGEmlRGL3BJzPq6prw2DDYMNgw2DDYMOwh1kAMUygQIEC2RejANVxnVE9aDOqJ39GVZWqB5Z3r1ndBX5oAAAAAElFTkSuQmCC)}div#audio-volume{float:left}div#audio-controls{font:100% Georgia,serif;font-size:1.5em;position:fixed;width:8em;height:100%;padding:1em 2em;z-index:10000;top:0;left:0;bottom:0;background:#333;color:#eee;transition:left .3s;text-align:center}div#audio-controls.closed{left:-10.5em}div#audio-controls tw-link#audio-panel-toggle{display:inline-block;width:1.5em;position:absolute;height:1.5em;top:0;right:0;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;text-decoration:none;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAAAYklEQVR4Ae3MsQFAMAAEQMDEagCgN4EuVTrbPcACeUBugDNeSdMQomI0PmYdTEYD9DA5jcVoBKuxGY1kNQ6jGRSaGaIj8gw1aI/KYVUSNqsSzMpiVT2zMjlVN0fqVW5o2luMGHqkQmD9cPYAAAAASUVORK5CYII=);background-size:contain}div#audio-controls.closed tw-link#audio-panel-toggle{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAAAZElEQVR4Ae3TpwGAMBQAUfrEeHB0cDhcXBSO7ehlgBw9N8BL/YZO95r6uA/UEbOv+ylfHRJ9z1BWLynKJqmWohyS6ijKOygKCpmjZYqXTTA2xUiCsShGAMw8/Q3ArFgFMHek0w3WCaR74eO2YQAAAABJRU5ErkJggg==)}@media screen and (max-width:800px){div#audio-controls.closed{left:-12em}div#audio-controls.closed tw-link#audio-panel-toggle{right:-1.5em}}div#story-menu{margin:1em 0}tw-link.story-menu{width:100%;display:block;font-weight:400;background:#ccc;font-size:.9em;padding:.1em 0;color:#111;border:1px solid #333}tw-link.story-menu.hide{display:none}tw-link.story-menu:hover{opacity:.8}tw-link.story-menu:active{opacity:.6}
+
 
 
 
@@ -408,7 +417,7 @@ GE.shame = +localStorage.getItem('shame');
     var options = {
         preload : true,
         loadDelay : 0,
-        muteOnBlur : true,
+        muteOnBlur : false,
         startingVol : 0.5,
         storagekey : '%%tw-audio',
         persistPrefs : true,
@@ -433,6 +442,7 @@ GE.shame = +localStorage.getItem('shame');
 
 
 
+
 </script><tw-passagedata pid="1" name="Main" tags="" position="25,273" size="200,200">{&lt;script&gt;
 	$(&quot;.lvl, .card, .card2&quot;).addClass(style);
 &lt;/script&gt;
@@ -443,11 +453,7 @@ GE.shame = +localStorage.getItem('shame');
 
 &lt;div class = &quot;card lore&quot;&gt;|lore&gt;[&lt;h3&gt;Sight&lt;/h3&gt;|display&gt;[]]&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;card2&quot;&gt;&lt;h3&gt;Location&lt;/h3&gt;(display: &quot;flavour&quot;)&lt;/div&gt;&lt;div class=&quot;card2&quot;&gt;&lt;h3&gt;Elements&lt;/h3&gt;(display: &quot;elements&quot;)&lt;/div&gt;&lt;/div&gt;\
 (replace: ?display)[(display: &quot;look&quot;)]\
-(replace: ?observe)[(display: &quot;observe&quot;)]
-(print: $slide)
-(print: $location)
-(for: each _row, ...$map)[
-(print: _row)]</tw-passagedata><tw-passagedata pid="2" name="startup" tags="startup" position="25,25" size="200,100">{
+(replace: ?observe)[(display: &quot;observe&quot;)]</tw-passagedata><tw-passagedata pid="2" name="startup" tags="startup" position="25,24" size="200,100">{
 (set: $tempDisplay to false)
 (set: $tiles to (dm: 
 	&quot;w&quot;, (dm: 
@@ -651,7 +657,7 @@ GE.shame = +localStorage.getItem('shame');
 (set: $shame to 0)
 (set: $level to 1)
 
-(set: $hints to (a: 
+(set: $hints to (shuffled: ...(a: 
 	&quot;You can push the push blocks by walking into them.&quot;,
 	&quot;Glancing lets you look around without changing the orientation of your body.&quot;, 
 	&quot;The Black-Robed Cultist commands the respect of most, but not all, of the other cultists.&quot;,  
@@ -661,7 +667,7 @@ GE.shame = +localStorage.getItem('shame');
 	&quot;Technically, pushing a somewhat sentient push-block into a pit constitutes murder.&quot;,
 	&quot;Lore books are hidden in some areas of the dungeon.&quot;, 
 	&quot;Your observations are recorded on the &#39;Observation&#39; card.&quot;, 
-	&quot;You can skip any level, but doing so will cause you to accrue shame.&quot;,
+	&quot;You can skip any level, but doing so will cause you to accrue shame points.&quot;,
 	&quot;You might need to reset the puzzle if you push a push-block into the wrong place.&quot;,
 	&quot;Most puzzles can be solved by pushing something onto the pressure plate.&quot;,
 	&quot;The Archivist archives in the Archives.&quot;,
@@ -674,7 +680,7 @@ GE.shame = +localStorage.getItem('shame');
 	&quot;You don&#39;t need to activate pressure plates to leave rooms with regular doors.&quot;,
 	&quot;The Fungus Keeper is responsible for cultivating the cult&#39;s supply of fungi.&quot;,
 	&quot;As in life, there are 30 levels in this game.&quot;,
-	&quot;Somewhat sentient push-blocks have volition, but can do nothing with it.&quot;))
+	&quot;Somewhat sentient push-blocks have volition, but can do nothing with it.&quot;)))
 
 (set: $about to (a:
 	&quot;This game was made in honour of Jared Marrick&#39;s 30th birthday&quot;,
@@ -684,7 +690,8 @@ GE.shame = +localStorage.getItem('shame');
 	&quot;This game was created with Twine, and also with love&quot;))
 
 (set: $lore to (dm:
-	23, &quot;Watermelons serve as an ideal vessel for ill will. The watermelon&#39;s veins can accomodate many kinds of unwanted emotions, which can be made to dissapate entirely by destroying the watermelon in the normal way.&quot;))
+	2, &quot;The tome is actually a guest book for the library. The comments are highly complimentary.&quot;,
+	23, &quot;*Watermelons serve as an ideal vessel for ill will. The watermelon&#39;s veins can accomodate many kinds of unwanted emotions, which can be made to dissapate entirely by destroying the watermelon in the normal way.*&quot;))
 
 (set: $levelNames to (dm:
 	1, &#39;The Library&#39;,
@@ -776,25 +783,26 @@ A.newTrack(&#39;shame&#39;, &#39;audio/shame.wav&#39;);
 (display: &quot;talk&quot;)
 	(replace: ?dialogue)[&#39;&#39;Black-robed Cultist: &#39;&#39;Oh. It&#39;s you.]
 	(replace: ?reply)[[[The same could be said about you.|1B]]
-[[*Ignore the black-robed cultist.*|1E]]]}</tw-passagedata><tw-passagedata pid="4" name="Intro" tags="" position="25,148" size="200,100">{
+[[*Ignore the black-robed cultist.*|1E]]]}</tw-passagedata><tw-passagedata pid="4" name="Intro" tags="" position="25,147" size="200,100">{
 	(set: $level to GE[&quot;level&quot;])
 	(set: $shame to GE[&quot;shame&quot;])
 	(set: _images to (shuffled: ...(datavalues: $speakers)))
 	(set: $delayExecute to $about)
+	(set: $map to $hints)
 &lt;script&gt;$(&quot;.card, .card2&quot;).addClass(&quot;lurid&quot;);&lt;/script&gt;
 
 }&lt;h1&gt;Push: Block&lt;/h1&gt;&lt;div class=&quot;row&quot;&gt;&lt;div class = &quot;card sink&quot;&gt;(print: _images&#39;s 1st)(set: _images to it - (a: _images&#39;s 1st))
-&lt;/h3&gt;(link: &quot;Begin playing&quot;)[(if: (saved-games:) contains &quot;A&quot;)[This will erase your save file. (link: &quot;Continue?&quot;)[(set: $level to 1)(display: &quot;audio&quot;)(set: $shame to 0)&lt;script&gt;		window.localStorage.setItem(&#39;level&#39;, &#39;1&#39;);
+&lt;/h3&gt;(link: &quot;Begin playing&quot;)[(if: $level &gt; 1)[This will erase your save file. (link: &quot;Continue?&quot;)[(set: $level to 1)(display: &quot;audio&quot;)(set: $shame to 0)&lt;script&gt;		window.localStorage.setItem(&#39;level&#39;, &#39;1&#39;);
 	window.localStorage.setItem(&#39;shame&#39;, &#39;0&#39;);
 	&lt;/script&gt;(goto: &quot;1&quot;)]](else:)[(set: $level to 1)&lt;script&gt;		window.localStorage.setItem(&#39;level&#39;, &#39;1&#39;);
 	window.localStorage.setItem(&#39;shame&#39;, &#39;0&#39;);
 	&lt;/script&gt;(display: &quot;audio&quot;)(goto: &quot;1&quot;)]]&lt;/h3&gt;&lt;/div&gt;
 &lt;div class = &quot;card sink&quot;&gt;(print: _images&#39;s 1st)(set: _images to it - (a: _images&#39;s 1st))
-&lt;/h3&gt;(link: &quot;Continue playing&quot;)[(if: $level &gt; 1)[(goto: (text: $level))](else:)[&#39;&#39;Error:&#39;&#39; Error occured.]]&lt;/h3&gt;&lt;/div&gt;
+&lt;/h3&gt;(link: &quot;Continue playing&quot;)[(if: $level &gt; 1)[(display: &quot;audio&quot;)(goto: (text: $level))](else:)[&#39;&#39;Error:&#39;&#39; Error occured.]]&lt;/h3&gt;&lt;/div&gt;
 &lt;div class = &quot;card sink&quot;&gt;(print: _images&#39;s 1st)(set: _images to it - (a: _images&#39;s 1st))
 &lt;/h3&gt;(link: &quot;Stop playing&quot;)[&lt;script&gt;window.close();&lt;/script&gt;]&lt;/h3&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;div class=&quot;row&quot;&gt;
-	&lt;div class=&quot;card2 imageLeft&quot;&gt;&lt;div class = &quot;speaker&quot;&gt;(print: _images&#39;s 1st)&lt;/div&gt;&lt;div class = &quot;dialogue&quot;&gt;(link-repeat: &quot;&#39;&#39;Hint: &#39;&#39;&quot;)[(replace: ?hint)[(print: 1st of (shuffled: ...$hints))]]|hint&gt;[You need to click on the words to do things, which is awkward. I&#39;m sorry.] &lt;/div&gt;&lt;/div&gt;
+	&lt;div class=&quot;card2 imageLeft&quot;&gt;&lt;div class = &quot;speaker&quot;&gt;(print: _images&#39;s 1st)&lt;/div&gt;&lt;div class = &quot;dialogue&quot;&gt;(link-repeat: &quot;&#39;&#39;Hint: &#39;&#39;&quot;)[(replace: ?hint)[(print: 1st of $map)(set: $map to (rotated: 1, ...$map))]]|hint&gt;[You need to click on the words to do things, which is awkward. I&#39;m sorry.] &lt;/div&gt;&lt;/div&gt;
 	&lt;div class = &quot;card2 imageLeft&quot;&gt;&lt;div class = &quot;speaker&quot;&gt;&lt;img src=&quot;greenGiraffe.png&quot;&gt;&lt;/div&gt;&lt;div class = &quot;dialogue&quot;&gt;(link-repeat: &quot;&#39;&#39;About: &#39;&#39;&quot;)[(replace: ?about)[(print: 1st of $delayExecute)(set: $delayExecute to (rotated: 1, ...$delayExecute))]]|about&gt;[This game was made by Green Giraffe Games].&lt;/div&gt;&lt;/div&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="look" tags="" position="375,275" size="100,200">{
 
@@ -933,9 +941,9 @@ Glance (link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$o
 	(replace: ?reply)[(link: &quot;Will do.&quot;)[(goto: $variant)]]</tw-passagedata><tw-passagedata pid="15" name="2" tags="" position="25,775" size="100,200">{&lt;script&gt;var style = &quot;library&quot;;&lt;/script&gt;
 (set: $map to (a: 
 (a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;), 
-(a: &#39;s&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;), 
-(a: &#39;s&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;1&#39;,&#39;1&#39;,&#39;9&#39;,&#39;w&#39;), 
-(a: &#39;s&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;), 
+(a: &#39;s&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;), 
+(a: &#39;s&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;1&#39;,&#39;1&#39;,&#39;9&#39;,&#39;0&#39;,&#39;w&#39;), 
+(a: &#39;s&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;,&#39;5&#39;,&#39;w&#39;), 
 (a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;)))
 (set: $location to (a: 2,3))
 (set: $orientation to (a: (a: 1,0), (a: 0,1), (a: -1, 0), (a: 0,-1)))
@@ -1050,7 +1058,7 @@ Glance (link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$o
 (set: _forwards&#39;s 1st of _forwards&#39;s 2nd of $map to &#39;0&#39;)
 (set: $location to _forwards)
 &lt;script&gt;A.track(&#39;fall&#39;).play();&lt;/script&gt;
-(goto: $variant)</tw-passagedata><tw-passagedata pid="25" name="6" tags="" position="25,1775" size="100,200">{
+(goto: $variant)</tw-passagedata><tw-passagedata pid="25" name="6" tags="" position="25,1774" size="100,200">{
 &lt;script&gt;var style = &quot;cellar&quot;;&lt;/script&gt;
 (set: $map to (a: 
 (a: &#39;w&#39;,&#39;r&#39;,&#39;r&#39;,&#39;r&#39;,&#39;r&#39;,&#39;r&#39;,&#39;w&#39;), 
@@ -1107,7 +1115,7 @@ Glance (link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$o
 (set: $level to it + 1)
 (set: $shame to it + 1)
 }&lt;div class = &quot;card cardLong&quot;&gt;&lt;div class = &quot;speaker&quot;&gt;&lt;img src = &quot;shame.png&quot;&gt;&lt;/div&gt;&lt;div class = &quot;dialogue&quot;&gt;You have gained &#39;&#39;1&#39;&#39; shame point.(if: $shame &gt; 1)[
-Shamefully, you now have &#39;&#39;(print: $shame)&#39;&#39; shame points.]&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class = &quot;card shame&quot;&gt;(link: &quot;*Feel ashamed.*&quot;)[&lt;script&gt;	window.localStorage.setItem(&#39;level&#39;, +localStorage.getItem(&#39;level&#39;) + 1);
+Shamefully, you now have &#39;&#39;(print: $shame)&#39;&#39; shame points.]&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class = &quot;cardLong shame&quot;&gt;(link: &quot;*Feel ashamed.*&quot;)[&lt;script&gt;	window.localStorage.setItem(&#39;level&#39;, +localStorage.getItem(&#39;level&#39;) + 1);
 	window.localStorage.setItem(&#39;shame&#39;, +localStorage.getItem(&#39;shame&#39;) + 1);&lt;/script&gt;(goto: (text:  $level))]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="31" name="3B" tags="" position="325,1000" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?dialogue)[&#39;&#39;Archivist: &#39;&#39; Ah. I take it the Order are gathering upstairs tonight?]
 	(replace: ?reply)[[[They are.|3C]]
@@ -1199,7 +1207,7 @@ Words]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="46" name="6A" tags="" po
 	(replace: ?img)[&lt;img src=&quot;sommelier.png&quot;&gt;]
 	(replace: ?dialogue)[&#39;&#39;Sommelier: &#39;&#39;I&#39;m busy. I don&#39;t have time to joke around.]
 	(replace: ?reply)[[[I&#39;m sorry for the interruption.|6D]]
-[[I&#39;ve actually forgotten. Please help me.|6F]]]</tw-passagedata><tw-passagedata pid="51" name="6G" tags="" position="775,1775" size="100,100">(display: &quot;talk&quot;)
+[[I&#39;ve really actually forgotten. Please help me.|6F]]]</tw-passagedata><tw-passagedata pid="51" name="6G" tags="" position="775,1775" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?img)[&lt;img src=&quot;sommelier.png&quot;&gt;]
 	(replace: ?dialogue)[&#39;&#39;Sommelier: &#39;&#39;Pah. Begone, then. And good luck to you.]
 	(replace: ?reply)[(link: &quot;To you too!&quot;)[(goto: &quot;Main&quot;)]]</tw-passagedata><tw-passagedata pid="52" name="6F" tags="" position="550,1900" size="100,100">(display: &quot;talk&quot;)
