@@ -718,7 +718,7 @@ GE.shame = +localStorage.getItem('shame');
 	&quot;Somewhat sentient push-blocks have volition, but can do nothing with it.&quot;)))
 
 (set: $about to (a:
-	&quot;This game was made in honour of Jared Marrick&#39;s 30th birthday&quot;,
+	&quot;This game was made in honour of Jarryd Marrick&#39;s 30th birthday&quot;,
 	&quot;This game is a game about pushing blocks&quot;,
 	&quot;This game is loosely inspired by real events&quot;,
 	&quot;This game is a spiritual successor to The Birthday Dungeon&quot;,
@@ -988,7 +988,7 @@ Glance (link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$o
 [[What are *you* doing in the archives?|3A]]]
 }</tw-passagedata><tw-passagedata pid="11" name="observe" tags="" position="750,275" size="100,200">(if: $tempDisplay is not false)[(print: $tempDisplay&#39;s 1st)
 ]\
-(else:)[|words&gt;[(print: 1st of (shuffled: ...(a: $room&#39;s flavour) + (repeated: 10, &quot;Nothing is notably different from how it was before.&quot;)))]\
+(else:)[|words&gt;[(print: 1st of (shuffled: ...(a: $room&#39;s flavour) + (repeated: 9, &quot;Nothing is notably different from how it was before.&quot;)))]\
 (if: (datanames: 1st of $ahead of $tiles) contains &quot;closeup&quot; and $tempDisplay is false)[(set: _next to 1st of $ahead of $tiles)(replace: ?words)[(print: _next&#39;s closeup)
 ]]](set: $tempDisplay to false)</tw-passagedata><tw-passagedata pid="12" name="1B" tags="" position="300,525" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?dialogue)[&#39;&#39;Black-robed Cultist:&#39;&#39; We need a fresh watermelon for the ritual. Your job is to retrieve one from the supply cupboard.]
@@ -1145,12 +1145,12 @@ Glance (link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$o
 	(replace: ?reply)[[[Can you help me find where the watermelons are stored?|6B]]  
 [[I shouldn&#39;t bother you. You look like you&#39;re doing very important work. |6A]]]
 }</tw-passagedata><tw-passagedata pid="26" name="spin" tags="" position="500,75" size="200,100">(display: &quot;Main&quot;)(replace: ?action)[(display: &quot;spinActions&quot;)]</tw-passagedata><tw-passagedata pid="27" name="nothing" tags="" position="1275,400" size="100,100">(set: $location to _forwards)
-(goto: $variant)</tw-passagedata><tw-passagedata pid="28" name="spinActions" tags="" position="725,75" size="100,100">You can (link-repeat: &quot;advance&quot;)[(set: $orientation to (rotated: (either: 0, 0, 0, 0, 0, 1, -1), ...$orientation))(display: &quot;advance&quot;)]
+(goto: $variant)</tw-passagedata><tw-passagedata pid="28" name="spinActions" tags="" position="725,74" size="100,100">You can (link-repeat: &quot;advance&quot;)[(set: $orientation to (rotated: (either: 0, 0, 0, 0, 0, 1, -1), ...$orientation))(display: &quot;advance&quot;)]
 Pivot (link-repeat: &quot;left&quot;)[(set: $orientation to (rotated: -1, ...$orientation))(set: _orientation to $orientation)(replace: ?display)[(display: &quot;look&quot;)](replace: ?observe)[(display: &quot;observe&quot;)]] or (link-repeat: &quot;right&quot;)[(set: $orientation to (rotated: 1, ...$orientation))(set: _orientation to $orientation)(replace: ?display)[(display: &quot;look&quot;)](replace: ?observe)[(display: &quot;observe&quot;)]]
 Glance (link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$orientation))(replace: ?observe)[To your left, you see:
 (display: &quot;look&quot;)]] or (link-repeat: &quot;right&quot;)[(set: _orientation to (rotated: 1, ...$orientation))(replace: ?observe)[To your right, you see:
 (display: &quot;look&quot;)]]
-[(link: &quot;Restart&quot;)[(goto: (text: $level))] or (link: &quot;skip&quot;)[(replace: ?skip)[Are you sure you want to skip? (link: &quot;Yes&quot;)[(goto: &quot;skip&quot;)]]] the level.]&lt;skip|</tw-passagedata><tw-passagedata pid="29" name="5" tags="" position="25,1525" size="100,200">{&lt;script&gt;var style = &quot;library&quot;;&lt;/script&gt;
+[(link: &quot;Restart&quot;)[(goto: (text: $level))] or (link: &quot;skip&quot;)[(replace: ?skip)[Are you sure you want to skip? (link: &quot;Yes&quot;)[(goto: &quot;skip&quot;)]]] the level]&lt;skip|</tw-passagedata><tw-passagedata pid="29" name="5" tags="" position="25,1525" size="100,200">{&lt;script&gt;var style = &quot;library&quot;;&lt;/script&gt;
 (set: $map to (a: 
 (a: &#39;w&#39;,&#39;s&#39;,&#39;s&#39;,&#39;s&#39;,&#39;s&#39;,&#39;s&#39;,&#39;s&#39;,&#39;s&#39;,&#39;s&#39;), 
 (a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;), 
@@ -1242,7 +1242,7 @@ Words]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="45" name="6A" tags="" po
 	(replace: ?dialogue)[&#39;&#39;Sommelier: &#39;&#39;Hmph. I surmise the black-robed cultist sent you?]
 	(replace: ?reply)[[[Yes.|6C]]]</tw-passagedata><tw-passagedata pid="47" name="6D" tags="" position="625,1775" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?img)[&lt;img src=&quot;sommelier.png&quot;&gt;]
-	(replace: ?dialogue)[&#39;&#39;Sommelier: &#39;&#39;Thank you. Now go, but please be careful in these cellars. And do not listen to the rats; they do not have your interests at heart.]
+	(replace: ?dialogue)[&#39;&#39;Sommelier: &#39;&#39;Thank you. Now go, but please be careful in these cellars. And do not listen to the rats; they do not have your best interests at heart.]
 	(replace: ?reply)[(link: &quot;Good advice. One should never trust rats&quot;)[(goto: &quot;Main&quot;)]
 	[[Talking rats? How implausible!|6G]]]</tw-passagedata><tw-passagedata pid="48" name="6C" tags="" position="325,1775" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?img)[&lt;img src=&quot;sommelier.png&quot;&gt;]
@@ -1434,9 +1434,9 @@ Glance (link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$o
 	(replace: ?img)[&lt;img src = &quot;ratKing.png&quot;&gt;]
 	(replace: ?dialogue)[&#39;&#39;King Rat: &#39;&#39;Be careful. I suspect you journeying to retrive a watermelons, and whatever this Presence is, it seems to be strongest on the lower levels.]
 	(replace: ?reply)[[[Can you help me?|10G2]]
-	[[You can talk!|10H]]]</tw-passagedata><tw-passagedata pid="80" name="10G" tags="" position="625,2725" size="100,100">(display: &quot;talk&quot;)
+	[[You can talk!|10H]]]</tw-passagedata><tw-passagedata pid="80" name="10G" tags="" position="623,2725" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?img)[&lt;img src = &quot;ratKing.png&quot;&gt;]
-	(replace: ?dialogue)[&#39;&#39;King Rat: &#39;&#39;I don&#39;t know how. My subjects and I have tried fleeing to the lower levels, but if anything it seems to gather strength the lower down we go.]
+	(replace: ?dialogue)[&#39;&#39;King Rat: &#39;&#39;I don&#39;t know how. My subjects and I have tried fleeing to the lower levels, but if anything it seems to gather strength the further down one goes.]
 	(replace: ?reply)[[[Thank you for your warning.|10H]]
 	[[You can talk!|10H]]]</tw-passagedata><tw-passagedata pid="81" name="10H" tags="" position="775,2775" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?img)[&lt;img src = &quot;ratKing.png&quot;&gt;]
