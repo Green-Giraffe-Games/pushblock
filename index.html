@@ -119,6 +119,10 @@ h3 {
   background-color: white;
 }
 
+.capital:first-letter: {
+  text-transform: capitalize;
+}
+
 /* On mouse-over, add a deeper shadow */
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -306,11 +310,7 @@ h3 {
   color: #006600;
 }
 
-.watermelon h2 {
-  color: #FF6385 !important;
-}
-
-.watermelon h3 {
+.watermelon h2, h3 {
   color: #B7245C !important;
 }
 
@@ -319,7 +319,7 @@ h3 {
 }
 
 .watermelon tw-link:hover, enchantment-link:hover{
-  color: #FF6385;
+  color: #FF6385 !important;
 }
 
 /* Lurid */
@@ -361,7 +361,7 @@ h3 {
 }
 
 .dark tw-link:hover, enchantment-link:hover{
-  color: #938274 !important;
+  color: #a49385 !important;
 }
 
 /* Shame */
@@ -378,7 +378,12 @@ h3 {
   color: #A40606 !important;
 }
 
-#audio-overlay{position:fixed;top:0;right:0;left:0;bottom:0;z-index:100000;background:#111}.lds-ring{display:block;position:relative;top:20%;margin:auto;width:20em;height:20em}.lds-ring div{box-sizing:border-box;display:block;position:absolute;width:18em;height:18em;margin:6px;border:6px solid #fff;border-radius:50%;-webkit-animation:lds-ring 1.2s cubic-bezier(.5,0,.5,1) infinite;animation:lds-ring 1.2s cubic-bezier(.5,0,.5,1) infinite;border-color:#fff transparent transparent transparent}.lds-ring div:nth-child(1){-webkit-animation-delay:-.45s;animation-delay:-.45s}.lds-ring div:nth-child(2){-webkit-animation-delay:-.3s;animation-delay:-.3s}.lds-ring div:nth-child(3){-webkit-animation-delay:-.15s;animation-delay:-.15s}@-webkit-keyframes lds-ring{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes lds-ring{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}input#audio-volume{width:100%;padding:2em 0}span#vol-title{position:relative;bottom:-2em;font-size:1rem;float:left}tw-link#audio-mute{display:inline-block;padding:.3em;width:90%;text-decoration:none;color:#111;background:#eee;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;border:1px solid #000}tw-link#audio-mute:hover{opacity:.8}tw-link#audio-mute:active{opacity:.6}tw-link#audio-mute span{display:inline-block;width:1em;position:relative;height:1em;top:.2em;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAABF0lEQVR4Ae2VJVREYRSEB3ftuFUaLhF6I22iF7TgLr1XvAc849CwiBac9Xtm3e97cefp/Pec7+mdH0mZrGtMoBomyAEHfjGHXKg07gNxeUS3BuMAqGZswE7YcOIYgqgG7BFlSQgTAgKysC2jNjQmghFQCOpMxq+QmQgmFATU4kcq/YlgfKB1lALUqFSukRIbEwpy4BTZPM/Bu9TaQ362KAsl56sAtSR+Sgv6RCFdr/gjBYiuj65c3J0eNEmXz95TgybocvmoJj3avf5l59L1iD/WglZCP7/uh8zgeQ6epdahaZENFIPCCFvEYNPW4JdNazBGzhkj6caCbSc02DRRu0+8RR/+rb7wx6D505HxCVKvG0zpp+yknHe8MBDkT/s8AAAAAElFTkSuQmCC);background-size:contain}tw-link#audio-mute.muted span{right:4px;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAASElEQVR4Ae3WsQ0AMAjAsJ7ez9MTGEmlRGL3BJzPq6prw2DDYMNgw2DDYMOwh1kAMUygQIEC2RejANVxnVE9aDOqJ39GVZWqB5Z3r1ndBX5oAAAAAElFTkSuQmCC)}div#audio-volume{float:left}div#audio-controls{font:100% Georgia,serif;font-size:1.5em;position:fixed;width:8em;height:100%;padding:1em 2em;z-index:10000;top:0;left:0;bottom:0;background:#333;color:#eee;transition:left .3s;text-align:center}div#audio-controls.closed{left:-10.5em}div#audio-controls tw-link#audio-panel-toggle{display:inline-block;width:1.5em;position:absolute;height:1.5em;top:0;right:0;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;text-decoration:none;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAAAYklEQVR4Ae3MsQFAMAAEQMDEagCgN4EuVTrbPcACeUBugDNeSdMQomI0PmYdTEYD9DA5jcVoBKuxGY1kNQ6jGRSaGaIj8gw1aI/KYVUSNqsSzMpiVT2zMjlVN0fqVW5o2luMGHqkQmD9cPYAAAAASUVORK5CYII=);background-size:contain}div#audio-controls.closed tw-link#audio-panel-toggle{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAAAZElEQVR4Ae3TpwGAMBQAUfrEeHB0cDhcXBSO7ehlgBw9N8BL/YZO95r6uA/UEbOv+ylfHRJ9z1BWLynKJqmWohyS6ijKOygKCpmjZYqXTTA2xUiCsShGAMw8/Q3ArFgFMHek0w3WCaR74eO2YQAAAABJRU5ErkJggg==)}@media screen and (max-width:800px){div#audio-controls.closed{left:-12em}div#audio-controls.closed tw-link#audio-panel-toggle{right:-1.5em}}div#story-menu{margin:1em 0}tw-link.story-menu{width:100%;display:block;font-weight:400;background:#ccc;font-size:.9em;padding:.1em 0;color:#111;border:1px solid #333}tw-link.story-menu.hide{display:none}tw-link.story-menu:hover{opacity:.8}tw-link.story-menu:active{opacity:.6}
+#audio-overlay{position:fixed;top:0;right:0;left:0;bottom:0;z-index:100000;background:#111}.lds-ring{display:block;position:relative;top:20%;margin:auto;width:20em;height:20em}.lds-ring div{box-sizing:border-box;display:block;position:absolute;width:18em;height:18em;margin:6px;border:6px solid #fff;border-radius:50%;-webkit-animation:lds-ring 1.2s cubic-bezier(.5,0,.5,1) infinite;animation:lds-ring 1.2s cubic-bezier(.5,0,.5,1) infinite;border-color:#fff transparent transparent transparent}.lds-ring div:nth-child(1){-webkit-animation-delay:-.45s;animation-delay:-.45s}.lds-ring div:nth-child(2){-webkit-animation-delay:-.3s;animation-delay:-.3s}.lds-ring div:nth-child(3){-webkit-animation-delay:-.15s;animation-delay:-.15s}@-webkit-keyframes lds-ring{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes lds-ring{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}input#audio-volume{width:100%;padding:2em 0}span#vol-title{position:relative;bottom:-2em;font-size:1rem;float:left}tw-link#audio-mute{display:inline-block;padding:.3em;width:90%;text-decoration:none;color:#111;background:#eee;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;border:1px solid #000}tw-link#audio-mute:hover{opacity:.8}tw-link#audio-mute:active{opacity:.6}tw-link#audio-mute span{display:inline-block;width:1em;position:relative;height:1em;top:.2em;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAABF0lEQVR4Ae2VJVREYRSEB3ftuFUaLhF6I22iF7TgLr1XvAc849CwiBac9Xtm3e97cefp/Pec7+mdH0mZrGtMoBomyAEHfjGHXKg07gNxeUS3BuMAqGZswE7YcOIYgqgG7BFlSQgTAgKysC2jNjQmghFQCOpMxq+QmQgmFATU4kcq/YlgfKB1lALUqFSukRIbEwpy4BTZPM/Bu9TaQ362KAsl56sAtSR+Sgv6RCFdr/gjBYiuj65c3J0eNEmXz95TgybocvmoJj3avf5l59L1iD/WglZCP7/uh8zgeQ6epdahaZENFIPCCFvEYNPW4JdNazBGzhkj6caCbSc02DRRu0+8RR/+rb7wx6D505HxCVKvG0zpp+yknHe8MBDkT/s8AAAAAElFTkSuQmCC);background-size:contain}tw-link#audio-mute.muted span{right:4px;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAASElEQVR4Ae3WsQ0AMAjAsJ7ez9MTGEmlRGL3BJzPq6prw2DDYMNgw2DDYMOwh1kAMUygQIEC2RejANVxnVE9aDOqJ39GVZWqB5Z3r1ndBX5oAAAAAElFTkSuQmCC)}div#audio-volume{float:left}div#audio-controls{font:100% Georgia,serif;font-size:1.5em;position:fixed;width:8em;height:100%;padding:1em 2em;z-index:10000;top:0;left:0;bottom:0;background:#333;color:#eee;transition:left .3s;text-align:center}div#audio-controls.closed{display: none; left:-10.5em}div#audio-controls tw-link#audio-panel-toggle{display:inline-block;width:1.5em;position:absolute;height:1.5em;top:0;right:0;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;text-decoration:none;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAAAYklEQVR4Ae3MsQFAMAAEQMDEagCgN4EuVTrbPcACeUBugDNeSdMQomI0PmYdTEYD9DA5jcVoBKuxGY1kNQ6jGRSaGaIj8gw1aI/KYVUSNqsSzMpiVT2zMjlVN0fqVW5o2luMGHqkQmD9cPYAAAAASUVORK5CYII=);background-size:contain}div#audio-controls.closed tw-link#audio-panel-toggle{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAAAZElEQVR4Ae3TpwGAMBQAUfrEeHB0cDhcXBSO7ehlgBw9N8BL/YZO95r6uA/UEbOv+ylfHRJ9z1BWLynKJqmWohyS6ijKOygKCpmjZYqXTTA2xUiCsShGAMw8/Q3ArFgFMHek0w3WCaR74eO2YQAAAABJRU5ErkJggg==)}@media screen and (max-width:800px){div#audio-controls.closed{left:-12em}div#audio-controls.closed tw-link#audio-panel-toggle{right:-1.5em}}div#story-menu{margin:1em 0}tw-link.story-menu{width:100%;display:block;font-weight:400;background:#ccc;font-size:.9em;padding:.1em 0;color:#111;border:1px solid #333}tw-link.story-menu.hide{display:none}tw-link.story-menu:hover{opacity:.8}tw-link.story-menu:active{opacity:.6}
+
+
+
+
+
 
 
 
@@ -443,7 +448,13 @@ GE.shame = +localStorage.getItem('shame');
 
 
 
-</script><tw-passagedata pid="1" name="Main" tags="" position="25,273" size="200,200">{&lt;script&gt;
+
+
+
+
+
+
+</script><tw-passagedata pid="1" name="Main" tags="" position="25,275" size="200,200">{&lt;script&gt;
 	$(&quot;.lvl, .card, .card2&quot;).addClass(style);
 &lt;/script&gt;
 }&lt;div class = &quot;lvl&quot;&gt;&lt;h2&gt;Chapter (print: (ceil: $level/5)).(abs: $level - ((floor: ($level-1)/5) * 5)): (print: $level of $levelNames)&lt;/h2&gt;&lt;/div&gt;
@@ -453,7 +464,7 @@ GE.shame = +localStorage.getItem('shame');
 
 &lt;div class = &quot;card lore&quot;&gt;|lore&gt;[&lt;h3&gt;Sight&lt;/h3&gt;|display&gt;[]]&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;card2&quot;&gt;&lt;h3&gt;Location&lt;/h3&gt;(display: &quot;flavour&quot;)&lt;/div&gt;&lt;div class=&quot;card2&quot;&gt;&lt;h3&gt;Elements&lt;/h3&gt;(display: &quot;elements&quot;)&lt;/div&gt;&lt;/div&gt;\
 (replace: ?display)[(display: &quot;look&quot;)]\
-(replace: ?observe)[(display: &quot;observe&quot;)]</tw-passagedata><tw-passagedata pid="2" name="startup" tags="startup" position="25,24" size="200,100">{
+(replace: ?observe)[(display: &quot;observe&quot;)]</tw-passagedata><tw-passagedata pid="2" name="startup" tags="startup" position="25,25" size="200,100">{
 (set: $tempDisplay to false)
 (set: $tiles to (dm: 
 	&quot;w&quot;, (dm: 
@@ -499,6 +510,13 @@ GE.shame = +localStorage.getItem('shame');
 		&quot;determiner&quot;, &quot;a&quot;,
 		&quot;solid&quot;, true,
 		&quot;immobile&quot;, &quot;n/a&quot;),
+	&#39;6&#39;, (dm:
+		&quot;name&quot;, &quot;launch-plate&quot;,
+		&quot;determiner&quot;, &quot;a&quot;,
+		&quot;solid&quot;, true,
+		&quot;immobile&quot;, true,
+		&quot;closeup&quot;, &quot;The launch-plate thrums with some mysterious energy.&quot;,
+		&quot;description&quot;, &quot;Will fling people and other objects a short distance away.&quot;),
 	&#39;7&#39;, (dm:
 		&quot;name&quot;, &quot;somewhat bottomless pit&quot;,
 		&quot;determiner&quot;, &quot;a&quot;,
@@ -551,7 +569,7 @@ GE.shame = +localStorage.getItem('shame');
 		&quot;solid&quot;, true,
 		&quot;immobile&quot;, true,
 		&quot;closeup&quot;, &quot;The door waits woodenly for you to pass through it.&quot;,
-		&quot;description&quot;, &quot;allows passage to the next room&quot;),	
+		&quot;description&quot;, &quot;allows passage to the next room&quot;),
 	&#39;m&#39;, (dm:
 		&quot;name&quot;, &quot;pushblock storage crate&quot;,
 		&quot;determiner&quot;, &quot;a&quot;,
@@ -597,7 +615,7 @@ GE.shame = +localStorage.getItem('shame');
 		&quot;determiner&quot;, &quot;a&quot;, 
 		&quot;solid&quot;, true,
 		&quot;immobile&quot;, true,
-		&quot;closeup&quot;, &quot;You&#39;re not sure who the statue depicts. It might be one of the lesser Crabcosan gods. Tanu or Ergloth or Sprud. Maybe someone like that.&quot;,
+		&quot;closeup&quot;, &quot;You&#39;re not sure who the statue depicts. It might be one of the lesser Crabcosan gods. Tanu or Ergloth or Sprud, or someone else like that.&quot;,
 		&quot;description&quot;, &quot;an immovable obstacle&quot;),
 	&#39;t&#39;, (dm:
 		&quot;name&quot;, &quot;row of stalactites&quot;,
@@ -616,7 +634,22 @@ GE.shame = +localStorage.getItem('shame');
 		&quot;determiner&quot;, &quot;a&quot;, 
 		&quot;solid&quot;, false, 
 		&quot;immobile&quot;, true,
-		&quot;onText&quot;, &quot;Mushrooms crumple underfoot, spurting spores into the air. They feel a bit like a rotten high-pile rug.&quot;),
+		&quot;onText&quot;, &quot;Mushrooms crumple underfoot. (either: &#39;They spurt spores into the air&#39;, &#39;They feel a bit like a rotting high-pile rug&#39;).&quot;,
+		&quot;description&quot;, &quot;an inconsequential cluster of mushrooms&quot;),
+	&#39;v&#39;, (dm:
+		&quot;name&quot;, &quot;watermelon vines&quot;,
+		&quot;determiner&quot;, &quot;some&quot;,
+		&quot;solid&quot;, true,
+		&quot;immobile&quot;, true,
+		&quot;closeup&quot;, &quot;The bewitching smell of watermelons is especially strong here.&quot;,
+		&quot;description&quot;, &quot;an immovable tangle of unpassable vines&quot;),
+	&#39;V&#39;, (dm:
+		&quot;name&quot;, &quot;oversized watermelon&quot;,
+		&quot;determiner&quot;, &quot;an&quot;,
+		&quot;solid&quot;, true,
+		&quot;immobile&quot;, true,
+		&quot;closeup&quot;, &quot;The oversized watermelon towers above you. There&#39;s no way you could move it.&quot;,
+		&quot;description&quot;, &quot;immovable due to its unusual enormity&quot;),
 	&#39;W&#39;, (dm:
 		&quot;name&quot;, &quot;angry sommelier&quot;,
 		&quot;determiner&quot;, &quot;an&quot;,
@@ -641,13 +674,14 @@ GE.shame = +localStorage.getItem('shame');
 	&#39;8&#39;, &#39;barrelplate&#39;,
 	&#39;2&#39;, &#39;ice&#39;,
 	&#39;3&#39;, &#39;sentient&#39;,
-	&#39;5&#39;, &#39;lore&#39;))
+	&#39;5&#39;, &#39;lore&#39;,
+	&#39;6&#39;, &#39;launchSelf&#39;))
 
 (set: $collision to (dm:
 	&#39;7&#39;, &#39;pitCollide&#39;,
 	&#39;9&#39;, &#39;plateCollide&#39;,
 	&#39;4&#39;, &#39;bridge&#39;,
-	&#39;5&#39;, &#39;anti-bridge collide&#39;))
+	&#39;6&#39;, &#39;launchObject&#39;))
 
 (set: $defaultRoom to (dm:
 	&#39;name&#39;, &#39;Nondescript room&#39;,
@@ -661,14 +695,12 @@ GE.shame = +localStorage.getItem('shame');
 	&quot;You can push the push blocks by walking into them.&quot;,
 	&quot;Glancing lets you look around without changing the orientation of your body.&quot;, 
 	&quot;The Black-Robed Cultist commands the respect of most, but not all, of the other cultists.&quot;,  
-	&quot;The game&#39;s plot is allegorical.&quot;,  
-	&quot;The arrows on the left of the page allow you to travel to the past.&quot;, 
-	&quot;Overcoming adversity builds resilience.&quot;, 
+	&quot;The game&#39;s plot is allegorical.&quot;, 
 	&quot;Technically, pushing a somewhat sentient push-block into a pit constitutes murder.&quot;,
-	&quot;Lore books are hidden in some areas of the dungeon.&quot;, 
+	&quot;Lore books are hidden in each of the major areas of the dungeon.&quot;, 
 	&quot;Your observations are recorded on the &#39;Observation&#39; card.&quot;, 
 	&quot;You can skip any level, but doing so will cause you to accrue shame points.&quot;,
-	&quot;You might need to reset the puzzle if you push a push-block into the wrong place.&quot;,
+	&quot;You might need to reset the puzzle if you push unwisely.&quot;,
 	&quot;Most puzzles can be solved by pushing something onto the pressure plate.&quot;,
 	&quot;The Archivist archives in the Archives.&quot;,
 	&quot;Some rooms have decorations that span an entire wall. You can use these to get your bearings.&quot;,
@@ -680,6 +712,7 @@ GE.shame = +localStorage.getItem('shame');
 	&quot;You don&#39;t need to activate pressure plates to leave rooms with regular doors.&quot;,
 	&quot;The Fungus Keeper is responsible for cultivating the cult&#39;s supply of fungi.&quot;,
 	&quot;As in life, there are 30 levels in this game.&quot;,
+	&quot;As in our world, the ice blocks in push:block are not subject to friction.&quot;,
 	&quot;Somewhat sentient push-blocks have volition, but can do nothing with it.&quot;)))
 
 (set: $about to (a:
@@ -687,11 +720,16 @@ GE.shame = +localStorage.getItem('shame');
 	&quot;This game is a game about pushing blocks&quot;,
 	&quot;This game is loosely inspired by real events&quot;,
 	&quot;This game is a spiritual successor to The Birthday Dungeon&quot;,
-	&quot;This game was created with Twine, and also with love&quot;))
+	&quot;This game was created with Twine, and also with love&quot;,
+	&quot;This game can&#39;t be enjoyed so much as &#39;enjoyed&#39;&quot;,
+	&quot;This game has barely been playtested at all&quot;))
 
 (set: $lore to (dm:
-	2, &quot;The tome is actually a guest book for the library. The comments are highly complimentary.&quot;,
-	23, &quot;*Watermelons serve as an ideal vessel for ill will. The watermelon&#39;s veins can accomodate many kinds of unwanted emotions, which can be made to dissapate entirely by destroying the watermelon in the normal way.*&quot;))
+	2, &quot;*There are two leading theories on why the cermony is performed topless. The first links the cult&#39;s current practices to some older fertility festival. The second holds that it&#39;s probably just to stop the watermlon juices from getting on one&#39;s clothes.*&quot;,
+	7, &quot;*The cult once had two chapters. The ceremonies performed by either chapter diverged by degrees until they were amost unrecognisable. The American chapter officially broke with the Australian chapter when they dropped the watermelon-related aspects of the ceremony altogether.*&quot;,
+	14, &quot;The ceremonial cudgels can be made from any combination of materials materials, but they are always carved into one of three familiar shapes. The Tree, The Head, The Squid. The significance of these shapes has been lost, but the tradition remains.&quot;,
+	23, &quot;*Watermelons serve as an ideal vessel for ill will. The watermelon&#39;s veins can accomodate many kinds of unwanted emotions, which can be made to dissapate entirely by destroying the watermelon in the normal way.*&quot;,
+	27, &quot;*The ceremonies are traditionally held on Ostara and Mabon. After each ceremony the remains of the watermelons are left to feed the grass. When we die we can take solace from the fact that our bodies will feed the watermelons, and so the great circle will continue to turn.*&quot;))
 
 (set: $levelNames to (dm:
 	1, &#39;The Library&#39;,
@@ -714,10 +752,17 @@ GE.shame = +localStorage.getItem('shame');
 	18, &#39;The Last of the Pushblock Miners&#39;,
 	19, &#39;Post-Storage&#39;,
 	20, &#39;Sentience&#39;,
-	21, &#39;Caves&#39;,
+	21, &#39;Getting over It&#39;,
 	22, &#39;Salamandala&#39;,
-	23, &#39;Claustrophobia&#39;,
-	24, &#39;There and back and there again&#39;))
+	23, &#39;Squeezing Room Only&#39;,
+	24, &#39;Mush Room&#39;,
+	25, &#39;Fun Guy&#39;,
+	26, &#39;Watermelon Fields&#39;,
+	27, &#39;Watermelon Fields&#39;,
+	28, &#39;Watermelon Fields Forever&#39;,
+	29, &#39;Watermelon Fields Forever&#39;,
+	30, &#39;Watermelon Fields Forever&#39;
+	))
 	
 (set: $chapterNames to (dm:
 	1, &#39;library&#39;,
@@ -751,6 +796,14 @@ GE.shame = +localStorage.getItem('shame');
 	23, &#39;&lt;img src=&quot;fungus.png&quot;&gt;&#39;,
 	24, &#39;&lt;img src=&quot;fungusKeeper.png&quot;&gt;&#39;,
 	25, &#39;&lt;img src=&quot;fungalOutcast.png&quot;&gt;&#39;,
+	26, &#39;&lt;img src=&quot;melon.png&quot;&gt;&#39;,
+	27, &#39;&lt;img src=&quot;melon.png&quot;&gt;&#39;,
+	28, &#39;&lt;img src=&quot;melon.png&quot;&gt;&#39;,
+	29, &#39;&lt;img src=&quot;melon.png&quot;&gt;&#39;,
+	30, &#39;&lt;img src=&quot;melonie.png&quot;&gt;&#39;,
+	31, &#39;&lt;img src=&quot;cultistFish.png&quot;&gt;&#39;,
+	34, &#39;&lt;img src = &quot;cultist.png&quot;&gt;&#39;,
+	98, &#39;&lt;img src=&quot;shame.png&quot;&gt;&#39;,
 	99, &#39;&lt;img src=&quot;lore.png&quot;&gt;&#39;))
 
 }&lt;script&gt;
@@ -765,6 +818,9 @@ A.newTrack(&#39;collide&#39;, &#39;audio/collide.wav&#39;);
 A.newTrack(&#39;fall&#39;, &#39;audio/fall.wav&#39;);
 A.newTrack(&#39;push&#39;, &#39;audio/push.wav&#39;);
 A.newTrack(&#39;shame&#39;, &#39;audio/shame.wav&#39;);
+A.newTrack(&#39;ice&#39;, &#39;audio/ice.wav&#39;);
+A.newTrack(&#39;fling&#39;, &#39;audio/fling.wav&#39;);
+A.newTrack(&#39;outro&#39;, &#39;audio/outro.mp3&#39;);
 &lt;/script&gt;</tw-passagedata><tw-passagedata pid="3" name="1" tags="" position="25,525" size="100,200">{&lt;script&gt;var style = &quot;library&quot;;&lt;/script&gt;
 (set: $map to (a: 
 (a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;), 
@@ -776,14 +832,14 @@ A.newTrack(&#39;shame&#39;, &#39;audio/shame.wav&#39;);
 (set: $orientation to (a: (a: 1,0), (a: 0,1), (a: -1, 0), (a: 0,-1)))
 (set: $level to 1)
 (set: $shame to 0)
-(set: $room to $defaultRoom + (dm: &quot;name&quot;, &quot;library&quot;, &quot;text&quot;, &quot;Books are contained here.&quot;, &quot;curses&quot;, false))
+(set: $room to $defaultRoom + (dm: &quot;name&quot;, &quot;library&quot;, &quot;text&quot;, &quot;Books are confined here.&quot;, &quot;curses&quot;, false))
 (set: $elements to (a: &#39;1&#39;, &#39;9&#39;))
 (set: $variant to &quot;Main&quot;)
 (if: (history:) contains (text: $level))[(goto: $variant)]
 (display: &quot;talk&quot;)
 	(replace: ?dialogue)[&#39;&#39;Black-robed Cultist: &#39;&#39;Oh. It&#39;s you.]
 	(replace: ?reply)[[[The same could be said about you.|1B]]
-[[*Ignore the black-robed cultist.*|1E]]]}</tw-passagedata><tw-passagedata pid="4" name="Intro" tags="" position="25,147" size="200,100">{
+[[*Ignore the black-robed cultist.*|1E]]]}</tw-passagedata><tw-passagedata pid="4" name="Intro" tags="" position="25,150" size="200,100">{
 	(set: $level to GE[&quot;level&quot;])
 	(set: $shame to GE[&quot;shame&quot;])
 	(set: _images to (shuffled: ...(datavalues: $speakers)))
@@ -845,7 +901,7 @@ A.newTrack(&#39;shame&#39;, &#39;audio/shame.wav&#39;);
 }(for: each _thing, ...$ahead)
 	[(set: _qualities to _thing of $tiles)\
 	(unless: _qualities&#39;s name is &quot;nothing&quot; or $track contains &#39;w&#39;)[(upperfirst: _qualities&#39;s determiner) (lowercase: _qualities&#39;s name), (abs: $track&#39;s length) metres away.&lt;br&gt;](replace: &quot;1 metres&quot;)[1 metre](replace: &quot;0 metres away&quot;)[right before you]\
-	(set: $track to it + (a: _thing))]</tw-passagedata><tw-passagedata pid="6" name="advance" tags="" position="500,274" size="100,200">{ 
+	(set: $track to it + (a: _thing))]</tw-passagedata><tw-passagedata pid="6" name="advance" tags="" position="500,275" size="100,200">{ 
 (set: _forwards to (a: ($location&#39;s 1st + 1st of $orientation&#39;s 1st), ($location&#39;s 2nd + 2nd of $orientation&#39;s 1st)))
 (set: _pushElement to _forwards&#39;s 1st of _forwards&#39;s 2nd of $map)
 (set: _qualities to _pushElement of $tiles)
@@ -929,7 +985,7 @@ Glance (link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$o
 [[What are *you* doing in the archives?|3A]]]
 }</tw-passagedata><tw-passagedata pid="11" name="observe" tags="" position="750,275" size="100,200">(if: $tempDisplay is not false)[(print: $tempDisplay&#39;s 1st)
 ]\
-(else:)[|words&gt;[](print: 1st of (shuffled: ...(a: $room&#39;s flavour) + (repeated: 10, &quot;Nothing is notably different from how it was before.&quot;)))\
+(else:)[|words&gt;[(print: 1st of (shuffled: ...(a: $room&#39;s flavour) + (repeated: 10, &quot;Nothing is notably different from how it was before.&quot;)))]\
 (if: (datanames: 1st of $ahead of $tiles) contains &quot;closeup&quot; and $tempDisplay is false)[(set: _next to 1st of $ahead of $tiles)(replace: ?words)[(print: _next&#39;s closeup)
 ]]](set: $tempDisplay to false)</tw-passagedata><tw-passagedata pid="12" name="1B" tags="" position="300,525" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?dialogue)[&#39;&#39;Black-robed Cultist:&#39;&#39; We need a fresh watermelon for the ritual. Your job is to retrieve one from the supply cupboard.]
@@ -938,7 +994,7 @@ Glance (link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$o
 	(replace: ?dialogue)[&#39;&#39;Black-robed Cultist:&#39;&#39; I&#39;m going to be cleaning the cudgels instead, as befits a cultist of my station.]
 	(replace: ?reply)[[[I won&#39;t forget my station again, oh black-robed one.|1D]]]</tw-passagedata><tw-passagedata pid="14" name="1D" tags="" position="525,525" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?dialogue)[&#39;&#39;Black-robed Cultist:&#39;&#39; There are many push block puzzles between here and there. Please make sure you reset them behind you.]
-	(replace: ?reply)[(link: &quot;Will do.&quot;)[(goto: $variant)]]</tw-passagedata><tw-passagedata pid="15" name="2" tags="" position="25,775" size="100,200">{&lt;script&gt;var style = &quot;library&quot;;&lt;/script&gt;
+	(replace: ?reply)[(link: &quot;Will do.&quot;)[&lt;script&gt;var style = &quot;library&quot;;&lt;/script&gt;(goto: $variant)]]</tw-passagedata><tw-passagedata pid="15" name="2" tags="" position="25,775" size="100,200">{&lt;script&gt;var style = &quot;library&quot;;&lt;/script&gt;
 (set: $map to (a: 
 (a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;), 
 (a: &#39;s&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;), 
@@ -1011,6 +1067,7 @@ Glance (link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$o
 
 (else-if: _qualities2&#39;s solid is false)
 	[
+		&lt;script&gt;A.track(&#39;ice&#39;).play();&lt;/script&gt;
 		(set: $tempDisplay to (a: &quot;The ice block slides across the floor until it hits the (print: $tempDisplay&#39;s 2nd).&quot;, _qualities3&#39;s name))
 		(set: _forwards&#39;s 1st of _forwards&#39;s 2nd of $map to &#39;0&#39;)
 		(set: _forwards2&#39;s 1st of _forwards2&#39;s 2nd of $map to _pushElement)
@@ -1024,7 +1081,7 @@ Glance (link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$o
 		(goto: $variant)
 	]
 
-}</tw-passagedata><tw-passagedata pid="21" name="plate" tags="" position="1400,274" size="100,100">(set: $tempDisplay to false)&lt;script&gt;A.track(&#39;plate&#39;).play();&lt;/script&gt;(replace: ?observe)[The weight of the (print: _qualities&#39;s name) activates the pressure plate. A hidden door creaks open.]
+}</tw-passagedata><tw-passagedata pid="21" name="plate" tags="" position="1400,275" size="100,100">(set: $tempDisplay to false)&lt;script&gt;A.track(&#39;plate&#39;).play();&lt;/script&gt;(replace: ?observe)[The weight of the (print: _qualities&#39;s name) activates the pressure plate. A hidden door creaks open.]
 		(replace: ?action)[(link: &quot;Leave&quot;)[&lt;script&gt;window.localStorage.setItem(&#39;level&#39;, +localStorage.getItem(&#39;level&#39;) + 1);&lt;/script&gt;(set: $level to it + 1)(goto: (text: $level))] the (print: $room&#39;s name).]</tw-passagedata><tw-passagedata pid="22" name="plateCollide" tags="" position="1150,400" size="100,100">(unless: _pushElement is &#39;b&#39;)
 	[
 	&lt;script&gt;A.track(&#39;plate&#39;).play();&lt;/script&gt;
@@ -1058,7 +1115,7 @@ Glance (link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$o
 (set: _forwards&#39;s 1st of _forwards&#39;s 2nd of $map to &#39;0&#39;)
 (set: $location to _forwards)
 &lt;script&gt;A.track(&#39;fall&#39;).play();&lt;/script&gt;
-(goto: $variant)</tw-passagedata><tw-passagedata pid="25" name="6" tags="" position="25,1774" size="100,200">{
+(goto: $variant)</tw-passagedata><tw-passagedata pid="25" name="6" tags="" position="25,1775" size="100,200">{
 &lt;script&gt;var style = &quot;cellar&quot;;&lt;/script&gt;
 (set: $map to (a: 
 (a: &#39;w&#39;,&#39;r&#39;,&#39;r&#39;,&#39;r&#39;,&#39;r&#39;,&#39;r&#39;,&#39;w&#39;), 
@@ -1073,7 +1130,7 @@ Glance (link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$o
 (set: $room to $defaultRoom + (dm: 
 	&quot;name&quot;, &quot;cellar antechamber&quot;, 
 	&quot;text&quot;, &quot;It is a cozy room filled with wooden barrels. The sommelier wanders from barrel to barrel, pressing his ears against them with a look of concentration on his face.&quot;,
-	&quot;flavour&quot;, &quot;The sommelier mutters that a particular wine would pair wonderfully with watermelon.&quot;))
+	&quot;flavour&quot;, &quot;The sommelier mutters about how a particular wine would pair wonderfully with watermelon.&quot;))
 (set: $elements to (a: &#39;1&#39;, &#39;b&#39;,&#39;9&#39;))
  
 (set: $level to 6)
@@ -1110,12 +1167,13 @@ Glance (link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$o
 (display: &quot;talk&quot;)
 	(replace: ?img)[&lt;img src=&quot;cultistFish.png&quot;&gt;]
 	(replace: ?dialogue)[&#39;&#39;Waterlogged cultist: &#39;&#39; ...]
-	(replace: ?reply)[[[... hello?|5B]]]}</tw-passagedata><tw-passagedata pid="30" name="skip" tags="" position="1000,273" size="100,200">&lt;script&gt;$(&quot;.card&quot;).addClass(style);&lt;/script&gt;
+	(replace: ?reply)[[[... hello?|5B]]]}</tw-passagedata><tw-passagedata pid="30" name="skip" tags="" position="1000,275" size="100,200">&lt;script&gt;$(&quot;.card&quot;).addClass(style);&lt;/script&gt;
 &lt;script&gt;A.track(&#39;shame&#39;).play();&lt;/script&gt;{
 (set: $level to it + 1)
 (set: $shame to it + 1)
 }&lt;div class = &quot;card cardLong&quot;&gt;&lt;div class = &quot;speaker&quot;&gt;&lt;img src = &quot;shame.png&quot;&gt;&lt;/div&gt;&lt;div class = &quot;dialogue&quot;&gt;You have gained &#39;&#39;1&#39;&#39; shame point.(if: $shame &gt; 1)[
-Shamefully, you now have &#39;&#39;(print: $shame)&#39;&#39; shame points.]&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class = &quot;cardLong shame&quot;&gt;(link: &quot;*Feel ashamed.*&quot;)[&lt;script&gt;	window.localStorage.setItem(&#39;level&#39;, +localStorage.getItem(&#39;level&#39;) + 1);
+Shamefully, you now have &#39;&#39;(print: $shame)&#39;&#39; shame points.]&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class = &quot;cardLong shame&quot;&gt;(link: &quot;*Feel ashamed.*&quot;)[&lt;script&gt;	window.localStorage.setItem(&#39;level&#39;, +localStorage.getItem(&#39;level&#39;) + 1);
 	window.localStorage.setItem(&#39;shame&#39;, +localStorage.getItem(&#39;shame&#39;) + 1);&lt;/script&gt;(goto: (text:  $level))]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="31" name="3B" tags="" position="325,1000" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?dialogue)[&#39;&#39;Archivist: &#39;&#39; Ah. I take it the Order are gathering upstairs tonight?]
 	(replace: ?reply)[[[They are.|3C]]
@@ -1152,7 +1210,8 @@ I ask again: what are you doing in the archives?]
 (a: &#39;r&#39;,&#39;0&#39;,&#39;0&#39;,&#39;b&#39;,&#39;0&#39;,&#39;B&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;), 
 (a: &#39;r&#39;,&#39;0&#39;,&#39;0&#39;,&#39;b&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;B&#39;,&#39;0&#39;,&#39;d&#39;), 
 (a: &#39;r&#39;,&#39;0&#39;,&#39;0&#39;,&#39;b&#39;,&#39;0&#39;,&#39;B&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;), 
-(a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;)))
+(a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;0&#39;,&#39;w&#39;),
+(a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;5&#39;,&#39;w&#39;)))
 (set: $location to (a: 2,3))
 (set: $orientation to (a: (a: 1,0), (a: 0,1), (a: -1, 0), (a: 0,-1)))
 (set: $room to $defaultRoom + (dm: 
@@ -1168,24 +1227,21 @@ I ask again: what are you doing in the archives?]
 	(replace: ?img)[&lt;img src=&quot;rat.png&quot;&gt;]
 	(replace: ?dialogue)[&#39;&#39;Rat: &#39;&#39;Squeak.]
 	(replace: ?reply)[[[I don&#39;t believe you.|7B]]  
-[[I&#39;m not sure if I should trust you.|7B]]]}</tw-passagedata><tw-passagedata pid="44" name="test" tags="" position="1025,600" size="100,100">{(set: $map to (a: 
+[[I&#39;m not sure if I should trust you.|7B]]]}</tw-passagedata><tw-passagedata pid="44" name="test" tags="" position="2150,575" size="100,100">{(set: $map to (a: 
 (a: &#39;w&#39;,&#39;w&#39;,&#39;d&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;), 
-(a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;7&#39;,&#39;0&#39;,&#39;w&#39;), 
-(a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;6&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;,&#39;0&#39;,&#39;w&#39;,), 
-(a: &#39;w&#39;,&#39;0&#39;,&#39;1&#39;,&#39;0&#39;,&#39;7&#39;,&#39;0&#39;,&#39;w&#39;), 
-(a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;7&#39;,&#39;0&#39;,&#39;w&#39;), 
-(a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;7&#39;,&#39;0&#39;,&#39;w&#39;), 
-(a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;7&#39;,&#39;9&#39;,&#39;w&#39;), 
+(a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;), 
+(a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;1&#39;,&#39;6&#39;,&#39;0&#39;,&#39;9&#39;, &#39;w&#39;), 
+(a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;7&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;),
 (a: &#39;s&#39;,&#39;s&#39;,&#39;s&#39;,&#39;s&#39;,&#39;s&#39;,&#39;s&#39;,&#39;s&#39;)))
 (set: $location to (a: 3,3))
 (set: $orientation to (a: (a: 1,0), (a: 0,1), (a: -1, 0), (a: 0,-1)))
 (set: $level to 23)
 (set: $room to $defaultRoom + (dm: &quot;name&quot;, &quot;library&quot;, &quot;text&quot;, &quot;Books are contained here.&quot;, &quot;curses&quot;, false))
-(set: $elements to (a: &#39;3&#39;, &#39;9&#39;))
+(set: $elements to (a: &#39;6&#39;))
 (set: $variant to &quot;Main&quot;)
 (if: (history:) contains &quot;1&quot;)[(goto: $variant)]
 (goto: $variant)
-&lt;script&gt;var style = &quot;dark&quot;;&lt;/script&gt;</tw-passagedata><tw-passagedata pid="45" name="talk" tags="" position="300,76" size="100,100">&lt;script&gt;
+&lt;script&gt;var style = &quot;dark&quot;;&lt;/script&gt;</tw-passagedata><tw-passagedata pid="45" name="talk" tags="" position="300,75" size="100,100">&lt;script&gt;
 	$(&quot;.card&quot;).addClass(style);
 &lt;/script&gt;&lt;div class = &quot;card cardLong&quot;&gt;&lt;div class = &quot;speaker&quot;&gt;|img&gt;[(print: $speakers&#39;s $level)]&lt;/div&gt;&lt;div class = &quot;dialogue&quot;&gt;|dialogue&gt;[&#39;&#39;Black-robed Cultist: &#39;&#39;Oh. It&#39;s you.]&lt;/div&gt;&lt;/div&gt;
 &lt;div class = &quot;card cardRespond&quot;&gt;|reply&gt;[Words
@@ -1197,7 +1253,7 @@ Words]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="46" name="6A" tags="" po
 	(replace: ?dialogue)[&#39;&#39;Sommelier: &#39;&#39;Hmph. I surmise the black-robed cultist sent you?]
 	(replace: ?reply)[[[Yes.|6C]]]</tw-passagedata><tw-passagedata pid="48" name="6D" tags="" position="625,1775" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?img)[&lt;img src=&quot;sommelier.png&quot;&gt;]
-	(replace: ?dialogue)[&#39;&#39;Sommelier: &#39;&#39;Thank you. Now go, but please be careful in these cellars. Do not listen to the rats; they do not have your interests at heart.]
+	(replace: ?dialogue)[&#39;&#39;Sommelier: &#39;&#39;Thank you. Now go, but please be careful in these cellars. And do not listen to the rats; they do not have your interests at heart.]
 	(replace: ?reply)[(link: &quot;Good advice. One should never trust rats&quot;)[(goto: &quot;Main&quot;)]
 	[[Talking rats? How implausible!|6G]]]</tw-passagedata><tw-passagedata pid="49" name="6C" tags="" position="325,1775" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?img)[&lt;img src=&quot;sommelier.png&quot;&gt;]
@@ -1357,12 +1413,7 @@ Words]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="46" name="6A" tags="" po
 
 &lt;div class = &quot;card&quot;&gt;&lt;h3&gt;Sight&lt;/h3&gt;|display&gt;[]&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;card2&quot;&gt;&lt;h3&gt;Location&lt;/h3&gt;(display: &quot;flavour&quot;)&lt;/div&gt;&lt;div class=&quot;card2&quot;&gt;&lt;h3&gt;Elements&lt;/h3&gt;(display: &quot;elements&quot;)&lt;/div&gt;&lt;/div&gt;\
 (replace: ?display)[(display: &quot;waterlogged&quot;)]\
-(replace: ?observe)[(display: &quot;semiblindObserve&quot;)]
-
-(print: $ahead)
-(print: $location)
-(for: each _row, ...$map)[
-(print: _row)]</tw-passagedata><tw-passagedata pid="72" name="semiblindActions" tags="" position="1150,75" size="100,100">You can (link-repeat: &quot;advance&quot;)[(display: &quot;advance&quot;)]
+(replace: ?observe)[(display: &quot;semiblindObserve&quot;)]</tw-passagedata><tw-passagedata pid="72" name="semiblindActions" tags="" position="1150,75" size="100,100">You can (link-repeat: &quot;advance&quot;)[(display: &quot;advance&quot;)]
 Pivot (link-repeat: &quot;left&quot;)[(set: $orientation to (rotated: -1, ...$orientation))(set: _orientation to $orientation)(replace: ?display)[(display: &quot;waterlogged&quot;)](replace: ?observe)[(display: &quot;semiblindObserve&quot;)]] or (link-repeat: &quot;right&quot;)[(set: $orientation to (rotated: 1, ...$orientation))(set: _orientation to $orientation)(replace: ?display)[(display: &quot;waterlogged&quot;)](replace: ?observe)[(display: &quot;semiblindObserve&quot;)]]
 Glance (link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$orientation))(replace: ?observe)[To your left, you see:
 (display: &quot;waterlogged&quot;)]] or (link-repeat: &quot;right&quot;)[(set: _orientation to (rotated: 1, ...$orientation))(replace: ?observe)[To your right, you see:
@@ -1373,7 +1424,7 @@ Glance (link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$o
 	(replace: ?img)[&lt;img src = &quot;ratKing.png&quot;&gt;]
 	(replace: ?dialogue)[&#39;&#39;King Rat: &#39;&#39;Something has gone deeply wrong in these cellars. Something unnatural lurks down here.]
 	(replace: ?reply)[[[I know. I have seen it.|10B]]
-	[[You&#39;re a talking rat!!|10C]]]</tw-passagedata><tw-passagedata pid="76" name="10B" tags="" position="325,2775" size="100,100">(display: &quot;talk&quot;)
+	[[You can talk!!|10C]]]</tw-passagedata><tw-passagedata pid="76" name="10B" tags="" position="325,2775" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?img)[&lt;img src = &quot;ratKing.png&quot;&gt;]
 	(replace: ?dialogue)[&#39;&#39;King Rat: &#39;&#39;It appears to all of us differently. To us it looks like a rat, but never exactly like a rat. The face will be wrong, or the fur, or in place of the eyes there will be two empty holes.]
 	(replace: ?reply)[[[It appears to me as a waterlogged cultist.|10D]]
@@ -1406,7 +1457,7 @@ Glance (link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$o
 	(replace: ?img)[&lt;img src = &quot;ratKing.png&quot;&gt;]
 	(replace: ?dialogue)[&#39;&#39;King Rat: &#39;&#39;I wish I could. But all I can offer is advice. Be careful. Be safe. Hurry back upstairs as soon as you can.]
 	(replace: ?reply)[[[Thank you for your warning.|10H]]
-	[[You can talk!|10H]]]</tw-passagedata><tw-passagedata pid="84" name="progress" tags="" position="1950,275" size="100,200">&lt;script&gt;
+	[[You can talk!|10H]]]</tw-passagedata><tw-passagedata pid="84" name="progress" tags="" position="2050,275" size="100,200">&lt;script&gt;
 	var x = document.getElementById(&quot;snackbar&quot;);
 	x.className = &quot;show&quot;;
 	setTimeout(function(){ x.className = x.className.replace(&quot;show&quot;, &quot;&quot;); }, 5000);
@@ -1485,9 +1536,9 @@ Glance (link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$o
 (display: &quot;talk&quot;)
 	(replace: ?dialogue)[*Candles have been planted in the recesses of the walls. Some have burned down, but some are still burning.*]
 	(replace: ?reply)[[[*Watch*|13A]]]}</tw-passagedata><tw-passagedata pid="93" name="12A" tags="" position="175,3275" size="100,100">(display: &quot;talk&quot;)
-	(replace: ?dialogue)[&#39;&#39;White cat:&#39;&#39; I assume this is a joke? Asking what I, a *cat*, am doing in the Catacombs? ]
+	(replace: ?dialogue)[&#39;&#39;White cat:&#39;&#39; I assume this is a joke? Asking what I, a *cat*, am doing in the *Cat*-acombs?]
 	(replace: ?reply)[[[I don&#39;t get it.|12B]]
-	[[The question stands. What are you doing in the Catacombs, Cat?|12C]]]</tw-passagedata><tw-passagedata pid="94" name="12B" tags="" position="325,3275" size="100,100">(display: &quot;talk&quot;)
+	[[It&#39;s a legitimate question. What are you doing in the Catacombs, Cat?|12C]]]</tw-passagedata><tw-passagedata pid="94" name="12B" tags="" position="325,3275" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?dialogue)[&#39;&#39;White cat:&#39;&#39; No. The last cultist to come this way didn&#39;t get it either.]
 	(replace: ?reply)[[[Have you met others of our order?|12D]]]</tw-passagedata><tw-passagedata pid="95" name="12C" tags="" position="325,3400" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?dialogue)[&#39;&#39;White cat:&#39;&#39; A silly question. More pressing matters are at hand. You humans are always talking just for the sake of it.]
@@ -1498,9 +1549,9 @@ Glance (link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$o
 	[[Bye, Talking Cat!|12F]]]</tw-passagedata><tw-passagedata pid="97" name="12E" tags="" position="625,3275" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?dialogue)[&#39;&#39;White cat:&#39;&#39; I&#39;ll wish you luck for when you reach the mines. I&#39;m sure you have nothing to fear. Nothing rotted, waterlogged, and rotten, or anything like that.]
 	(replace: ?reply)[(link: &quot;Bye, White Cat!&quot;)[(goto: $variant)]]</tw-passagedata><tw-passagedata pid="98" name="12F" tags="" position="625,3400" size="100,100">(display: &quot;talk&quot;)
-	(replace: ?dialogue)[&#39;&#39;White cat:&#39;&#39; Goodbye, talking human. Best of luck for when you reach the mines. I look forward to seeing if you make it back to the Catacombs.]
-	(replace: ?reply)[(link: &quot;Goodbye, Talking Cat!&quot;)[(goto: $variant)]]</tw-passagedata><tw-passagedata pid="99" name="13A" tags="" position="175,3528" size="100,100">(display: &quot;talk&quot;)
-	(replace: ?dialogue)[*A gust of wind blows through the chamber. All the candles gutter and die, save one precarious flame.*]
+	(replace: ?dialogue)[&#39;&#39;White cat:&#39;&#39; Goodbye, talking human. Best of luck for when you reach the mines. I look forward to seeing if you make it back alive.]
+	(replace: ?reply)[(link: &quot;Goodbye, Talking Cat!&quot;)[(goto: $variant)]]</tw-passagedata><tw-passagedata pid="99" name="13A" tags="" position="175,3525" size="100,100">(display: &quot;talk&quot;)
+	(replace: ?dialogue)[*A gust of wind blows through the chamber. All the candles gutter and die, save for one precarious flame.*]
 	(replace: ?reply)[(link: &quot;*Begin*&quot;)[(goto: &quot;Main&quot;)]]</tw-passagedata><tw-passagedata pid="100" name="14" tags="" position="25,3775" size="100,200">{&lt;script&gt;var style = &quot;catacombs&quot;;&lt;/script&gt;
 (set: $map to (a: 
 (a: &#39;w&#39;,&#39;c&#39;,&#39;c&#39;,&#39;c&#39;,&#39;c&#39;,&#39;c&#39;), 
@@ -1508,8 +1559,8 @@ Glance (link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$o
 (a: &#39;w&#39;,&#39;S&#39;,&#39;0&#39;,&#39;2&#39;,&#39;0&#39;,&#39;7&#39;,&#39;w&#39;), 
 (a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;7&#39;,&#39;w&#39;), 
 (a: &#39;w&#39;,&#39;0&#39;,&#39;9&#39;,&#39;0&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;), 
-(a: &#39;w&#39;,&#39;0&#39;,&#39;S&#39;,&#39;0&#39;,&#39;w&#39;), 
-(a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;)))
+(a: &#39;w&#39;,&#39;0&#39;,&#39;S&#39;,&#39;0&#39;,&#39;0&#39;,&#39;5&#39;), 
+(a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;)))
 (set: $location to (a: 5,3))
 (set: $orientation to (a: (a: 0,-1), (a: 1,0), (a: 0,1), (a: -1, 0)))
 (set: $room to $defaultRoom + (dm: 
@@ -1522,7 +1573,7 @@ Glance (link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$o
 (set: $variant to &quot;dark&quot;)
 (if: (history:) contains (text: $level))[(goto: $variant)]
 (display: &quot;talk&quot;)
-	(replace: ?dialogue)[*A gust of sour wind extinguishes all the candles in the room. You can see almost nothing. You certainly can&#39;t see anything greater than two metres away from you.*]
+	(replace: ?dialogue)[*A sour gust of wind extinguishes all the candles in the room. You can see almost nothing. You certainly can&#39;t see anything further than two metres away from you.*]
 	(replace: ?reply)[(link: &quot;Open your eyes as widely as your face-muscles allow.&quot;)[(goto: $variant)]]}</tw-passagedata><tw-passagedata pid="101" name="dark" tags="" position="1600,75" size="200,100">{&lt;script&gt;
 	$(&quot;.lvl&quot;).addClass(style);
     $(&quot;.card&quot;).addClass(style);
@@ -1535,13 +1586,7 @@ Glance (link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$o
 
 &lt;div class = &quot;card&quot;&gt;&lt;h3&gt;Sight&lt;/h3&gt;|display&gt;[]&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;card2&quot;&gt;&lt;h3&gt;Location&lt;/h3&gt;(display: &quot;flavour&quot;)&lt;/div&gt;&lt;div class=&quot;card2&quot;&gt;&lt;h3&gt;Elements&lt;/h3&gt;(display: &quot;elements&quot;)&lt;/div&gt;&lt;/div&gt;\
 (replace: ?display)[(display: &quot;darkSight&quot;)]\
-(replace: ?observe)[(display: &quot;observe&quot;)]
-
-(print: $ahead)
-(print: $slide)
-(print: $location)
-(for: each _row, ...$map)[
-(print: _row)]</tw-passagedata><tw-passagedata pid="102" name="darkActions" tags="" position="1825,75" size="100,100">You can (link-repeat: &quot;advance&quot;)[(display: &quot;advance&quot;)]
+(replace: ?observe)[(display: &quot;observe&quot;)]</tw-passagedata><tw-passagedata pid="102" name="darkActions" tags="" position="1825,75" size="100,100">You can (link-repeat: &quot;advance&quot;)[(display: &quot;advance&quot;)]
 Pivot (link-repeat: &quot;left&quot;)[(set: $orientation to (rotated: -1, ...$orientation))(set: _orientation to $orientation)(replace: ?display)[(display: &quot;darkSight&quot;)](replace: ?observe)[(display: &quot;observe&quot;)]] or (link-repeat: &quot;right&quot;)[(set: $orientation to (rotated: 1, ...$orientation))(set: _orientation to $orientation)(replace: ?display)[(display: &quot;darkSight&quot;)](replace: ?observe)[(display: &quot;observe&quot;)]]
 Glance (link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$orientation))(replace: ?observe)[To your left, you see:
 (display: &quot;darkSight&quot;)]] or (link-repeat: &quot;right&quot;)[(set: _orientation to (rotated: 1, ...$orientation))(replace: ?observe)[To your right, you see:
@@ -1592,7 +1637,7 @@ Glance (link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$o
 	You see (lowerfirst: _qualities&#39;s determiner) (lowercase: _qualities&#39;s name) right before you.(if: $ahead&#39;s length &gt; 1)[
 You can make out nothing beyond that.]]</tw-passagedata><tw-passagedata pid="104" name="15" tags="" position="25,4025" size="100,200">{&lt;script&gt;var style = &quot;catacombs&quot;;&lt;/script&gt;
 (set: $map to (a: 
-(a: &#39;w&#39;,&#39;c&#39;,&#39;c&#39;,&#39;c&#39;,&#39;c&#39;,&#39;c&#39;), 
+(a: &#39;w&#39;,&#39;c&#39;,&#39;c&#39;,&#39;c&#39;,&#39;c&#39;,&#39;c&#39;,&#39;w&#39;), 
 (a: &#39;c&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;c&#39;), 
 (a: &#39;c&#39;,&#39;0&#39;,&#39;2&#39;,&#39;0&#39;,&#39;2&#39;,&#39;0&#39;,&#39;c&#39;), 
 (a: &#39;c&#39;,&#39;0&#39;,&#39;0&#39;,&#39;9&#39;,&#39;0&#39;,&#39;0&#39;,&#39;c&#39;), 
@@ -1603,7 +1648,7 @@ You can make out nothing beyond that.]]</tw-passagedata><tw-passagedata pid="104
 (set: $orientation to (a: (a: 0,-1), (a: 1,0), (a: 0,1), (a: -1, 0)))
 (set: $room to $defaultRoom + (dm: 
 	&quot;name&quot;, &quot;entry to the mines&quot;,
-	&quot;text&quot;, &quot;The Burning Cultist stands in the corner, burning. Skulls are piled in fastidious rows. Strange symbols are carved on all the walls.&quot;,
+	&quot;text&quot;, &quot;The Burning Cultist stands in the corner, burning. Skulls are piled in fastidious pyramids. Strange symbols are carved on all the walls.&quot;,
 	&quot;flavour&quot;, &quot;The Burning Cultist burns merrily.&quot;))
 (set: $elements to (a: &#39;2&#39;, &#39;9&#39;))
  
@@ -1616,7 +1661,7 @@ You can make out nothing beyond that.]]</tw-passagedata><tw-passagedata pid="104
 	(replace: ?reply)[[[*Back away*|15A]]
 	[[*Wait*|15B]]]}</tw-passagedata><tw-passagedata pid="105" name="15B" tags="" position="275,4000" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?img)[&lt;img src=&quot;cultistFish.png&quot;&gt;]
-	(replace: ?dialogue)[*It&#39;s the waterlogged cultist! It opens its mouth and begins to sing a wet, soggy chant. Its voice is sombre and low and strangely familiar.*]
+	(replace: ?dialogue)[*It&#39;s the waterlogged cultist! It opens its mouth and begins to sing. Its voice is sombre and soggy and strangely familiar.*]
 	(replace: ?reply)[[[*Close your eyes*|15C1]]
 	[[*Close your ears*|15C2]]]</tw-passagedata><tw-passagedata pid="106" name="15A" tags="" position="175,4150" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?img)[]
@@ -1628,12 +1673,10 @@ You can make out nothing beyond that.]]</tw-passagedata><tw-passagedata pid="104
 	(replace: ?reply)[[[Try a different direction*|15A2]]
 	[[*Wait*|15B]]]</tw-passagedata><tw-passagedata pid="108" name="15C1" tags="" position="525,4000" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?img)[&lt;img src=&quot;cultistFish.png&quot;&gt;]
-	(replace: ?dialogue)[*You have never heard its song before - how could you have? - but you know it, unmistakably. It is the tang of blood and the weight of stones and the door to the den left slightly ajar, white light from the computer monitor spilling onto carpet. It is the dullness of anger and the thrill of regret.
-	
-	Hot breath warms your face. It reeks of old fish.*]
+	(replace: ?dialogue)[*You have never heard its song before - how could you have? - but you know it, unmistakably. It is the tang of blood and the weight of stones and the door to the den left slightly ajar, white light spilling onto the carpet outside. It is the dullness of anger and the thrill of regret.]
 	(replace: ?reply)[[[*Listen*|15D]]]</tw-passagedata><tw-passagedata pid="109" name="15C2" tags="" position="525,4150" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?img)[&lt;img src=&quot;cultistFish.png&quot;&gt;]
-	(replace: ?dialogue)[*You try but fail to close your ears.*]
+	(replace: ?dialogue)[*You try, but fail, to close your ears.*]
 	(replace: ?reply)[[[*Close your eyes*|15C1]]]</tw-passagedata><tw-passagedata pid="110" name="15D" tags="" position="675,4000" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?img)[]
 	(replace: ?dialogue)[*Silence.*]
@@ -1647,7 +1690,7 @@ You can make out nothing beyond that.]]</tw-passagedata><tw-passagedata pid="104
 	(replace: ?dialogue)[&#39;&#39;Burning cultist:&#39;&#39; I&#39;ll tell you later.]
 	(replace: ?reply)[[[How did you rescue me?|15F1]]
 	[[Can you help me?|15G]]]</tw-passagedata><tw-passagedata pid="114" name="15G" tags="" position="1125,4000" size="100,100">(display: &quot;talk&quot;)
-	(replace: ?dialogue)[I see the candles have all blown out. I can stay with you in this room to provide some light, but I can&#39;t help you any further. This next door leads to the mines, and I never go to the mines anymore.]
+	(replace: ?dialogue)[I see the candles have blown out. I can light this room for you, but I cannot help you any further. This next door leads to the mines, and I never go to the mines anymore.]
 	(replace: ?reply)[(link: &quot;Thanks.&quot;)[(goto: $variant)]
 	(link: &quot;Thanks, I guess.&quot;)[(goto: $variant)]
 	[[Go away. I don&#39;t need light.|15H]]]</tw-passagedata><tw-passagedata pid="115" name="15H" tags="" position="1275,4000" size="100,100">{
@@ -1692,7 +1735,7 @@ You can make out nothing beyond that.]]</tw-passagedata><tw-passagedata pid="104
 	(replace: ?dialogue)[*You pick up the lantern and take it with you.*]
 	(replace: ?reply)[(link: &quot;Onwards!&quot;)[(goto: $variant)]]</tw-passagedata><tw-passagedata pid="118" name="16A" tags="" position="175,4375" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?img)[]
-	(replace: ?dialogue)[*You decide not to pick up the lantern and take it with you, but then you realise that you should definitely pick up the lantern and take it with you.*]
+	(replace: ?dialogue)[*You think about not picking up the lantern and taking it with you, but then you realise that you should definitely pick up the lantern and take it with you.*]
 	(replace: ?reply)[[[Pick up the lantern and take it with you|16B]]]</tw-passagedata><tw-passagedata pid="119" name="7C" tags="" position="400,2075" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?dialogue)[*The rat scurries away.*]
 	(replace: ?reply)[(link: &#39;*Leave*&#39;)[(goto: $variant)]]</tw-passagedata><tw-passagedata pid="120" name="17" tags="" position="25,4525" size="100,200">{&lt;script&gt;var style = &quot;mines&quot;;&lt;/script&gt;
@@ -1747,9 +1790,9 @@ You can make out nothing beyond that.]]</tw-passagedata><tw-passagedata pid="104
 (set: $orientation to (a: (a: 1,0), (a: 0,1), (a: -1, 0), (a: 0,-1)))
 (set: $room to $defaultRoom + (dm: 
 	&quot;name&quot;, &quot;pushblock storage room A&quot;,
-	&quot;text&quot;, &quot;Rough-hewn pushblocks are piled in the corners, and some have been left half-extracted from the earth. You&#39;re having trouble focusing, and sometimes when you come back to yourself you wonder where you were.&quot;))
+	&quot;text&quot;, &quot;Rough-hewn pushblocks are piled in the corners, and some have been left half-extracted from the earth.&quot;,
+	&quot;flavour&quot;, &quot;Wait. What were you doing? What were you thinking of?&quot;))
 (set: $elements to (a: &#39;3&#39;, &#39;7&#39;, &#39;p&#39;, &#39;9&#39;))
- 
 (set: $level to 18)
 (set: $variant to &quot;spin&quot;)
 (if: (history:) contains (text: $level))[(goto: $variant)]
@@ -1762,8 +1805,8 @@ You can make out nothing beyond that.]]</tw-passagedata><tw-passagedata pid="104
 	(replace: ?dialogue)[&#39;&#39;Fear-Crazed Cultist:&#39;&#39; Let me tell you what happened down here.]
 	(replace: ?reply)[[[By all means.|18C]]
 	[[No.|18C2]](if: last of (history:) is &#39;18A&#39;)[
-	(link: &#39;*Resume slithering*&#39;)[(goto: $variant)]]]</tw-passagedata><tw-passagedata pid="128" name="18A" tags="" position="175,4875" size="100,100">(display: &quot;talk&quot;)
-	(replace: ?dialogue)[&#39;&#39;Fear-Crazed Cultist:&#39;&#39; I note that you&#39;ve dropped to the ground and started slithering. Unfortunately, your fondness for dirt won&#39;t protect you here.]
+	(link: &#39;*Slither away*&#39;)[(goto: $variant)]]]</tw-passagedata><tw-passagedata pid="128" name="18A" tags="" position="175,4875" size="100,100">(display: &quot;talk&quot;)
+	(replace: ?dialogue)[&#39;&#39;Fear-Crazed Cultist:&#39;&#39; I note that you&#39;ve dropped to the ground and started slithering. Unfortunately, your fondness for dirt won&#39;t protect you here!!]
 	(replace: ?reply)[[[*Stand back up*|18B]]
 	[[*Keep slithering*|18B]]]</tw-passagedata><tw-passagedata pid="129" name="18C" tags="" position="475,4775" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?dialogue)[&#39;&#39;Fear-Crazed Cultist:&#39;&#39; I came to the pushblock mines to mine pushblocks. Many of my closest friends came with me. I&#39;m the only one left. We delved too deep, and we found only horrors.]
@@ -1771,7 +1814,7 @@ You can make out nothing beyond that.]]</tw-passagedata><tw-passagedata pid="104
 	[[Can you describe these horrors with greater specificity?|18E]]]</tw-passagedata><tw-passagedata pid="130" name="18D" tags="" position="625,4775" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?dialogue)[&#39;&#39;Fear-Crazed Cultist:&#39;&#39; My friends claimed to be haunted by something. Something empty; something hungry. Something that appeared to all of them differently, and waited calmly for them to give themselves up to it.]
 	(replace: ?reply)[[[What happened next?|18F]]]</tw-passagedata><tw-passagedata pid="131" name="18E" tags="" position="625,4900" size="100,100">(display: &quot;talk&quot;)
-	(replace: ?dialogue)[&#39;&#39;Fear-Crazed Cultist:&#39;&#39; I cannot, for my friends all saw it differently. But whatever it was, it was dreadful. It pulled on us as gently and inexorably as the tides.]
+	(replace: ?dialogue)[&#39;&#39;Fear-Crazed Cultist:&#39;&#39; I cannot, for my friends all saw it differently. But whatever it was, it was dreadful. It pulled on us as inexorably as the tides.]
 	(replace: ?reply)[[[What happened next?|18F]]]</tw-passagedata><tw-passagedata pid="132" name="18F" tags="" position="775,4775" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?dialogue)[&#39;&#39;Fear-Crazed Cultist:&#39;&#39; *Gurgle*]
 	(replace: ?reply)[[[Are you okay?|18G]]
@@ -1802,29 +1845,41 @@ You can make out nothing beyond that.]]</tw-passagedata><tw-passagedata pid="104
 	&quot;flavour&quot;, &quot;You think you hear something moving in the distance. But it might just be cave-wind.&quot;))
 (set: $elements to (a: &#39;m&#39;, &#39;3&#39;, &#39;7&#39;, &#39;9&#39;))
  
-(set: $level to 18)
+(set: $level to 19)
 (set: $variant to &quot;Main&quot;)
 (if: (history:) contains (text: $level))[(goto: $variant)]
 (display: &quot;talk&quot;)
 	(replace: ?dialogue)[*The room is filled with pushblock-sized crates. Some have been opened.*]
-	(replace: ?reply)[[[*Look inside one*|19A]]
+	(replace: ?reply)[[[*Look inside one of them*|19A]]
 	[[*Look inside all of them*|19B]]
 	(link: &quot;*Avert your eyes and being solving the puzzle*&quot;)[(goto: $variant)]]
 }</tw-passagedata><tw-passagedata pid="137" name="19A" tags="" position="175,5025" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?dialogue)[*It&#39;s empty. The wood inside has been scuffed.*]
 	(replace: ?reply)[(link: &quot;How interesting!&quot;)[(goto: $variant)]]</tw-passagedata><tw-passagedata pid="138" name="19B" tags="" position="175,5150" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?dialogue)[*They are all empty, and all of them have been at least a little bit damaged. The wood of some of the crates has been splintered, and the inside surface of the others has been thoroughly scuffed.*]
-	(replace: ?reply)[(link: &quot;How interesting!&quot;)[(goto: $variant)]]</tw-passagedata><tw-passagedata pid="139" name="anti-bridge" tags="" position="1775,275" size="100,100">(set: $tempDisplay to (a: &quot;You cannot push the (print: $tempDisplay&#39;s 2nd) over the rope bridge.&quot;, _qualities&#39;s name))
-(goto: $variant)</tw-passagedata><tw-passagedata pid="140" name="20" tags="" position="25,5275" size="100,200">{&lt;script&gt;var style = &quot;mines&quot;;&lt;/script&gt;
+	(replace: ?reply)[(link: &quot;How interesting!&quot;)[(goto: $variant)]]</tw-passagedata><tw-passagedata pid="139" name="launchSelf" tags="" position="1900,275" size="100,100">(set: _forwards3 to (a: ($location&#39;s 1st + 1st of $orientation&#39;s 1st + 1st of $orientation&#39;s 1st + 1st of $orientation&#39;s 1st), ($location&#39;s 2nd + 2nd of $orientation&#39;s 1st + 2nd of $orientation&#39;s 1st + 2nd of $orientation&#39;s 1st)))
+(set: _flingToElement to _forwards3&#39;s 1st of _forwards3&#39;s 2nd of $map)
+(set: _qualities3 to _flingToElement of $tiles)
+
+(unless: _qualities3&#39;s solid is false)
+	[
+		(set: $tempDisplay to (a: &quot;Stepping onto the launch-plate would launch you into the (print: $tempDisplay&#39;s 2nd). This would be inadvisable.&quot;, _qualities3&#39;s name))
+		(goto: $variant)
+	]
+(else:)
+	[
+	&lt;script&gt;A.track(&#39;fling&#39;).play();&lt;/script&gt;
+	(set: $tempDisplay to (a: &quot;You spin through the air like a (either: &#39;flightless roundbird&#39;, &#39;winged brick&#39;) and land heavily on your (either: &#39;knees&#39;, &#39;ribcage&#39;, &#39;back&#39;, &#39;elbows&#39;).&quot;))
+	(set: $location to _forwards3)
+	(goto: $variant)
+	]</tw-passagedata><tw-passagedata pid="140" name="20" tags="" position="25,5275" size="100,200">{&lt;script&gt;var style = &quot;mines&quot;;&lt;/script&gt;
 (set: $map to (a: 
 (a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;), 
-(a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;7&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;), 
 (a: &#39;w&#39;,&#39;0&#39;,&#39;3&#39;,&#39;7&#39;,&#39;3&#39;,&#39;0&#39;,&#39;w&#39;), 
 (a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;M&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;), 
 (a: &#39;w&#39;,&#39;0&#39;,&#39;3&#39;,&#39;9&#39;,&#39;3&#39;,&#39;0&#39;,&#39;w&#39;), 
 (a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;M&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;), 
 (a: &#39;w&#39;,&#39;0&#39;,&#39;3&#39;,&#39;7&#39;,&#39;3&#39;,&#39;0&#39;,&#39;w&#39;), 
-(a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;7&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;), 
 (a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;)))
 (set: $location to (a: 2,5))
 (set: $orientation to (a: (a: 1,0), (a: 0,1), (a: -1, 0), (a: 0,-1)))
@@ -1843,12 +1898,12 @@ You can make out nothing beyond that.]]</tw-passagedata><tw-passagedata pid="104
 }</tw-passagedata><tw-passagedata pid="141" name="20A" tags="" position="175,5275" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?dialogue)[&#39;&#39;Sentient Push-Block:&#39;&#39; I&#39;m a Sentient Push-Block!]
 	(replace: ?reply)[[[How did you come to be alive?|20B]]
-	[[You&#39;re a bit creepy.|20C]]]</tw-passagedata><tw-passagedata pid="142" name="20B" tags="" position="325,5275" size="100,100">(display: &quot;talk&quot;)
+	[[Your face is unsettling.|20C]]]</tw-passagedata><tw-passagedata pid="142" name="20B" tags="" position="325,5275" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?dialogue)[&#39;&#39;Sentient Push-Block:&#39;&#39; I was once part of the grand expanse of earth. Since being mined from the wall the scope of my self has become smaller, and I have become more me.]
 	(replace: ?reply)[[[Are there others like you?|20D]]]</tw-passagedata><tw-passagedata pid="143" name="20C" tags="" position="325,5400" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?dialogue)[&#39;&#39;Sentient Push-Block:&#39;&#39; At least I&#39;m not made of meat. Unlike some.]
 	(replace: ?reply)[[[Are there others like you?|20D]]
-	[[One benefit of being made of meat is that I have meat-legs to transport me around. Unlike some.|20E]]]</tw-passagedata><tw-passagedata pid="144" name="20D" tags="" position="475,5275" size="100,100">(display: &quot;talk&quot;)
+	[[One benefit of being made of meat is that I have-legs I can use to move around. Unlike some.|20E]]]</tw-passagedata><tw-passagedata pid="144" name="20D" tags="" position="475,5275" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?dialogue)[&#39;&#39;Sentient Push-Block:&#39;&#39; Many of my sisters and brothers are insensate, but others are beginning to wake up.]
 	(replace: ?reply)[[[Can you feel pain?|20F]]
 	[[What good is sentience if you can&#39;t move around?|20E]]]</tw-passagedata><tw-passagedata pid="145" name="20E" tags="" position="600,5400" size="100,100">(display: &quot;talk&quot;)
@@ -1865,7 +1920,7 @@ You can make out nothing beyond that.]]</tw-passagedata><tw-passagedata pid="104
 	[[I&#39;m leaving now, Sentient Push-Block, and you can&#39;t follow me.|20J]]]</tw-passagedata><tw-passagedata pid="149" name="20I" tags="" position="1025,5275" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?dialogue)[&#39;&#39;Sentient Push-Block:&#39;&#39; Atop a pressure plate. It feels wonderful there.]
 	(replace: ?reply)[(link: &quot;Well, bye.&quot;)[(goto: $variant)]
-	(link: &quot;Ew. Also, bye.&quot;)[(goto: $variant)]]</tw-passagedata><tw-passagedata pid="150" name="20J" tags="" position="1025,5400" size="100,100">(display: &quot;talk&quot;)
+	(link: &quot;Well, bye. Also, ew.&quot;)[(goto: $variant)]]</tw-passagedata><tw-passagedata pid="150" name="20J" tags="" position="1025,5400" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?dialogue)[&#39;&#39;Sentient Push-Block:&#39;&#39; Good luck, meat-person.]
 	(replace: ?reply)[(link: &quot;To you too!&quot;)[(goto: $variant)]]</tw-passagedata><tw-passagedata pid="151" name="21" tags="" position="1700,550" size="100,200">{&lt;script&gt;var style = &quot;dark&quot;;&lt;/script&gt;
 (display: &quot;progress&quot;)
@@ -1880,11 +1935,11 @@ You can make out nothing beyond that.]]</tw-passagedata><tw-passagedata pid="104
 (set: $location to (a: 3,2))
 (set: $orientation to (a: (a: 0,1), (a: -1, 0), (a: 0,-1), (a: 1,0)))
 (set: $room to $defaultRoom + (dm: 
-	&quot;name&quot;, &quot;door-cave&quot;,
-	&quot;text&quot;, &quot;A natural stone structure forms the shape of a door, complete with hinges. Nature is amazing.&quot;))
+	&quot;name&quot;, &quot;bridge-cave&quot;,
+	&quot;text&quot;, &quot;An unusual confluence of stalactites, stalagmites, and rope-fungus form a functional rope bridge. Nature is amazing.&quot;))
 (set: $elements to (a: &#39;1&#39;, &#39;4&#39;, &#39;7&#39;, &#39;9&#39;))
  
-(set: $level to 20)
+(set: $level to 21)
 (set: $variant to &quot;Main&quot;)
 (if: (history:) contains (text: $level))[(goto: $variant)]
 (display: &quot;talk&quot;)
@@ -1905,7 +1960,7 @@ You can make out nothing beyond that.]]</tw-passagedata><tw-passagedata pid="104
 	&quot;text&quot;, &quot;The walls ooze with moisture.&quot;,
 	&quot;flavour&quot;, &quot;Somewhere in the darkness, a drop of water plinks into a pool.&quot;))
 (set: $elements to (a: &#39;1&#39;, &#39;4&#39;, &#39;7&#39;, &#39;9&#39;))
-(set: $level to 20)
+(set: $level to 22)
  
 (set: $variant to &quot;Main&quot;)
 (if: (history:) contains (text: $level))[(goto: $variant)]
@@ -1944,11 +1999,11 @@ You can make out nothing beyond that.]]</tw-passagedata><tw-passagedata pid="104
 	[[*Stare at it*|23B]]]}</tw-passagedata><tw-passagedata pid="157" name="24" tags="" position="1700,1300" size="100,200">{&lt;script&gt;var style = &quot;dark&quot;;&lt;/script&gt;
 (set: $map to (a: 
 (a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;),
-(a: &#39;w&#39;,&#39;U&#39;,&#39;0&#39;,&#39;0&#39;,&#39;7&#39;,&#39;t&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;),
-(a: &#39;w&#39;,&#39;0&#39;,&#39;1&#39;,&#39;0&#39;,&#39;4&#39;,&#39;0&#39;,&#39;9&#39;,&#39;0&#39;,&#39;w&#39;),
 (a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;7&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;),
-(a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;t&#39;,&#39;0&#39;,&#39;w&#39;),
-(a: &#39;w&#39;,&#39;U&#39;,&#39;0&#39;,&#39;0&#39;,&#39;7&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;),
+(a: &#39;w&#39;,&#39;0&#39;,&#39;9&#39;,&#39;0&#39;,&#39;4&#39;,&#39;0&#39;,&#39;1&#39;,&#39;0&#39;,&#39;w&#39;),
+(a: &#39;w&#39;,&#39;T&#39;,&#39;0&#39;,&#39;t&#39;,&#39;7&#39;,&#39;t&#39;,&#39;0&#39;,&#39;T&#39;,&#39;w&#39;),
+(a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;),
+(a: &#39;w&#39;,&#39;U&#39;,&#39;U&#39;,&#39;U&#39;,&#39;U&#39;,&#39;U&#39;,&#39;U&#39;,&#39;U&#39;,&#39;w&#39;),
 (a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;)))
 (set: $location to (a: 2,3))
 (set: $orientation to (a: (a: 1,0), (a: 0,1), (a: -1, 0), (a: 0,-1)))
@@ -1956,7 +2011,7 @@ You can make out nothing beyond that.]]</tw-passagedata><tw-passagedata pid="104
 	&quot;name&quot;, &quot;fungal caves&quot;,
 	&quot;text&quot;, &quot;The air is thick with spores.&quot;,
 	&quot;flavour&quot;, &quot;You hear a damp rustling coming from a nearby chamber. Is it the fungus-keeper? Or something else?&quot;))
-(set: $elements to (a: &#39;1&#39;, &#39;4&#39;, &#39;7&#39;, &#39;9&#39;))
+(set: $elements to (a: &#39;1&#39;, &#39;4&#39;, &#39;7&#39;, &#39;9&#39;, &#39;U&#39;))
  
 (set: $level to 24)
 (set: $variant to &quot;Main&quot;)
@@ -1982,42 +2037,319 @@ You can make out nothing beyond that.]]</tw-passagedata><tw-passagedata pid="104
 	(replace: ?dialogue)[&#39;&#39;Fungus farmer: &#39;&#39;Yes. It is.]
 	(replace: ?reply)[[[You&#39;ve changed my mind. The caves are great!|24D]]]</tw-passagedata><tw-passagedata pid="163" name="24F" tags="" position="2150,1425" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?dialogue)[&#39;&#39;Fungus farmer: &#39;&#39;Goodbye, fellow cultist! If you need me, I&#39;ll be tending to some fungi nearby.]
-	(replace: ?reply)[(link: &quot;Goodbye, Fungus Farmer!&quot;)[(goto: $variant)]]</tw-passagedata><tw-passagedata pid="164" name="24G" tags="" position="2300,1300" size="100,100">	(replace: ?dialogue)[&#39;&#39;Fungus farmer: &#39;&#39;I would if I could, but I need to go tend to some nearby fungi.]
+	(replace: ?reply)[(link: &quot;Goodbye, Fungus Farmer!&quot;)[(goto: $variant)]]</tw-passagedata><tw-passagedata pid="164" name="24G" tags="" position="2300,1300" size="100,100">(display: &quot;talk&quot;)
+	(replace: ?dialogue)[&#39;&#39;Fungus farmer: &#39;&#39;I would if I could, but I urgently need to tend to some nearby fungi.]
 	(replace: ?reply)[(link: &quot;Goodbye, Fungus Farmer!&quot;)[(goto: $variant)]]</tw-passagedata><tw-passagedata pid="165" name="23A" tags="" position="1850,1050" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?dialogue)[*It doesn&#39;t reply.*]
 	(replace: ?reply)[(link: &quot;*Ignore it*&quot;)[(goto: $variant)]]</tw-passagedata><tw-passagedata pid="166" name="23B" tags="" position="1850,1175" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?dialogue)[*It doesn&#39;t make any sudden movements.*]
-	(replace: ?reply)[(link: &quot;*Ignore it*&quot;)[(goto: $variant)]]</tw-passagedata><tw-passagedata pid="167" name="audio" tags="" position="2075,275" size="100,200">&lt;script&gt;A.stopAll()&lt;/script&gt;{
+	(replace: ?reply)[(link: &quot;*Ignore it*&quot;)[(goto: $variant)]]</tw-passagedata><tw-passagedata pid="167" name="audio" tags="" position="2175,275" size="100,200">&lt;script&gt;A.stopAll()&lt;/script&gt;{
 (set: _chapterMusic to (dm:
 	1, &quot;&lt;script&gt;A.track(&#39;library&#39;).loop(true).play();&lt;/script&gt;&quot;,
 	2, &quot;&lt;script&gt;A.track(&#39;cellars&#39;).loop(true).play();&lt;/script&gt;&quot;,
 	3, &quot;&lt;script&gt;A.track(&#39;catacombs&#39;).loop(true).play();&lt;/script&gt;&quot;,
 	4, &quot;&lt;script&gt;A.track(&#39;mines&#39;).loop(true).play();&lt;/script&gt;&quot;,
 	5, &quot;&lt;script&gt;A.track(&#39;caves&#39;).loop(true).play();&lt;/script&gt;&quot;,
-	6, &quot;&lt;script&gt;A.track(&#39;fields&#39;).loop(true).play();&lt;/script&gt;&quot;))
-(print: _chapterMusic&#39;s (abs: 1 + (floor: ($level-1)/5)))}</tw-passagedata><tw-passagedata pid="168" name="Untitled Passage" tags="" position="1317,737" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="169" name="25" tags="" position="1700,1550" size="100,200">{&lt;script&gt;var style = &quot;dark&quot;;&lt;/script&gt;
+	6, &quot;&lt;script&gt;A.track(&#39;fields&#39;).loop(true).play();&lt;/script&gt;&quot;,
+	7, &quot;&lt;script&gt;A.track(&#39;outro&#39;).loop(true).play();&lt;/script&gt;&quot;))
+(print: _chapterMusic&#39;s (abs: 1 + (floor: ($level-1)/5)))}</tw-passagedata><tw-passagedata pid="168" name="launchObject" tags="" position="1775,275" size="100,100">(set: _forwards3 to (a: ($location&#39;s 1st + 1st of $orientation&#39;s 1st + 1st of $orientation&#39;s 1st + 1st of $orientation&#39;s 1st + 1st of $orientation&#39;s 1st), ($location&#39;s 2nd + 2nd of $orientation&#39;s 1st + 2nd of $orientation&#39;s 1st + 2nd of $orientation&#39;s 1st + 2nd of $orientation&#39;s 1st)))
+(set: _flingToElement to _forwards3&#39;s 1st of _forwards3&#39;s 2nd of $map)
+(set: _qualities3 to _flingToElement of $tiles)
+
+(if: _qualities3&#39;s solid is true)
+	[
+		(set: $tempDisplay to (a: &quot;The launch-plate would launch the (print: $tempDisplay&#39;s 2nd) into the (print: $tempDisplay&#39;s 3rd), and for some reason you don&#39;t want that to happen.&quot;, _qualities&#39;s name, _qualities3&#39;s name))
+		(goto: $variant)
+	]
+(else:)
+	[
+	&lt;script&gt;A.track(&#39;fling&#39;).play();&lt;/script&gt;
+	(set: $tempDisplay to (a: &quot;The (print: $tempDisplay&#39;s 2nd) spins through the air.&quot;, _qualities&#39;s name))
+	(set: _forwards&#39;s 1st of _forwards&#39;s 2nd of $map to &#39;0&#39;)
+	(set: $location to _forwards)
+	(if: (datanames: $collision) contains _flingToElement)
+		[
+			(display: _flingToElement of $collision)
+		]
+	(else:)
+		[
+		(set: _forwards3&#39;s 1st of _forwards3&#39;s 2nd of $map to _pushElement)
+		]
+	(goto: $variant)
+	]</tw-passagedata><tw-passagedata pid="169" name="25" tags="" position="1700,1550" size="100,200">{&lt;script&gt;var style = &quot;dark&quot;;&lt;/script&gt;
 (set: $map to (a: 
-(a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;),
-(a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;),
-(a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;1&#39;,&#39;4&#39;,&#39;0&#39;,&#39;w&#39;),
-(a: &#39;d&#39;,&#39;1&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;,&#39;0&#39;,&#39;w&#39;),
-(a: &#39;w&#39;,&#39;4&#39;,&#39;7&#39;,&#39;4&#39;,&#39;w&#39;,&#39;0&#39;,&#39;w&#39;),
-(a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;1&#39;,&#39;w&#39;,&#39;0&#39;,&#39;w&#39;),
-(a: &#39;w&#39;,&#39;T&#39;,&#39;0&#39;,&#39;1&#39;,&#39;4&#39;,&#39;U&#39;,&#39;w&#39;),
-(a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;)))
-(set: $location to (a: 3,4))
-(set: $orientation to (a: (a: -1, 0), (a: 0,-1), (a: 1,0), (a: 0,1)))
+(a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;),
+(a: &#39;w&#39;,&#39;U&#39;,&#39;0&#39;,&#39;0&#39;,&#39;7&#39;,&#39;t&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;),
+(a: &#39;w&#39;,&#39;0&#39;,&#39;1&#39;,&#39;0&#39;,&#39;4&#39;,&#39;0&#39;,&#39;9&#39;,&#39;0&#39;,&#39;w&#39;),
+(a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;7&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;),
+(a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;t&#39;,&#39;0&#39;,&#39;w&#39;),
+(a: &#39;w&#39;,&#39;U&#39;,&#39;0&#39;,&#39;0&#39;,&#39;7&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;),
+(a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;)))
+(set: $location to (a: 2,3))
+(set: $orientation to (a: (a: 1,0), (a: 0,1), (a: -1, 0), (a: 0,-1)))
+(set: $level to 25)
 (set: $room to $defaultRoom + (dm: 
-	&quot;name&quot;, &quot;fungus keeper&#39;s dwelling&quot;,
+	&quot;name&quot;, &quot;cave adjoining the watermelon fields&quot;,
 	&quot;text&quot;, &quot;The floor here is mercifully free of fungus.&quot;,
-	&quot;flavour&quot;, &quot;You hear a damp rustling coming from a nearby chamber. Is it the fungus-keeper? Or something else?&quot;))
-(set: $elements to (a: &#39;1&#39;, &#39;4&#39;, &#39;7&#39;, &#39;d&#39;))
- 
+	&quot;flavour&quot;, &quot;A vibrant green glow leaks from the direction of the watermelon fields&quot;))
+(set: $elements to (a: &#39;1&#39;, &#39;4&#39;, &#39;7&#39;,&#39;9&#39;))
+(set: $tempDisplay to 0)
 (set: $variant to &quot;Main&quot;)
 (if: (history:) contains (text: $level))[(goto: $variant)]
 (display: &quot;talk&quot;)
-	(replace: ?dialogue)[&#39;&#39;Fungal Outcast: &#39;&#39;I haven&#39;t written this part yet.]
-	(replace: ?reply)[(link: &quot;Goto Main&quot;)[(goto: $variant)]]}</tw-passagedata></tw-storydata>
+	(replace: ?dialogue)[&#39;&#39;Fungal Outcast: &#39;&#39;.... urgh....]
+	(replace: ?reply)[[[Hi, Fungal Outcast!|25A]]
+	(link: &quot;*Leave. It has no legs and therefore cannot follow you.*&quot;)[(goto: $variant)]]}</tw-passagedata><tw-passagedata pid="170" name="25A" tags="" position="1900,1600" size="100,100">{(set: $tempDisplay to it + 1)
+(set: _fungalSpeech to (a: &quot;urgh&quot;, &quot;ooooooo&quot;, &quot;sssssshhhhh&quot;, &quot;iiiisssss&quot;, &quot;eeeeeee&quot;, &quot;aaurgh&quot;, &quot;ffffflluuu&quot;, &quot;uudge&quot;, &quot;nnnnng&quot;, &quot;mmmmmehl&quot;, &quot;sssssssss&quot;))
+(set: _translate to (a: 
+	&quot;(either: &#39;splurge&#39;, &#39;urge&#39;, &#39;berg&#39;)&quot;,
+	&quot;(either: &#39;you&#39;, &#39;you&#39;, &#39;goo&#39;, &#39;blue&#39;, &#39;moon&#39;, &#39;spoon&#39;, &#39;tune&#39;, &#39;flew&#39;, &#39;grew&#39;)&quot;,
+	&quot;(either: &#39;ash&#39;, &#39;lash&#39;, &#39;squash&#39;, &#39;moss&#39;, &#39;shore&#39;, &#39;shame&#39;, &#39;shaman&#39;)&quot;,
+	&quot;(either: &#39;is&#39;, &#39;is&#39;, &#39;miss&#39;, &#39;missed&#39;, &#39;ice&#39;, &#39;fleece&#39;, &#39;mice&#39;)&quot;,
+	&quot;(either: &#39;bleed&#39;, &#39;be&#39;, &#39;see&#39;, &#39;sea&#39;, &#39;seed&#39;, &#39;flee&#39;, &#39;green&#39;, &#39;tree&#39;, &#39;he&#39;, &#39;she&#39;, &#39;mead&#39;, &#39;leave&#39;)&quot;,
+	&quot;(either: &#39;urge&#39;, &#39;auger&#39;, &#39;large&#39;, &#39;targe&#39;, &#39;lurge&#39;, &#39;trudge&#39;, &#39;smudge&#39;)&quot;,
+	&quot;(either: &#39;flue&#39;, &#39;flu&#39;, &#39;flock&#39;, &#39;flew&#39;, &#39;flood&#39;, &#39;fool&#39;, &#39;fluke&#39;, &#39;flume&#39;, &#39;flame&#39;)&quot;,
+	&quot;(either: &#39;nudge&#39;, &#39;urge&#39;, &#39;surge&#39;, &#39;merge&#39;, &#39;turgid&#39;, &#39;cudgel&#39;, &#39;judge&#39;, &#39;grudge&#39;, &#39;smudge&#39;, &#39;trudge&#39;)&quot;,
+	&quot;(either: &#39;hang&#39;, &#39;swang&#39;, &#39;tang&#39;, &#39;swung&#39;, &#39;brang&#39;, &#39;brung&#39;)&quot;,
+	&quot;(either: &#39;melon&#39;, &#39;meld&#39;, &#39;smelled&#39;, &#39;smelt&#39;, &#39;melt&#39;, &#39;melodie&#39;, &#39;melon&#39;)&quot;,
+	&quot;(either: &#39;sacrifice&#39;, &#39;so&#39;, &#39;solder&#39;, &#39;seperate&#39;, &#39;slay&#39;, &#39;sap&#39;, &#39;says&#39;, &#39;sister&#39;)&quot;))
+(set: _words to (shuffled: ...(range: 1,8)))
+(display: &quot;talk&quot;)
+(unless: $tempDisplay &gt; 10)[(replace: ?dialogue)[&#39;&#39;Fungal Outcast: &#39;&#39;....(print: 1st of _words of _fungalSpeech)....(print: 2nd of _words of _fungalSpeech).....(print: 3rd of _words of _fungalSpeech).....]
+	(replace: ?reply)[[[...(print: 1st of _words of _translate) (print: 2nd of _words of _translate) (print: 3rd of _words of _translate)?|25A]]
+	[[...(print: 1st of _words of _translate) (print: 2nd of _words of _translate) (print: 3rd of _words of _translate)?|25A]]
+	[[I&#39;m sorry. I don&#39;t understand.|25B]]]]
+(else:)[(replace: ?dialogue)[*The Fungal Outcast falls into silence.*]
+(replace: ?reply)[(link: &quot;*Leave. It has no legs and therefore cannot follow you.*&quot;)[(set: $tempDisplay to false)(goto: $variant)]]]}</tw-passagedata><tw-passagedata pid="171" name="25B" tags="" position="2050,1600" size="100,100">(display: &quot;talk&quot;)
+	(replace: ?dialogue)[*The Fungal Outcast contorts and quivers.*]
+	(replace: ?reply)[[[Please, tell me more.|25A]]
+	(link: &quot;*Leave. It has no legs and therefore cannot follow you.*&quot;)[(set: $tempDisplay to false)(goto: $variant)]]</tw-passagedata><tw-passagedata pid="172" name="26" tags="" position="1700,1800" size="100,200">{&lt;script&gt;var style = &quot;watermelon&quot;;&lt;/script&gt;
+(set: $map to (a: 
+(a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;),
+(a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;v&#39;),
+(a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;9&#39;,&#39;6&#39;,&#39;1&#39;,&#39;0&#39;,&#39;v&#39;),
+(a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;v&#39;),
+(a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;)))
+(set: $location to (a: 2,3))
+(set: $orientation to (a: (a: 1,0), (a: 0,1), (a: -1, 0), (a: 0,-1)))
+(set: $level to 26)
+(set: $room to $defaultRoom + (dm: 
+	&quot;name&quot;, &quot;watermelon fields&quot;,
+	&quot;text&quot;, &quot;Vines coil like serpents on the floor. At intervals they bulge, obscenely, into the shapes of maturing watermelons.&quot;))
+(set: $elements to (a: &#39;1&#39;, &#39;6&#39;, &#39;9&#39;))
+(set: $variant to &quot;Main&quot;)
+(if: (history:) contains (text: $level))[(goto: $variant)]
+(display: &quot;talk&quot;)
+	(replace: ?dialogue)[*You found a watermelon! It&#39;s not quite right, though. When you shake it, the insides slosh like water. It has probably rotted. 
+	
+	&#39;&#39;...Or worse&#39;&#39;.*]
+	(replace: ?reply)[(link: &quot;*Push onwards*&quot;)[(goto: $variant)]]}</tw-passagedata><tw-passagedata pid="173" name="27" tags="" position="1700,2050" size="100,200">{&lt;script&gt;var style = &quot;watermelon&quot;;&lt;/script&gt;
+(set: $map to (a: 
+(a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;),
+(a: &#39;w&#39;,&#39;V&#39;,&#39;0&#39;,&#39;V&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;v&#39;),
+(a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;V&#39;,&#39;0&#39;,&#39;0&#39;,&#39;v&#39;),
+(a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;6&#39;,&#39;1&#39;,&#39;9&#39;,&#39;0&#39;,&#39;v&#39;),
+(a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;V&#39;,&#39;0&#39;,&#39;0&#39;,&#39;v&#39;),
+(a: &#39;w&#39;,&#39;V&#39;,&#39;0&#39;,&#39;V&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;v&#39;),
+(a: &#39;w&#39;,&#39;5&#39;,&#39;0&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;),
+(a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;)))
+(set: $location to (a: 2,4))
+(set: $orientation to (a: (a: 1,0), (a: 0,1), (a: -1, 0), (a: 0,-1)))
+(set: $level to 27)
+(set: $room to $defaultRoom + (dm: 
+	&quot;name&quot;, &quot;watermelon fields&quot;,
+	&quot;text&quot;, &quot;Green and purple birds flutter against the black roof of the cave. Half-eaten chunks of watermelon litter the floor. You surmise that the birds feed on the watermelons. They must pierce through the thick green flesh with their unreasonably sharp beaks.&quot;,
+	&quot;flavour&quot;, &quot;A bird-thing screeches (either: &#39;obnoxiously&#39;, &#39;loudly&#39;, &#39;frantically&#39;).&quot;))
+(set: $elements to (a: &#39;1&#39;, &#39;6&#39;, &#39;9&#39;, &#39;V&#39;))
+(set: $variant to &quot;Main&quot;)
+(if: (history:) contains (text: $level))[(goto: $variant)]
+(display: &quot;talk&quot;)
+	(replace: ?dialogue)[*You found a watermelon! It&#39;s not quite right, though. This one is larger than you are, and you doubt you could carry it all the way back upstairs.*]
+	(replace: ?reply)[(link: &quot;*Push onwards*&quot;)[(goto: $variant)]]}</tw-passagedata><tw-passagedata pid="174" name="28" tags="" position="1700,2300" size="100,200">{&lt;script&gt;var style = &quot;watermelon&quot;;&lt;/script&gt;
+(set: $map to (a: 
+(a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;),
+(a: &#39;v&#39;,&#39;V&#39;,&#39;0&#39;,&#39;0&#39;,&#39;7&#39;,&#39;6&#39;,&#39;0&#39;,&#39;w&#39;),
+(a: &#39;v&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;7&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;),
+(a: &#39;v&#39;,&#39;0&#39;,&#39;0&#39;,&#39;6&#39;,&#39;7&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;),
+(a: &#39;v&#39;,&#39;0&#39;,&#39;1&#39;,&#39;0&#39;,&#39;7&#39;,&#39;9&#39;,&#39;0&#39;,&#39;w&#39;),
+(a: &#39;v&#39;,&#39;0&#39;,&#39;0&#39;,&#39;6&#39;,&#39;7&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;),
+(a: &#39;v&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;7&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;),
+(a: &#39;v&#39;,&#39;V&#39;,&#39;0&#39;,&#39;0&#39;,&#39;7&#39;,&#39;6&#39;,&#39;0&#39;,&#39;w&#39;),
+(a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;)))
+(set: $location to (a: 7,5))
+(set: $orientation to (a: (a: -1, 0), (a: 0,-1), (a: 1,0), (a: 0,1)))
+(set: $level to 28)
+(set: $room to $defaultRoom + (dm: 
+	&quot;name&quot;, &quot;watermelon fields&quot;,
+	&quot;text&quot;, &quot;The air is thick with the heady scent of watermelons.&quot;,
+	&quot;flavour&quot;, &quot;You are tumescent with hungers. You are gravid with craving.&quot;))
+(set: $elements to (a: &#39;1&#39;, &#39;6&#39;, &#39;9&#39;, &#39;V&#39;))
+(set: $variant to &quot;Main&quot;)
+(if: (history:) contains (text: $level))[(goto: $variant)]
+(display: &quot;talk&quot;)
+	(replace: ?dialogue)[*You found a watermelon! It&#39;s not quite right, though. This one is twitching and lolling about on the grass. If used for the ceremony, it might fall from the pedestal before a single blow of the cudgel can connect with its flesh.*]
+	(replace: ?reply)[(link: &quot;*Push onwards*&quot;)[(goto: $variant)]]}</tw-passagedata><tw-passagedata pid="175" name="29" tags="" position="1700,2550" size="100,200">{&lt;script&gt;var style = &quot;watermelon&quot;;&lt;/script&gt;
+(set: $map to (a: 
+(a: &#39;w&#39;,&#39;v&#39;,&#39;v&#39;,&#39;v&#39;,&#39;v&#39;,&#39;v&#39;,&#39;v&#39;,&#39;v&#39;),
+(a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;),
+(a: &#39;w&#39;,&#39;0&#39;,&#39;9&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;),
+(a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;6&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;),
+(a: &#39;w&#39;,&#39;7&#39;,&#39;7&#39;,&#39;7&#39;,&#39;7&#39;,&#39;7&#39;,&#39;4&#39;,&#39;7&#39;,&#39;w&#39;),
+(a: &#39;w&#39;,&#39;0&#39;,&#39;6&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;),
+(a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;1&#39;,&#39;0&#39;,&#39;w&#39;),
+(a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;),
+(a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;)))
+(set: $location to (a: 7,3))
+(set: $orientation to (a: (a: 0,1), (a: -1, 0), (a: 0,-1), (a: 1,0)))
+(set: $level to 29)
+(set: $room to $defaultRoom + (dm: 
+	&quot;name&quot;, &quot;watermelon fields&quot;,
+	&quot;text&quot;, &quot;The air is thick with the heady scent of watermelons.&quot;,
+	&quot;flavour&quot;, &quot;You experience a fleeting urge to lay yourself on the ground and gnaw through a watermelon&#39;s shell and consume and consume until the flesh falls from your bones and the plants, in their turn, begin to consume you.&quot;))
+(set: $elements to (a: &#39;1&#39;, &#39;7&#39;, &#39;4&#39;, &#39;6&#39;, &#39;9&#39;))
+(set: $variant to &quot;Main&quot;)
+(if: (history:) contains (text: $level))[(goto: $variant)]
+(display: &quot;talk&quot;)
+	(replace: ?dialogue)[*You found a watermelon! It&#39;s not quite right, though. This one bleeds real blood, which might be unsettling for any cultists partaking in tonight&#39;s ceremony.*]
+	(replace: ?reply)[(link: &quot;*Push onwards*&quot;)[(goto: $variant)]]}</tw-passagedata><tw-passagedata pid="176" name="30" tags="" position="1700,2800" size="100,200">{&lt;script&gt;var style = &quot;watermelon&quot;;&lt;/script&gt;
+(set: $map to (a: 
+(a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;), 
+(a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;), 
+(a: &#39;w&#39;,&#39;0&#39;,&#39;1&#39;,&#39;0&#39;,&#39;9&#39;,&#39;0&#39;,&#39;w&#39;), 
+(a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;), 
+(a: &#39;w&#39;,&#39;v&#39;,&#39;v&#39;,&#39;v&#39;,&#39;v&#39;,&#39;v&#39;)))
+(set: $location to (a: 4,3))
+(set: $orientation to (a: (a: 1,0), (a: 0,1), (a: -1, 0), (a: 0,-1)))
+(set: $level to 30)
+(set: $room to $defaultRoom + (dm: 
+	&quot;name&quot;, &quot;most pungent part of the watermelon fields&quot;,
+	&quot;text&quot;, &quot;Birds screech, stomachs gurgle, the scent of watermelon continues its relentless colonisation of your nostrils. You no longer know where you are. Frankly, you barely remember who you are, and you&#39;re no longer sure if you&#39;ve ever been anywhere else.&quot;,
+	&quot;flavour&quot;, &quot;All is as it ever was, and all is as it ever shall be.&quot;))
+(set: $elements to (a: &#39;1&#39;, &#39;9&#39;))
+(set: $variant to &quot;Main&quot;)
+(if: (history:) contains (text: $level))[(goto: $variant)]
+(display: &quot;talk&quot;)
+	(replace: ?dialogue)[&#39;&#39;Melonie, Keeper of Watermelons:&#39;&#39; I&#39;ve been waiting for you a long time... Jared.]
+	(replace: ?reply)[[[How did you know my name?|30B]]
+[[My name isn&#39;t Jared.|30A]]]}</tw-passagedata><tw-passagedata pid="177" name="30B" tags="" position="1975,2800" size="100,100">(display: &quot;talk&quot;)
+	(replace: ?dialogue)[&#39;&#39;Melonie, Keeper of Watermelons:&#39;&#39; We can talk more soon. You have one more puzzle to complete.]
+	(replace: ?reply)[(link: &quot;Very well.&quot;)[(goto: $variant)]]</tw-passagedata><tw-passagedata pid="178" name="30A" tags="" position="1850,2900" size="100,100">(display: &quot;talk&quot;)
+	(replace: ?dialogue)[&#39;&#39;Melonie, Keeper of Watermelons:&#39;&#39; I know you better than you know yourself, and yes. Your name is Jared.]
+	(replace: ?reply)[[[How did you know my name?|30B]]]</tw-passagedata><tw-passagedata pid="179" name="31" tags="" position="1700,3050" size="100,200">&lt;script&gt;A.stopAll()&lt;/script&gt;&lt;script&gt;var style = &quot;watermelon&quot;;&lt;/script&gt;(display: &quot;talk&quot;)
+	(replace: ?img)[&lt;img src=&quot;melonie.png&quot;&gt;]
+	(replace: ?dialogue)[&#39;&#39;Melonie, Keeper of the Watermelons: &#39;&#39;So. You have your watermelon.]
+	(replace: ?reply)[[[I do.|31A]]]</tw-passagedata><tw-passagedata pid="180" name="33" tags="" position="1700,3300" size="100,200">&lt;script&gt;var style = &quot;dark&quot;;&lt;/script&gt;(display: &quot;audio&quot;)(display: &quot;talk&quot;)
+	(replace: ?img)[&lt;img src=&quot;fungusKeeper.png&quot;&gt;]
+	(replace: ?dialogue)[&#39;&#39;Fungus farmer: &#39;&#39;I see you found your watermelon! That&#39;s wonderful!]
+	(replace: ?reply)[[[Thank you, Fungus Farmer!|33A]]]</tw-passagedata><tw-passagedata pid="181" name="31A" tags="" position="1850,3050" size="100,100">(display: &quot;talk&quot;)
+	(replace: ?img)[&lt;img src=&quot;melonie.png&quot;&gt;]
+	(replace: ?dialogue)[&#39;&#39;Melonie, Keeper of the Watermelons: &#39;&#39;And you are ready to take it upstairs?]
+	(replace: ?reply)[[[I am.|31B]]]</tw-passagedata><tw-passagedata pid="182" name="31B" tags="" position="2000,3050" size="100,100">(display: &quot;talk&quot;)
+	(replace: ?img)[&lt;img src=&quot;melonie2.png&quot;&gt;]
+	(replace: ?dialogue)[&#39;&#39;Melonie, Keeper of the Watermelons? &#39;&#39;You should stay here. With me. In the darkness. We could revel in song and dissolution. You could shield yourself forever from our swollen sun.]
+	(replace: ?reply)[[[I can&#39;t. I made a promise to retrieve a watermelon.|31C]]
+	[[That does sound alluring...|31D]]]</tw-passagedata><tw-passagedata pid="183" name="31C" tags="" position="2150,3050" size="100,100">(display: &quot;talk&quot;)
+	(replace: ?img)[&lt;img src=&quot;melonie3.png&quot;&gt;]
+	(replace: ?dialogue)[&#39;&#39;Melonie? Keeper of the Watermelons? &#39;&#39;The watermelon doesn&#39;t matter. The watermelon is a symbol. The ceremony is a symbol. The cult is a sheen of oil on the surface of the ocean, ignorant of the currents dispersing it from below. I am offering you something *real*.]
+	(replace: ?reply)[[[You don&#39;t sound like the real Melonie, keeper of the watermelons...|31E]]]</tw-passagedata><tw-passagedata pid="184" name="31D" tags="" position="2075,3200" size="100,100">(display: &quot;talk&quot;)
+	(replace: ?img)[&lt;img src=&quot;melonie3.png&quot;&gt;]
+	(replace: ?dialogue)[&#39;&#39;Melonie? Keeper of the Watermelons?&#39;&#39; So leave the cult. Stay with me. The cult is a sheen of oil on the surface of the ocean, ignorant of the currents dispersing it from below. I am offering you something more. I am offering you something real.]
+	(replace: ?reply)[[[You don&#39;t sound like the real Melonie, keeper of the watermelons...|31E]]]</tw-passagedata><tw-passagedata pid="185" name="31H" tags="" position="2650,3050" size="100,100">(display: &quot;talk&quot;)
+	(replace: ?img)[&lt;img src=&quot;cultistFish2.png&quot;&gt;]
+	(replace: ?dialogue)[&#39;&#39;????? &#39;&#39;There is plenty of time to come back. I will wait for you.]
+	(replace: ?reply)[(link: &quot;*Continue*&quot;)[&lt;script&gt;window.localStorage.setItem(&#39;level&#39;, 33);&lt;/script&gt;(set: $level to 33)(goto: &quot;33&quot;)]]</tw-passagedata><tw-passagedata pid="186" name="31E" tags="" position="2300,3050" size="100,100">(display: &quot;talk&quot;)
+	(replace: ?img)[&lt;img src=&quot;melonieFish.png&quot;&gt;]
+	(replace: ?dialogue)[&#39;&#39;????? &#39;&#39;You should not have left Melonie in the darkness. She is not Melonie anymore. She seethes with something you can barely comprehend.]
+	(replace: ?reply)[[[I&#39;m going to be honest. You&#39;re not selling me on staying with you.|31F1]]
+	[[I too want to seethe with something I can barely comprehend!|31F2]]]</tw-passagedata><tw-passagedata pid="187" name="31F1" tags="" position="2475,3050" size="100,100">(display: &quot;talk&quot;)
+	(replace: ?img)[&lt;img src=&quot;cultistFish.png&quot;&gt;]
+	(replace: ?dialogue)[&#39;&#39;????? &#39;&#39;It doesn&#39;t matter. You can&#39;t escape my influence, above or below the ground.
+	But I won&#39;t force you to remain down here. You are free to go.]
+	(replace: ?reply)[[[*Stay*|32]]
+	[[*Leave*|31H]]]</tw-passagedata><tw-passagedata pid="188" name="31F2" tags="" position="2450,3200" size="100,100">(display: &quot;talk&quot;)
+	(replace: ?img)[&lt;img src=&quot;cultistFish.png&quot;&gt;]
+	(replace: ?dialogue)[&#39;&#39;????? &#39;&#39;So stay.]
+	(replace: ?reply)[[[*Stay*|32]]
+	[[*Leave*|31H]]]</tw-passagedata><tw-passagedata pid="189" name="32" tags="" position="2650,3200" size="100,100">{&lt;script&gt;var style = &quot;watermelon&quot;;&lt;/script&gt;
+&lt;script&gt;window.localStorage.setItem(&#39;level&#39;, 32);&lt;/script&gt;
+&lt;script&gt;
+	$(&quot;.card&quot;).addClass(style);
+&lt;/script&gt;
+}&lt;div class = &quot;card cardLong&quot;&gt;&lt;div class = &quot;speaker&quot;&gt;&lt;img src=&quot;cultistFish2.png&quot;&gt;&lt;/div&gt;&lt;div class = &quot;dialogue&quot;&gt;|dialogue&gt;[*You have decided to stay with the waterlogged cultist. The birds squabble, the vines grow, and by degrees the world above begins to fade. But there is plenty of light left in your eyes.*]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="190" name="33A" tags="" position="1850,3350" size="100,100">(display: &quot;talk&quot;)
+	(replace: ?img)[&lt;img src=&quot;fungusKeeper.png&quot;&gt;]
+	(replace: ?dialogue)[&#39;&#39;Fungus farmer: &#39;&#39;Enjoy tonight&#39;s ceremony!]
+	(replace: ?reply)[[[I will!|33B]]
+	[[Enjoy your fungus-keeping duties!|33B]]]</tw-passagedata><tw-passagedata pid="191" name="33B" tags="" position="2000,3350" size="100,200">&lt;script&gt;var style = &quot;mines&quot;;&lt;/script&gt;(display: &quot;talk&quot;)
+	(replace: ?img)[&lt;img src=&quot;block.png&quot;&gt;]
+	(replace: ?dialogue)[&#39;&#39;Sentient Push-Block:&#39;&#39; Hi! I&#39;m the sentient push-block you met earlier!]
+	(replace: ?reply)[[[Indeed you are! And that&#39;s great!|33C]]]</tw-passagedata><tw-passagedata pid="192" name="33C" tags="" position="2150,3350" size="100,100">(display: &quot;talk&quot;)
+	(replace: ?img)[&lt;img src=&quot;block.png&quot;&gt;]
+	(replace: ?dialogue)[&#39;&#39;Sentient Push-Block:&#39;&#39; All the best for your future travels, sentient human!]
+	(replace: ?reply)[[[All the best for yours, sentient push-block!|33D]]]</tw-passagedata><tw-passagedata pid="193" name="33D" tags="" position="2300,3350" size="100,200">&lt;script&gt;var style = &quot;catacombs&quot;;&lt;/script&gt;(display: &quot;talk&quot;)
+	(replace: ?img)[&lt;img src=&quot;catWhite.png&quot;&gt;]
+	(replace: ?dialogue)[&#39;&#39;White Cat:&#39;&#39; Hello again. I see you survived.]
+	(replace: ?reply)[[[I did! And I feel great!|33E1]]
+	[[I did! And I feel a little uncomfortable about the things I witnessed!|33E2]]]</tw-passagedata><tw-passagedata pid="194" name="33E1" tags="" position="2450,3350" size="100,100">(display: &quot;talk&quot;)
+	(replace: ?img)[&lt;img src=&quot;catWhite.png&quot;&gt;]
+	(replace: ?dialogue)[&#39;&#39;White Cat:&#39;&#39; I am very happy for you. Now if you&#39;ll excuse me, I recently spotted a rat wearing an adorable little crown, and I want to hunt, kill, and eat it.]
+	(replace: ?reply)[[[All the best!|33F]]
+	[[Please don&#39;t do that.|33E3]]]</tw-passagedata><tw-passagedata pid="195" name="33E2" tags="" position="2450,3475" size="100,100">(display: &quot;talk&quot;)
+	(replace: ?img)[&lt;img src=&quot;catWhite.png&quot;&gt;]
+	(replace: ?dialogue)[&#39;&#39;White Cat:&#39;&#39; I am sure that, with time, you will emerge from this experience all the stronger. Or at least interestingly different. 
+	
+	Now if you&#39;ll excuse me, I recently spotted a rat wearing an adorable little crown, and I want to hunt, kill, and eat it.]
+	(replace: ?reply)[[[All the best!|33F]]
+	[[Please don&#39;t do that.|33E3]]]</tw-passagedata><tw-passagedata pid="196" name="33F" tags="" position="2725,3350" size="100,200">&lt;script&gt;var style = &quot;cellar&quot;;&lt;/script&gt;(display: &quot;talk&quot;)
+	(replace: ?img)[&lt;img src=&quot;sommelier.png&quot;&gt;]
+	(replace: ?dialogue)[*The sommelier is engrossed in his work.*]
+	(replace: ?reply)[[[Hi, Sommelier! It&#39;s good to see you!|33G]]]</tw-passagedata><tw-passagedata pid="197" name="33E3" tags="" position="2600,3525" size="100,100">&lt;script&gt;var style = &quot;catacombs&quot;;&lt;/script&gt;(display: &quot;talk&quot;)
+	(replace: ?img)[&lt;img src=&quot;catWhite.png&quot;&gt;]
+	(replace: ?dialogue)[&#39;&#39;White Cat:&#39;&#39; Well. Okay. For you. Since you so improbably survived.]
+	(replace: ?reply)[[[Thanks, White Cat!|33F]]]</tw-passagedata><tw-passagedata pid="198" name="33G" tags="" position="2875,3350" size="100,100">(display: &quot;talk&quot;)
+	(replace: ?img)[&lt;img src=&quot;sommelier.png&quot;&gt;]
+	(replace: ?dialogue)[&#39;&#39;Sommelier: &#39;&#39;Hmph.]
+	(replace: ?reply)[[[Bye, Sommelier!|33H]]]</tw-passagedata><tw-passagedata pid="199" name="33H" tags="" position="3025,3350" size="100,200">&lt;script&gt;var style = &quot;library&quot;;&lt;/script&gt;(display: &quot;talk&quot;)
+	(replace: ?img)[&lt;img src=&quot;cultistRed.png&quot;&gt;]
+	(replace: ?dialogue)[&#39;&#39;Archivist: &#39;&#39;It&#39;s good to see you again. But quick - hurry upstairs. The ceremony is about to start, and the Black-Robed Cultist is waiting for you.]
+	(replace: ?reply)[(link: &quot;Will do.&quot;)[(set: $level to 34)(goto: &quot;34&quot;)]]</tw-passagedata><tw-passagedata pid="200" name="34" tags="" position="1700,3575" size="100,200">{&lt;script&gt;var style = &quot;lurid&quot;;&lt;/script&gt;(display: &quot;talk&quot;)
+	(replace: ?dialogue)[&#39;&#39;Black-robed Cultist: &#39;&#39;You there! Arrange the cudgels from smallest to largest! You there! Collect the readings from the archives. You there! Unravel four medium-sized gongs into triangles, assemble the four medium-sized triangles into one extra-large triangle, and then re-ravel the triangle into an extra-large gong!]
+	(replace: ?reply)[[[I&#39;m back.|34A]]]}</tw-passagedata><tw-passagedata pid="201" name="34A" tags="" position="1850,3625" size="100,100">(display: &quot;talk&quot;)
+	(replace: ?dialogue)[&#39;&#39;Black-robed Cultist: &#39;&#39;You! You&#39;re just in time. Did you remember to reset the puzzles behind you?]
+	(replace: ?reply)[[[...no|34B]]
+	[[...maybe?|34B]]]</tw-passagedata><tw-passagedata pid="202" name="34B" tags="" position="2000,3625" size="100,100">(display: &quot;talk&quot;)
+	(replace: ?dialogue)[&#39;&#39;Black-robed Cultist: &#39;&#39;No matter. I&#39;ll send someone else down later.]
+	(replace: ?reply)[[[Great! Thank you!|34C]]]</tw-passagedata><tw-passagedata pid="203" name="34C" tags="" position="2150,3625" size="100,100">(display: &quot;talk&quot;)
+	(replace: ?dialogue)[&#39;&#39;Black-robed Cultist: &#39;&#39;I would thank you for your help, but first I need to sound the shame-gong for each unit of shame you&#39;ve acquired.]
+	(replace: ?reply)[[[Um.|34C1]]]</tw-passagedata><tw-passagedata pid="204" name="34D" tags="" position="2450,3625" size="100,100">(display: &quot;talk&quot;)
+	(replace: ?dialogue)[&#39;&#39;Black-robed cultist:&#39;&#39; Now. Thank you for your help. I have to go carry the watermelon to the pedestal, but before I do, I think I owe you some answers. That is, if you have any questions you want to ask.]
+	(replace: ?reply)[(link: &quot;Why do we meet to smash watermelons?&quot;)[(goto: &quot;Why do we meet to smash watermelons?&quot;)]
+[[Who, or what, is the waterlogged cultist?]]
+[[Why are the watermelons so difficult to retrieve?]]
+[[No. I&#39;m not confused by this situation at all.|I&#39;m no longer confused by this situation at all.]]]</tw-passagedata><tw-passagedata pid="205" name="questions" tags="" position="2125,3875" size="100,100">[[Why do we meet to smash watermelons?]]
+[[Who, or what, is the waterlogged cultist?]]
+[[Why are the watermelons so difficult to retrieve?]]
+[[I&#39;m no longer confused by this situation at all.]]</tw-passagedata><tw-passagedata pid="206" name="Why do we meet to smash watermelons?" tags="" position="1900,4025" size="100,100">(display: &quot;talk&quot;)
+	(replace: ?dialogue)[&#39;&#39;Black-robed cultist:&#39;&#39; I can&#39;t explain it. Not fully. I&#39;m not sure if there is a full explanation. It is an untraditional tradition, and it is one that is all our own. It is a source of meaning, and togetherness, and watermelon giblets.
+	
+	Do you have any other questions?](replace: ?reply)[(link: &quot;Who, or what, is the waterlogged cultist?&quot;)[(goto: &quot;Who, or what, is the waterlogged cultist?&quot;)]
+[[Why are the watermelons so difficult to retrieve?]]
+[[No. I&#39;m not confused by this situation at all.|I&#39;m no longer confused by this situation at all.]]]</tw-passagedata><tw-passagedata pid="207" name="Who, or what, is the waterlogged cultist?" tags="" position="2050,4025" size="100,100">(display: &quot;talk&quot;)
+	(replace: ?dialogue)[&#39;&#39;Black-robed cultist:&#39;&#39; An allegory and a threat and a burden. But here, in this place, on this night, it won&#39;t bother you.
+	
+	Do you have any other questions?]
+	(replace: ?reply)[(link: &quot;Why do we meet to smash watermelons?&quot;)[(goto: &quot;Why do we meet to smash watermelons?&quot;)]
+[[Why are the watermelons so difficult to retrieve?]]
+[[No. I&#39;m not confused by this situation at all.|I&#39;m no longer confused by this situation at all.]]]</tw-passagedata><tw-passagedata pid="208" name="Why are the watermelons so difficult to retrieve?" tags="" position="2200,4025" size="100,100">(display: &quot;talk&quot;)
+	(replace: ?dialogue)[&#39;&#39;Black-robed cultist:&#39;&#39; To defer watermelon-thieves.
+	
+	Do you have any other questions?]
+	(replace: ?reply)[(link: &quot;Why do we meet to smash watermelons?&quot;)[(goto: &quot;Why do we meet to smash watermelons?&quot;)]
+[[Who, or what, is the waterlogged cultist?]]
+[[I&#39;m no longer confused by this situation at all.]]]</tw-passagedata><tw-passagedata pid="209" name="I&#39;m no longer confused by this situation at all." tags="" position="2350,4025" size="100,100">(display: &quot;talk&quot;)
+	(replace: ?dialogue)[&#39;&#39;Black-robed Cultist: &#39;&#39;You have done a good thing today. Now go - enjoy the ceremony. And thank you again for your work.]
+	(replace: ?reply)[(link: &quot;*This is the end, but it is also a beginning. All things are as they should be. You have done well.*&quot;)[(goto: &quot;Intro&quot;)]]</tw-passagedata><tw-passagedata pid="210" name="34C1" tags="" position="2300,3625" size="100,100">(display: &quot;talk&quot;)
+	(replace: ?dialogue)[(if: $shame &lt; 1)[... wait. You&#39;ve acquired 0 units of shame. Well done.](else:)[&#39;&#39;(for: each _unit, ...(repeated: $shame, 1))[(print: &quot;Shame. &quot;)]&#39;&#39;]]
+	(replace: ?reply)[[[...okay?|34D]]]</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
