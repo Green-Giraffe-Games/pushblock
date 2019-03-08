@@ -628,11 +628,11 @@ GE.shame = +localStorage.getItem('shame');
 		&quot;immobile&quot;, true,
 		&quot;closeup&quot;, &quot;The stalactites jut down from the ceiling&quot;),
 	&#39;T&#39;, (dm:
-		&quot;name&quot;, &quot;row of stalagmites&quot;,
+		&quot;name&quot;, &quot;solitary stalagmite&quot;,
 		&quot;determiner&quot;, &quot;a&quot;,
 		&quot;solid&quot;, true,
 		&quot;immobile&quot;, true,
-		&quot;closeup&quot;, &quot;The stalagmites jut up from the floor.&quot;),
+		&quot;closeup&quot;, &quot;The stalagmite juts up from the floor.&quot;),
 	&#39;U&#39;, (dm:
 		&quot;name&quot;, &quot;mushroom cluster&quot;,
 		&quot;determiner&quot;, &quot;a&quot;, 
@@ -669,7 +669,9 @@ GE.shame = +localStorage.getItem('shame');
 	&quot;semiblind&quot;, &quot;
 		&#39;&#39;Confused terror:&#39;&#39; You can&#39;t see anything that&#39;s in front of you, except insofar as what&#39;s in front of you is the waterlogged cultist.&quot;,
 		&quot;dark&quot;, &quot;
-		&#39;&#39;Darkness:&#39;&#39; You can&#39;t see anything that&#39;s not immediately in front of you.&quot;))
+		&#39;&#39;Darkness:&#39;&#39; You can&#39;t see anything that&#39;s not immediately in front of you.&quot;,
+	&quot;pivot&quot;, &quot;
+		&#39;&#39;Disequilibrium:&#39;&#39; You can&#39;t control how far you pivot, and you&#39;ve forgotten the distinction between left and right.&quot;))
 
 (set: $pushSpecial to (dm:
 	&#39;0&#39;, &#39;nothing&#39;,
@@ -962,9 +964,9 @@ A.newTrack(&#39;outro&#39;, &#39;audio/outro.mp3&#39;);
 ]
 }</tw-passagedata><tw-passagedata pid="7" name="actions" tags="" position="250,275" size="100,200">You can [(link-repeat: &quot;advance&quot;)[(display: &quot;advance&quot;)]]&lt;advance|
 Pivot [(link-repeat: &quot;left&quot;)[(set: $orientation to (rotated: -1, ...$orientation))(set: _orientation to $orientation)(replace: ?display)[(display: &quot;look&quot;)](replace: ?observe)[(display: &quot;observe&quot;)]] or (link-repeat: &quot;right&quot;)[(set: $orientation to (rotated: 1, ...$orientation))(set: _orientation to $orientation)(replace: ?display)[(display: &quot;look&quot;)](replace: ?observe)[(display: &quot;observe&quot;)]]]&lt;pivot|
-Glance (link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$orientation))(replace: ?observe)[To your left, you see:
+Glance [(link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$orientation))(replace: ?observe)[To your left, you see:
 (display: &quot;look&quot;)]] or (link-repeat: &quot;right&quot;)[(set: _orientation to (rotated: 1, ...$orientation))(replace: ?observe)[To your right, you see:
-(display: &quot;look&quot;)]]
+(display: &quot;look&quot;)]]]&lt;glance|
 [(link: &quot;Restart&quot;)[(goto: (text: $level))] or (link: &quot;skip&quot;)[(replace: ?skip)[Are you sure you want to skip? (link: &quot;Yes&quot;)[(goto: &quot;skip&quot;)]]] the level.]&lt;skip|</tw-passagedata><tw-passagedata pid="8" name="flavour" tags="" position="625,275" size="100,200">You are in the &#39;&#39;(print: $room&#39;s name)&#39;&#39;. (print: $room&#39;s text)\
 (print: $variant of $variants)</tw-passagedata><tw-passagedata pid="9" name="elements" tags="" position="875,275" size="100,200">(for: each _signifier, ...$elements)[&#39;&#39;(upperfirst: name of _signifier of $tiles):&#39;&#39; (print: description of _signifier of $tiles).
 ]</tw-passagedata><tw-passagedata pid="10" name="3" tags="" position="25,1025" size="100,200">{&lt;script&gt;var style = &quot;library&quot;;&lt;/script&gt;
@@ -1985,9 +1987,9 @@ You can make out nothing beyond that.]]</tw-passagedata><tw-passagedata pid="103
  
 (set: $variant to &quot;Main&quot;)(display: &quot;talk&quot;)
 	(replace: ?dialogue)[*You spot some fungi sprouting from the cave floor. You feel like it might be watching you.*]
-	(replace: ?reply)[[[Hi, fungi!|23A]]
-	(link: &quot;*Ignore it*&quot;)[(goto: $variant)]
-	[[*Stare at it*|23B]]]}</tw-passagedata><tw-passagedata pid="156" name="24" tags="" position="1700,1300" size="100,200">{&lt;script&gt;var style = &quot;dark&quot;;&lt;/script&gt;
+	(replace: ?reply)[[[*Greet it cheerfully*|23A]]
+	[[*Stare at it*|23B]]
+	(link: &quot;*Ignore it*&quot;)[(goto: $variant)]]}</tw-passagedata><tw-passagedata pid="156" name="24" tags="" position="1700,1300" size="100,200">{&lt;script&gt;var style = &quot;dark&quot;;&lt;/script&gt;
 (set: $map to (a: 
 (a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;),
 (a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;7&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;),
@@ -2070,27 +2072,27 @@ You can make out nothing beyond that.]]</tw-passagedata><tw-passagedata pid="103
 	]</tw-passagedata><tw-passagedata pid="168" name="25" tags="" position="1700,1550" size="100,200">{&lt;script&gt;var style = &quot;dark&quot;;&lt;/script&gt;
 (set: $map to (a: 
 (a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;),
-(a: &#39;w&#39;,&#39;U&#39;,&#39;0&#39;,&#39;0&#39;,&#39;7&#39;,&#39;t&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;),
-(a: &#39;w&#39;,&#39;0&#39;,&#39;1&#39;,&#39;0&#39;,&#39;4&#39;,&#39;0&#39;,&#39;9&#39;,&#39;0&#39;,&#39;w&#39;),
-(a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;7&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;),
-(a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;t&#39;,&#39;0&#39;,&#39;w&#39;),
-(a: &#39;w&#39;,&#39;U&#39;,&#39;0&#39;,&#39;0&#39;,&#39;7&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;),
-(a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;)))
-(set: $location to (a: 2,3))
-(set: $orientation to (a: (a: 1,0), (a: 0,1), (a: -1, 0), (a: 0,-1)))
+(a: &#39;w&#39;,&#39;0&#39;,&#39;T&#39;,&#39;0&#39;,&#39;7&#39;,&#39;0&#39;,&#39;0&#39;,&#39;U&#39;,&#39;w&#39;),
+(a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;4&#39;,&#39;0&#39;,&#39;0&#39;,&#39;U&#39;,&#39;w&#39;),
+(a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;7&#39;,&#39;0&#39;,&#39;0&#39;,&#39;U&#39;,&#39;w&#39;),
+(a: &#39;w&#39;,&#39;7&#39;,&#39;4&#39;,&#39;7&#39;,&#39;7&#39;,&#39;0&#39;,&#39;0&#39;,&#39;U&#39;,&#39;w&#39;),
+(a: &#39;w&#39;,&#39;0&#39;,&#39;1&#39;,&#39;0&#39;,&#39;4&#39;,&#39;0&#39;,&#39;0&#39;,&#39;U&#39;,&#39;w&#39;),
+(a: &#39;w&#39;,&#39;t&#39;,&#39;d&#39;,&#39;t&#39;,&#39;t&#39;,&#39;t&#39;,&#39;t&#39;,&#39;t&#39;)))
+(set: $location to (a: 3,3))
+(set: $orientation to (a: (a: 0,1), (a: -1, 0), (a: 0,-1), (a: 1,0)))
 (set: $level to 25)
 (set: $room to $defaultRoom + (dm: 
 	&quot;name&quot;, &quot;cave adjoining the watermelon fields&quot;,
-	&quot;text&quot;, &quot;The floor here is mercifully free of fungus.&quot;,
+	&quot;text&quot;, &quot;You inhale great lungfulls of fungal spores with every breath.&quot;,
 	&quot;flavour&quot;, &quot;A vibrant green glow leaks from the direction of the watermelon fields&quot;))
-(set: $elements to (a: &#39;1&#39;, &#39;4&#39;, &#39;7&#39;,&#39;9&#39;))
+(set: $elements to (a: &#39;1&#39;, &#39;4&#39;, &#39;7&#39;,&#39;d&#39;))
 (set: $tempDisplay to 0)
-(set: $variant to &quot;Main&quot;)
+(set: $variant to &quot;pivot&quot;)
 (if: (history:) contains (text: $level))[(goto: $variant)]
 (display: &quot;talk&quot;)
 	(replace: ?dialogue)[&#39;&#39;Fungal Outcast: &#39;&#39;.... urgh....]
 	(replace: ?reply)[[[Hi, Fungal Outcast!|25A]]
-	(link: &quot;*Leave. It has no legs and therefore cannot follow you.*&quot;)[(goto: $variant)]]}</tw-passagedata><tw-passagedata pid="169" name="25A" tags="" position="1900,1600" size="100,100">{(set: $tempDisplay to it + 1)
+	(link: &quot;*Leave. It has no legs and therefore cannot follow you.*&quot;)[(set: $tempDisplay to false)(goto: $variant)]]}</tw-passagedata><tw-passagedata pid="169" name="25A" tags="" position="1900,1600" size="100,100">{(set: $tempDisplay to it + 1)
 (set: _fungalSpeech to (a: &quot;urgh&quot;, &quot;ooooooo&quot;, &quot;sssssshhhhh&quot;, &quot;iiiisssss&quot;, &quot;eeeeeee&quot;, &quot;aaurgh&quot;, &quot;ffffflluuu&quot;, &quot;uudge&quot;, &quot;nnnnng&quot;, &quot;mmmmmehl&quot;, &quot;sssssssss&quot;))
 (set: _translate to (a: 
 	&quot;(either: &#39;splurge&#39;, &#39;urge&#39;, &#39;berg&#39;)&quot;,
@@ -2340,7 +2342,9 @@ You can make out nothing beyond that.]]</tw-passagedata><tw-passagedata pid="103
 	(replace: ?dialogue)[&#39;&#39;Black-robed Cultist: &#39;&#39;You have done a good thing today. Now go - enjoy the ceremony. And thank you again for your work.]
 	(replace: ?reply)[(link: &quot;*This is the end, but it is also a beginning. All things are as they should be. You have done well.*&quot;)[(goto: &quot;Intro&quot;)]]</tw-passagedata><tw-passagedata pid="209" name="34C1" tags="" position="2300,3625" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?dialogue)[(if: $shame &lt; 1)[... wait. You&#39;ve acquired 0 units of shame. Well done.](else:)[&#39;&#39;(for: each _unit, ...(repeated: $shame, 1))[(print: &quot;Shame. &quot;)]&#39;&#39;(replace: ?img)[&lt;img src=&quot;gong.png&quot;&gt;]]]
-	(replace: ?reply)[[[...okay?|34D]]]</tw-passagedata><tw-passagedata pid="210" name="pivot" tags="" position="2150,75" size="200,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+	(replace: ?reply)[[[...okay?|34D]]]</tw-passagedata><tw-passagedata pid="210" name="pivot" tags="" position="2150,75" size="200,100">(display: &quot;Main&quot;)(replace: ?pivot)[(link-repeat: &quot;randomly&quot;)[(set: $orientation to (rotated: (either: 1, 2, 3), ...$orientation))(set: _orientation to $orientation)(replace: ?display)[(display: &quot;look&quot;)](replace: ?observe)[(display: &quot;observe&quot;)]]]\
+(replace: ?glance)[(link-repeat: &quot;to one side&quot;)[(set: _orientation to (rotated: (either: 1, -1), ...$orientation))(replace: ?observe)[To one side, you see:
+(display: &quot;look&quot;)]]]</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
