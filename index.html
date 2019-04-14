@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Push: Block</title>
+<title>Push:Block</title>
 <style title="Twine CSS">@-webkit-keyframes appear{0%{opacity:0}to{opacity:1}}@keyframes appear{0%{opacity:0}to{opacity:1}}@-webkit-keyframes fade-in-out{0%,to{opacity:0}50%{opacity:1}}@keyframes fade-in-out{0%,to{opacity:0}50%{opacity:1}}@-webkit-keyframes rumble{50%{-webkit-transform:translateY(-0.2em);transform:translateY(-0.2em)}}@keyframes rumble{50%{-webkit-transform:translateY(-0.2em);transform:translateY(-0.2em)}}@-webkit-keyframes shudder{50%{-webkit-transform:translateX(0.2em);transform:translateX(0.2em)}}@keyframes shudder{50%{-webkit-transform:translateX(0.2em);transform:translateX(0.2em)}}@-webkit-keyframes box-flash{0%{background-color:white;color:white}}@keyframes box-flash{0%{background-color:white;color:white}}@-webkit-keyframes pulse{0%{-webkit-transform:scale(0, 0);transform:scale(0, 0)}20%{-webkit-transform:scale(1.2, 1.2);transform:scale(1.2, 1.2)}40%{-webkit-transform:scale(0.9, 0.9);transform:scale(0.9, 0.9)}60%{-webkit-transform:scale(1.05, 1.05);transform:scale(1.05, 1.05)}80%{-webkit-transform:scale(0.925, 0.925);transform:scale(0.925, 0.925)}to{-webkit-transform:scale(1, 1);transform:scale(1, 1)}}@keyframes pulse{0%{-webkit-transform:scale(0, 0);transform:scale(0, 0)}20%{-webkit-transform:scale(1.2, 1.2);transform:scale(1.2, 1.2)}40%{-webkit-transform:scale(0.9, 0.9);transform:scale(0.9, 0.9)}60%{-webkit-transform:scale(1.05, 1.05);transform:scale(1.05, 1.05)}80%{-webkit-transform:scale(0.925, 0.925);transform:scale(0.925, 0.925)}to{-webkit-transform:scale(1, 1);transform:scale(1, 1)}}@-webkit-keyframes shudder-in{0%, to{-webkit-transform:translateX(0em);transform:translateX(0em)}5%, 25%, 45%{-webkit-transform:translateX(-1em);transform:translateX(-1em)}15%, 35%, 55%{-webkit-transform:translateX(1em);transform:translateX(1em)}65%{-webkit-transform:translateX(-0.6em);transform:translateX(-0.6em)}75%{-webkit-transform:translateX(0.6em);transform:translateX(0.6em)}85%{-webkit-transform:translateX(-0.2em);transform:translateX(-0.2em)}95%{-webkit-transform:translateX(0.2em);transform:translateX(0.2em)}}@keyframes shudder-in{0%, to{-webkit-transform:translateX(0em);transform:translateX(0em)}5%, 25%, 45%{-webkit-transform:translateX(-1em);transform:translateX(-1em)}15%, 35%, 55%{-webkit-transform:translateX(1em);transform:translateX(1em)}65%{-webkit-transform:translateX(-0.6em);transform:translateX(-0.6em)}75%{-webkit-transform:translateX(0.6em);transform:translateX(0.6em)}85%{-webkit-transform:translateX(-0.2em);transform:translateX(-0.2em)}95%{-webkit-transform:translateX(0.2em);transform:translateX(0.2em)}}.debug-mode tw-expression[type=hookref]{background-color:rgba(115,123,140,0.15)}.debug-mode tw-expression[type=hookref]::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"?" attr(name)}.debug-mode tw-expression[type=variable]{background-color:rgba(140,128,115,0.15)}.debug-mode tw-expression[type=variable]::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"$" attr(name)}.debug-mode tw-expression[type=tempVariable]{background-color:rgba(140,128,115,0.15)}.debug-mode tw-expression[type=tempVariable]::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"_" attr(name)}.debug-mode tw-expression[type=macro]:nth-of-type(4n+0){background-color:rgba(136,153,102,0.15)}.debug-mode tw-expression[type=macro]:nth-of-type(2n+1){background-color:rgba(102,153,102,0.15)}.debug-mode tw-expression[type=macro]:nth-of-type(4n+2){background-color:rgba(102,153,136,0.15)}.debug-mode tw-expression[type=macro][name="display"]{background-color:rgba(0,170,255,0.1) !important}.debug-mode tw-expression[type=macro][name="if"],.debug-mode tw-expression[type=macro][name="if"]+tw-hook:not([name]),.debug-mode tw-expression[type=macro][name="unless"],.debug-mode tw-expression[type=macro][name="unless"]+tw-hook:not([name]),.debug-mode tw-expression[type=macro][name="elseif"],.debug-mode tw-expression[type=macro][name="elseif"]+tw-hook:not([name]),.debug-mode tw-expression[type=macro][name="else"],.debug-mode tw-expression[type=macro][name="else"]+tw-hook:not([name]){background-color:rgba(0,255,0,0.1) !important}.debug-mode tw-expression[type=macro].false{background-color:rgba(255,0,0,0.2) !important}.debug-mode tw-expression[type=macro].false+tw-hook:not([name]){display:none}.debug-mode tw-expression[type=macro][name="a"],.debug-mode tw-expression[type=macro][name="array"],.debug-mode tw-expression[type=macro][name="datamap"],.debug-mode tw-expression[type=macro][name="dataset"],.debug-mode tw-expression[type=macro][name="colour"],.debug-mode tw-expression[type=macro][name="color"],.debug-mode tw-expression[type=macro][name="num"],.debug-mode tw-expression[type=macro][name="number"],.debug-mode tw-expression[type=macro][name="text"],.debug-mode tw-expression[type=macro][name="print"]{background-color:rgba(255,255,0,0.2) !important}.debug-mode tw-expression[type=macro][name="put"],.debug-mode tw-expression[type=macro][name="set"]{background-color:rgba(255,128,0,0.2) !important}.debug-mode tw-expression[type=macro][name="script"]{background-color:rgba(255,191,0,0.2) !important}.debug-mode tw-expression[type=macro][name="style"]{background-color:rgba(185,198,198,0.2) !important}.debug-mode tw-expression[type=macro][name^="link"],.debug-mode tw-expression[type=macro][name^="click"],.debug-mode tw-expression[type=macro][name^="mouseover"],.debug-mode tw-expression[type=macro][name^="mouseout"]{background-color:rgba(128,223,32,0.2) !important}.debug-mode tw-expression[type=macro][name^="replace"],.debug-mode tw-expression[type=macro][name^="prepend"],.debug-mode tw-expression[type=macro][name^="append"],.debug-mode tw-expression[type=macro][name^="remove"]{background-color:rgba(223,96,32,0.2) !important}.debug-mode tw-expression[type=macro][name="live"]{background-color:rgba(32,96,223,0.2) !important}.debug-mode tw-expression[type=macro]::before{content:"(" attr(name) ":)";padding:0 0.5rem;font-size:1rem;vertical-align:middle;line-height:normal;background-color:inherit;border:1px solid rgba(255,255,255,0.5)}.debug-mode tw-hook{background-color:rgba(0,85,255,0.1) !important}.debug-mode tw-hook::before{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"["}.debug-mode tw-hook::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"]"}.debug-mode tw-hook[name]::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"]<" attr(name) "|"}.debug-mode tw-pseudo-hook{background-color:rgba(255,170,0,0.1) !important}.debug-mode tw-collapsed::before{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"{"}.debug-mode tw-collapsed::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"}"}.debug-mode tw-verbatim::before,.debug-mode tw-verbatim::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"`"}.debug-mode tw-align[style*="text-align: center"]{background:linear-gradient(to right, rgba(255,204,189,0) 0%, rgba(255,204,189,0.25) 50%, rgba(255,204,189,0) 100%)}.debug-mode tw-align[style*="text-align: left"]{background:linear-gradient(to right, rgba(255,204,189,0.25) 0%, rgba(255,204,189,0) 100%)}.debug-mode tw-align[style*="text-align: right"]{background:linear-gradient(to right, rgba(255,204,189,0) 0%, rgba(255,204,189,0.25) 100%)}.debug-mode tw-column{background-color:rgba(189,228,255,0.2)}.debug-mode tw-enchantment{animation:enchantment 0.5s infinite;-webkit-animation:enchantment 0.5s infinite;border:1px solid}.debug-mode tw-link::after,.debug-mode tw-broken-link::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:attr(passage-name)}.debug-mode tw-include{background-color:rgba(204,128,51,0.1)}.debug-mode tw-include::before{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:attr(type) ' "' attr(title) '"'}@keyframes enchantment{0%,to{border-color:#ffb366}50%{border-color:#6fc}}@-webkit-keyframes enchantment{0%,to{border-color:#ffb366}50%{border-color:#6fc}}tw-debugger{position:fixed;box-sizing:border-box;bottom:0;right:0;z-index:999999;min-width:10em;min-height:1em;padding:1em;font-size:1.25em;font-family:sans-serif;border-left:solid #000 2px;border-top:solid #000 2px;border-top-left-radius:.5em;background:#fff;opacity:1}tw-debugger select{margin-right:1em;width:12em}tw-debugger button{border-radius:3px;border:solid #999 1px;margin:auto 4px;background-color:#fff;font-size:inherit}tw-debugger button.enabled{background-color:#eee;box-shadow:inset #ddd 3px 5px 0.5em}tw-debugger .variables{display:-webkit-box;display:-webkit-flex;display:-moz-flex;display:-ms-flexbox;display:flex;-webkit-box-direction:normal;-webkit-box-orient:vertical;-webkit-flex-direction:column;-moz-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:absolute;bottom:100%;left:-2px;right:0;padding:1em;max-height:40vh;overflow-y:scroll;overflow-x:hidden;z-index:999998;background:#fff;border:inherit;border-top-left-radius:.5em;border-bottom-left-radius:.5em;font-size:0.8em}tw-debugger .variables:empty,tw-debugger .variables[hidden]{display:none}tw-debugger .variables .variable-row{display:-webkit-box;display:-webkit-flex;display:-moz-flex;display:-ms-flexbox;display:flex;-webkit-box-direction:normal;-webkit-box-orient:horizontal;-webkit-flex-direction:row;-moz-flex-direction:row;-ms-flex-direction:row;flex-direction:row;flex-shrink:0}tw-debugger .variables .variable-row:nth-child(2n){background:#EEE}tw-debugger .variables .variable-name{display:inline-block;width:50%}tw-debugger .variables .variable-name::before{content:"$"}tw-debugger .variables .variable-name.temporary::before{content:"_"}tw-debugger .variables .variable-name .temporary-variable-scope{opacity:0.8;font-size:0.75em}tw-debugger .variables .variable-name .temporary-variable-scope::before{content:" in "}tw-debugger .variables .variable-value{display:inline-block;width:50%}tw-link,.link,tw-icon,.enchantment-clickblock{cursor:pointer}tw-link,.enchantment-link{color:#4169E1;font-weight:bold;text-decoration:none;transition:color 0.2s ease-in-out}tw-enchantment[style^="color"] tw-link:not(:hover),tw-enchantment[style*=" color"] tw-link:not(:hover),tw-enchantment[style^="color"] .enchantment-link:not(:hover),tw-enchantment[style*=" color"] .enchantment-link:not(:hover){color:inherit}tw-link:hover,.enchantment-link:hover{color:#00bfff}tw-link:active,.enchantment-link:active{color:#DD4B39}.visited{color:#6941e1}tw-enchantment[style^="color"] .visited:not(:hover),tw-enchantment[style*=" color"] .visited:not(:hover){color:inherit}.visited:hover{color:#E3E}tw-broken-link{color:#993333;border-bottom:2px solid #993333;cursor:not-allowed}tw-enchantment[style^="color"] tw-broken-link:not(:hover),tw-enchantment[style*=" color"] tw-broken-link:not(:hover){color:inherit}.enchantment-mouseover{border-bottom:1px dashed #666}.enchantment-mouseout{border:rgba(64,149,191,0.25) 1px solid}.enchantment-mouseout:hover{background-color:rgba(64,149,191,0.25);border:transparent 1px solid;border-radius:0.2em}.enchantment-clickblock{box-shadow:inset 0 0 0 0.5vmax;display:block;color:rgba(65,105,225,0.5);transition:color 0.2s ease-in-out}.enchantment-clickblock:hover{color:rgba(0,191,255,0.5)}.enchantment-clickblock:active{color:rgba(222,78,59,0.5)}html{margin:0;height:100%;overflow-x:hidden}*,:before,:after{position:relative;box-sizing:inherit}body{margin:0;height:100%}tw-storydata{display:none}tw-story{display:-webkit-box;display:-webkit-flex;display:-moz-flex;display:-ms-flexbox;display:flex;-webkit-box-direction:normal;-webkit-box-orient:vertical;-webkit-flex-direction:column;-moz-flex-direction:column;-ms-flex-direction:column;flex-direction:column;font:100% Georgia, serif;box-sizing:border-box;width:100%;min-height:100%;font-size:1.5em;line-height:1.5em;padding:5% 20%;margin:0;background-color:#000;color:#fff}tw-passage{display:block}br+br{display:block;height:0;margin:0.8ex 0}tw-sidebar{left:-5em;width:3em;position:absolute;text-align:center;display:block}tw-icon{display:block;margin:0.5em 0;opacity:0.1;font-size:2.75em}tw-icon:hover{opacity:0.3}tw-hook:empty,tw-expression:empty{display:none}tw-error{display:inline-block;border-radius:0.2em;padding:0.2em;font-size:1rem;cursor:help}tw-error.error{background-color:rgba(223,58,190,0.4);color:#fff}tw-error.warning{background-color:rgba(223,140,58,0.4);color:#fff;display:none}.debug-mode tw-error.warning{display:inline}tw-error-explanation{display:block;font-size:0.8rem;line-height:1rem}tw-error-explanation-button{cursor:pointer;line-height:0em;border-radius:1px;border:1px solid black;font-size:0.8rem;margin:0 0.4rem;opacity:0.5}tw-error-explanation-button .folddown-arrowhead{display:inline-block}tw-notifier{border-radius:0.2em;padding:0.2em;font-size:1rem;background-color:rgba(223,182,58,0.4);display:none}.debug-mode tw-notifier{display:inline}tw-notifier::before{content:attr(message)}tw-colour{border:1px solid black;display:inline-block;width:1em;height:1em}h1{font-size:3em}h2{font-size:2.25em}h3{font-size:1.75em}h1,h2,h3,h4,h5,h6{line-height:1em;margin:0.3em 0 0.6em 0}pre{font-size:1rem}small{font-size:70%}big{font-size:120%}mark{color:rgba(0,0,0,0.6);background-color:#ff9}ins{color:rgba(0,0,0,0.6);background-color:rgba(255,242,204,0.5);border-radius:0.5em;box-shadow:0em 0em 0.2em #ffe699;text-decoration:none}center{text-align:center;margin:0 auto;width:60%}blink{text-decoration:none;animation:fade-in-out 1s steps(1, end) infinite alternate;-webkit-animation:fade-in-out 1s steps(1, end) infinite alternate}tw-align{display:block}tw-columns{display:-webkit-box;display:-webkit-flex;display:-moz-flex;display:-ms-flexbox;display:flex;-webkit-box-direction:normal;-webkit-box-orient:horizontal;-webkit-flex-direction:row;-moz-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;-webkit-justify-content:space-between;-moz-justify-content:space-between;justify-content:space-between}tw-outline{color:white;text-shadow:-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000}tw-shadow{text-shadow:0.08em 0.08em 0.08em #000}tw-emboss{text-shadow:0.08em 0.08em 0em #000;color:white}tw-condense{letter-spacing:-0.08em}tw-expand{letter-spacing:0.1em}tw-blur{color:transparent;text-shadow:0em 0em 0.08em #000}tw-blurrier{color:transparent;text-shadow:0em 0em 0.2em #000}tw-blurrier::selection{background-color:transparent;color:transparent}tw-blurrier::-moz-selection{background-color:transparent;color:transparent}tw-smear{color:transparent;text-shadow:0em 0em 0.02em rgba(0,0,0,0.75),-0.2em 0em 0.5em rgba(0,0,0,0.5),0.2em 0em 0.5em rgba(0,0,0,0.5)}tw-mirror{display:inline-block;transform:scaleX(-1);-webkit-transform:scaleX(-1)}tw-upside-down{display:inline-block;transform:scaleY(-1);-webkit-transform:scaleY(-1)}tw-fade-in-out{text-decoration:none;animation:fade-in-out 2s ease-in-out infinite alternate;-webkit-animation:fade-in-out 2s ease-in-out infinite alternate}tw-rumble{-webkit-animation:rumble linear 0.1s 0s infinite;animation:rumble linear 0.1s 0s infinite;display:inline-block}tw-shudder{-webkit-animation:shudder linear 0.1s 0s infinite;animation:shudder linear 0.1s 0s infinite;display:inline-block}tw-shudder-in{animation:shudder-in 1s ease-out;-webkit-animation:shudder-in 1s ease-out}.transition-in{-webkit-animation:appear 0ms step-start;animation:appear 0ms step-start}.transition-out{-webkit-animation:appear 0ms step-end;animation:appear 0ms step-end}[data-t8n^=fade-in].transition-in{-webkit-animation:appear .8s;animation:appear .8s}[data-t8n^=fade-in].transition-out{display:none}[data-t8n^=dissolve].transition-in{-webkit-animation:appear .8s;animation:appear .8s}[data-t8n^=dissolve].transition-out{-webkit-animation:appear .8s reverse;animation:appear .8s reverse}[data-t8n^=shudder-in].transition-in,.transition-in[data-t8n^=shudder]{display:inline-block;-webkit-animation:shudder-in .8s;animation:shudder-in .8s}[data-t8n^=shudder-out].transition-out,.transition-out[data-t8n^=shudder]{display:inline-block;-webkit-animation:shudder-out .8s;animation:shudder-out .8s}[data-t8n^=boxflash].transition-in{-webkit-animation:box-flash .8s;animation:box-flash .8s}[data-t8n^=pulse].transition-in{-webkit-animation:pulse .8s;animation:pulse .8s;display:inline-block}[data-t8n^=pulse].transition-out{-webkit-animation:pulse .8s reverse;animation:pulse .8s reverse;display:inline-block}[data-t8n$=fast]{animation-duration:.4s;-webkit-animation-duration:.4s}[data-t8n$=slow]{animation-duration:1.6s;-webkit-animation-duration:1.6s}
 </style>
 </head>
@@ -11,7 +11,7 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="Push: Block" startnode="4" creator="Twine" creator-version="2.2.1" ifid="1E098D58-04AB-4F91-9066-80D005EE945A" zoom="1" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css?family=Lato|Special+Elite|ZCOOL+KuaiLe');
+<tw-storydata name="Push:Block" startnode="4" creator="Twine" creator-version="2.2.1" ifid="1E098D58-04AB-4F91-9066-80D005EE945A" zoom="1" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css?family=Lato|Special+Elite');
 
 .transition-in[data-t8n^=dissolve] {
 	-webkit-animation:appear 0ms step-start;
@@ -401,6 +401,8 @@ h3 {
 
 
 
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">function myFunction() {
   // Get the snackbar DIV
   var x = document.getElementById("snackbar");
@@ -468,6 +470,8 @@ GE.shame = +localStorage.getItem('shame');
 
 
 
+
+
 </script><tw-passagedata pid="1" name="Main" tags="" position="25,275" size="200,200">{&lt;script&gt;
 	$(&quot;.lvl, .card, .card2&quot;).addClass(style);
 &lt;/script&gt;
@@ -484,7 +488,7 @@ GE.shame = +localStorage.getItem('shame');
 	&quot;w&quot;, (dm: 
 		&quot;name&quot;, &quot;wall&quot;, 
 		&quot;determiner&quot;, &quot;the&quot;, 
-		&quot;closeup&quot;, &quot;This section of the wall is (either: &#39;largely featureless&#39;, &#39;wholly uninteresting&#39;).&quot;,
+		&quot;closeup&quot;, &quot;This section of wall is (either: &#39;largely featureless&#39;, &#39;wholly uninteresting&#39;).&quot;,
 		&quot;solid&quot;, true, 	
 		&quot;immobile&quot;, true), 
 	&#39;0&#39;, (dm: 
@@ -681,7 +685,13 @@ GE.shame = +localStorage.getItem('shame');
 		&quot;determiner&quot;, &quot;an&quot;,
 		&quot;closeup&quot;, &quot;The sommelier refuses to speak with you.&quot;,
 		&quot;solid&quot;, true,
-		&quot;immobile&quot;, true)
+		&quot;immobile&quot;, true),
+	&#39;X&#39;, (dm: 
+		&quot;name&quot;, &quot;wall&quot;, 
+		&quot;determiner&quot;, &quot;the&quot;, 
+		&quot;closeup&quot;, &quot;This section of wall is mildly unusual.&quot;,
+		&quot;solid&quot;, true, 	
+		&quot;immobile&quot;, true)		
 		))
 	
 (set: $variants to (dm:
@@ -703,7 +713,8 @@ GE.shame = +localStorage.getItem('shame');
 	&#39;2&#39;, &#39;ice&#39;,
 	&#39;3&#39;, &#39;sentient&#39;,
 	&#39;5&#39;, &#39;lore&#39;,
-	&#39;6&#39;, &#39;launchSelf&#39;))
+	&#39;6&#39;, &#39;launchSelf&#39;,
+	&#39;X&#39;, &#39;secretExit&#39;))
 
 (set: $collision to (dm:
 	&#39;7&#39;, &#39;pitCollide&#39;,
@@ -727,7 +738,7 @@ GE.shame = +localStorage.getItem('shame');
 	&quot;Technically, pushing a somewhat sentient push-block into a pit constitutes murder.&quot;,
 	&quot;Lore books are hidden in each of the six areas of the dungeon.&quot;, 
 	&quot;Your observations are recorded on the &#39;Observation&#39; card.&quot;, 
-	&quot;You can skip any level, but doing so will cause you to accrue shame .&quot;,
+	&quot;You can skip any level, but doing so will cause you to accrue shame.&quot;,
 	&quot;You might need to reset the puzzle if you make bad block-pushing decisions.&quot;,
 	&quot;Most puzzles can be solved by pushing a block onto a pressure plate.&quot;,
 	&quot;The Archivist archives in the Archives.&quot;,
@@ -736,11 +747,11 @@ GE.shame = +localStorage.getItem('shame');
 	&quot;Most of these hints aren&#39;t actually helpful.&quot;,
 	&quot;The game saves automatically at the beginning of each level.&quot;,
 	&quot;Clicking &#39;hint:&#39; will display hints.&quot;,
-	&quot;Most (but not all) rooms are rectangular.&quot;,
+	&quot;Most (but not all) rooms are either square or rectangular.&quot;,
 	&quot;Some puzzles require you to reach a door rather than activate a pressure plate.&quot;,
 	&quot;The Fungus Keeper is responsible for cultivating the cult&#39;s supply of fungi.&quot;,
 	&quot;As in life, there are 30 levels in this game.&quot;,
-	&quot;As in our world, any ice blocks in the dungeon are not subject to friction.&quot;,
+	&quot;As in real life, ice blocks in this game are not subject to friction.&quot;,
 	&quot;Somewhat sentient push-blocks have volition, but can do nothing with it.&quot;)))
 
 (set: $about to (a:
@@ -832,6 +843,7 @@ GE.shame = +localStorage.getItem('shame');
 	30, &#39;&lt;img src=&quot;melonie.png&quot;&gt;&#39;,
 	31, &#39;&lt;img src=&quot;cultistFish.png&quot;&gt;&#39;,
 	34, &#39;&lt;img src = &quot;cultist.png&quot;&gt;&#39;,
+	96, &#39;&lt;img src=&quot;door.png&quot;&gt;&#39;,
 	97, &#39;&lt;img src = &quot;gong.png&quot;&gt;&#39;,
 	98, &#39;&lt;img src=&quot;shame.png&quot;&gt;&#39;,
 	99, &#39;&lt;img src=&quot;lore.png&quot;&gt;&#39;))
@@ -886,7 +898,8 @@ A.newTrack(&#39;outro&#39;, &#39;audio/outro.mp3&#39;);
 &lt;div class = &quot;card sink&quot;&gt;(print: _images&#39;s 1st)(set: _images to it - (a: _images&#39;s 1st))
 &lt;/h3&gt;(link: &quot;Continue playing&quot;)[(if: $level &gt; 1)[&lt;script&gt;A.stopAll()&lt;/script&gt;(display: &quot;audio&quot;)(goto: (text: $level))](else:)[&#39;&#39;Error:&#39;&#39; Error occured.]]&lt;/h3&gt;&lt;/div&gt;
 &lt;div class = &quot;card sink&quot;&gt;(print: _images&#39;s 1st)(set: _images to it - (a: _images&#39;s 1st))
-&lt;/h3&gt;(link: &quot;Stop playing&quot;)[&lt;script&gt;window.close();&lt;/script&gt;]&lt;/h3&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/h3&gt;(link-repeat: &quot;Stop playing&quot;)[&lt;script&gt;window.close();&lt;/script&gt;&lt;script&gt;
+  window.history.back();&lt;/script&gt;]&lt;/h3&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;div class=&quot;row&quot;&gt;
 	&lt;div class=&quot;card2 imageLeft&quot;&gt;&lt;div class = &quot;speaker&quot;&gt;(print: _images&#39;s 1st)&lt;/div&gt;&lt;div class = &quot;dialogue&quot;&gt;(link-repeat: &quot;&#39;&#39;Hint: &#39;&#39;&quot;)[(replace: ?hint)[(print: 1st of $map)(set: $map to (rotated: 1, ...$map))]]|hint&gt;[You need to click on the words to do things, which is awkward. I&#39;m sorry.] &lt;/div&gt;&lt;/div&gt;
 	&lt;div class = &quot;card2 imageLeft&quot;&gt;&lt;div class = &quot;speaker&quot;&gt;&lt;img src=&quot;greenGiraffe.png&quot;&gt;&lt;/div&gt;&lt;div class = &quot;dialogue&quot;&gt;(link-repeat: &quot;&#39;&#39;About: &#39;&#39;&quot;)[(replace: ?about)[(print: 1st of $delayExecute)(set: $delayExecute to (rotated: 1, ...$delayExecute))]]|about&gt;[This game was made by Green Giraffe Games].&lt;/div&gt;&lt;/div&gt;
@@ -994,9 +1007,9 @@ Glance [(link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$
 (print: $variant of $variants)</tw-passagedata><tw-passagedata pid="9" name="elements" tags="" position="875,275" size="100,200">(for: each _signifier, ...$elements)[&#39;&#39;(upperfirst: name of _signifier of $tiles):&#39;&#39; (print: description of _signifier of $tiles).
 ]</tw-passagedata><tw-passagedata pid="10" name="3" tags="" position="25,1025" size="100,200">{&lt;script&gt;var style = &quot;library&quot;;&lt;/script&gt;
 (set: $map to (a: 
-(a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;), 
-(a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;), 
-(a: &#39;w&#39;,&#39;0&#39;,&#39;1&#39;,&#39;0&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;), 
+(a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;0&#39;), 
+(a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;,&#39;0&#39;), 
+(a: &#39;w&#39;,&#39;0&#39;,&#39;1&#39;,&#39;0&#39;,&#39;w&#39;,&#39;X&#39;,&#39;w&#39;), 
 (a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;), 
 (a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;9&#39;,&#39;0&#39;,&#39;w&#39;), 
 (a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;), 
@@ -1024,7 +1037,7 @@ Glance [(link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$
 	(replace: ?dialogue)[&#39;&#39;Black-robed Cultist:&#39;&#39; I&#39;m going to be cleaning the cudgels instead, as befits a cultist of my station.]
 	(replace: ?reply)[[[I won&#39;t forget my station again, oh black-robed one.|1D]]]</tw-passagedata><tw-passagedata pid="14" name="1D" tags="" position="525,525" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?dialogue)[&#39;&#39;Black-robed Cultist:&#39;&#39; There are many push block puzzles between here and there. Please make sure you reset them behind you.]
-	(replace: ?reply)[(link: &quot;Will do.&quot;)[&lt;script&gt;var style = &quot;library&quot;;&lt;/script&gt;(goto: $variant)]]</tw-passagedata><tw-passagedata pid="15" name="2" tags="" position="25,773" size="100,200">{&lt;script&gt;var style = &quot;library&quot;;&lt;/script&gt;
+	(replace: ?reply)[(link: &quot;Will do.&quot;)[&lt;script&gt;var style = &quot;library&quot;;&lt;/script&gt;(goto: $variant)]]</tw-passagedata><tw-passagedata pid="15" name="2" tags="" position="25,775" size="100,200">{&lt;script&gt;var style = &quot;library&quot;;&lt;/script&gt;
 (set: $map to (a: 
 (a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;), 
 (a: &#39;s&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;), 
@@ -1069,7 +1082,7 @@ Glance [(link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$
 (display: &quot;talk&quot;)
 	(replace: ?dialogue)[&#39;&#39;Archivist: &#39;&#39; Hello again.]
 	(replace: ?reply)[[[Hi, Archivist!|4B]]]
-}</tw-passagedata><tw-passagedata pid="19" name="door" tags="" position="1150,274" size="100,100">(set: $tempDisplay to (a: &quot;(replace: ?observe)[The exit door swings open. It&#39;s time to leave.]
+}</tw-passagedata><tw-passagedata pid="19" name="door" tags="" position="1150,275" size="100,100">(set: $tempDisplay to (a: &quot;(replace: ?observe)[The exit door swings open. It&#39;s time to leave.]
 (replace: ?action)[(link: &#39;Leave&#39;)[&lt;script&gt;window.localStorage.setItem(&#39;level&#39;, +localStorage.getItem(&#39;level&#39;) + 1);&lt;/script&gt;(set: $level to it + 1)(goto: (text: $level))] the (print: $room&#39;s name).]
 (replace: ?display)[Darkness and opportunity.]&quot;))(goto: $variant)</tw-passagedata><tw-passagedata pid="20" name="ice" tags="" position="1525,274" size="100,100">{
 (set: $slide to 0)
@@ -1332,13 +1345,12 @@ Words]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="45" name="6A" tags="" po
 (a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;), 
 (a: &#39;w&#39;,&#39;0&#39;,&#39;B&#39;,&#39;b&#39;,&#39;B&#39;,&#39;0&#39;,&#39;w&#39;), 
 (a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;1&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;), 
-(a: &#39;w&#39;,&#39;B&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;B&#39;,&#39;w&#39;), 
+(a: &#39;w&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;w&#39;), 
 (a: &#39;w&#39;,&#39;r&#39;,&#39;r&#39;,&#39;r&#39;,&#39;r&#39;,&#39;r&#39;,&#39;w&#39;)))
 (set: $location to (a: 4,6))
 (set: $orientation to (a: (a: 0,-1), (a: 1,0), (a: 0,1), (a: -1, 0)))
 (set: $room to $defaultRoom + (dm: &quot;name&quot;, &quot;crowded storeroom&quot;, &quot;text&quot;, &quot;The barrels leave little room to maneuver.&quot;))
 (set: $elements to (a: &#39;1&#39;, &#39;b&#39;, &#39;9&#39;))
- 
 (set: $level to 10)
 (set: $variant to &quot;Main&quot;)
 (if: (history:) contains (text: $level))[(goto: $variant)]
@@ -1346,7 +1358,7 @@ Words]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="45" name="6A" tags="" po
 	(replace: ?img)[&lt;img src = &quot;ratKing.png&quot;&gt;]
 	(replace: ?dialogue)[&#39;&#39;King Rat: &#39;&#39;Hello.]
 	(replace: ?reply)[[[Hello.|10A]]
-	[[You can talk!!|10A]]]}&lt;script&gt;var style = &quot;cellar&quot;;&lt;/script&gt;</tw-passagedata><tw-passagedata pid="55" name="11" tags="" position="25,3025" size="100,200">{&lt;script&gt;var style = &quot;catacombs&quot;;&lt;/script&gt;
+	[[You can talk!!|10A]]]}</tw-passagedata><tw-passagedata pid="55" name="11" tags="" position="25,3025" size="100,200">{&lt;script&gt;var style = &quot;catacombs&quot;;&lt;/script&gt;
 (display: &quot;progress&quot;)
 (set: $map to (a: 
 (a: &#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;,&#39;w&#39;), 
@@ -1368,7 +1380,7 @@ Words]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="45" name="6A" tags="" po
 (set: $variant to &quot;Main&quot;)
 (if: (history:) contains (text: $level))[(goto: $variant)]
 (display: &quot;talk&quot;)
-	(replace: ?dialogue)[&#39;&#39;Burning cultist:&#39;&#39; A visitor! It has been a while since someone has come all this way to see me.]
+	(replace: ?dialogue)[&#39;&#39;Burning cultist:&#39;&#39; A visitor! It has been a long while since someone has come all this way to see me.]
 	(replace: ?reply)[[[Why are you on fire?|11A]]
 	[[Why does your head look so small?|11A2]]]}</tw-passagedata><tw-passagedata pid="56" name="7B" tags="" position="250,2075" size="100,100">(display: &quot;talk&quot;)
 	(replace: ?dialogue)[&#39;&#39;Rat:&#39;&#39; (either: &#39;Squeak&#39;, &#39;Squeak&#39;, &#39;Squeak&#39;, &#39;Squeak squeak&#39;, &#39;Squeeeeeak&#39;)(either: &#39; squeak&#39;, &#39;&#39;, &#39;&#39;)(either: &#39; squeak&#39;, &#39;&#39;, &#39;&#39;)(either: &#39; squeak&#39;, &#39;&#39;, &#39;&#39;)(either: &#39;.&#39;, &#39;.&#39;, &#39;?&#39;, &#39;!&#39;, &#39;?!&#39;)]
@@ -1478,7 +1490,7 @@ Glance (link-repeat: &quot;left&quot;)[(set: _orientation to (rotated: -1, ...$o
 	x.className = &quot;show&quot;;
 	setTimeout(function(){ x.className = x.className.replace(&quot;show&quot;, &quot;&quot;); }, 5000);
 &lt;/script&gt;
-&lt;div id = &quot;snackbar&quot;&gt;You have left the (print: $chapterNames&#39;s (abs: (floor: ($level-1)/5))), and are entering the (print: $chapterNames&#39;s (abs: 1 + (floor: ($level-1)/5))).&lt;/div&gt;(display: &quot;audio&quot;)</tw-passagedata><tw-passagedata pid="84" name="lore" tags="" position="1775,398" size="100,100">(replace: ?observe)[The lore-tome is musty and old. You could (link-repeat: &quot;read it&quot;)[&lt;script&gt;$(&quot;.lore&quot;).addClass(&quot;imageLeft&quot;);&lt;/script&gt;(replace: ?lore)[&lt;div class = &quot;speaker&quot;&gt;&lt;img src = &quot;lore.png&quot;&gt;&lt;/div&gt;&lt;div class = &quot;dialogue&quot;&gt;(print: $level of $lore)
+&lt;div id = &quot;snackbar&quot;&gt;You have left the (print: $chapterNames&#39;s (abs: (floor: ($level-1)/5))), and are entering the (print: $chapterNames&#39;s (abs: 1 + (floor: ($level-1)/5))).&lt;/div&gt;(display: &quot;audio&quot;)</tw-passagedata><tw-passagedata pid="84" name="lore" tags="" position="1775,400" size="100,100">(replace: ?observe)[The lore-tome is musty and old. You could (link-repeat: &quot;read it&quot;)[&lt;script&gt;$(&quot;.lore&quot;).addClass(&quot;imageLeft&quot;);&lt;/script&gt;(replace: ?lore)[&lt;div class = &quot;speaker&quot;&gt;&lt;img src = &quot;lore.png&quot;&gt;&lt;/div&gt;&lt;div class = &quot;dialogue&quot;&gt;(print: $level of $lore)
 (link: &quot;*Stop reading*&quot;)[(goto: $variant)]]&lt;/div&gt;].]</tw-passagedata><tw-passagedata pid="85" name="sentient" tags="" position="1650,400" size="100,100">(set: _forwards3 to (a: (_forwards2&#39;s 1st + 1st of $orientation&#39;s 1st), (_forwards2&#39;s 2nd + 2nd of $orientation&#39;s 1st)))
 (set: _forwards4 to (a: (_forwards2&#39;s 1st + 1st of $orientation&#39;s 2nd), (_forwards2&#39;s 2nd + 2nd of $orientation&#39;s 2nd)))
 (set: _forwards5 to (a: (_forwards2&#39;s 1st + 1st of $orientation&#39;s 4th), (_forwards2&#39;s 2nd + 2nd of $orientation&#39;s 4th)))
@@ -2369,7 +2381,20 @@ You can make out nothing beyond that.]]</tw-passagedata><tw-passagedata pid="103
 	(replace: ?dialogue)[(if: $shame &lt; 1)[... wait. You&#39;ve acquired 0 units of shame. Well done.](else:)[&#39;&#39;(for: each _unit, ...(repeated: $shame, 1))[(print: &quot;Shame. &quot;)]&#39;&#39;(replace: ?img)[&lt;img src=&quot;gong.png&quot;&gt;]]]
 	(replace: ?reply)[[[...okay?|34D]]]</tw-passagedata><tw-passagedata pid="210" name="pivot" tags="" position="2150,75" size="200,100">(display: &quot;Main&quot;)(replace: ?pivot)[(link-repeat: &quot;randomly&quot;)[(set: $orientation to (rotated: (either: 1, 2, 3), ...$orientation))(set: _orientation to $orientation)(replace: ?display)[(display: &quot;look&quot;)](replace: ?observe)[(display: &quot;observe&quot;)]]]\
 (replace: ?glance)[(link-repeat: &quot;to one side&quot;)[(set: _orientation to (rotated: (either: 1, -1), ...$orientation))(replace: ?observe)[To one side, you see:
-(display: &quot;look&quot;)]]]</tw-passagedata></tw-storydata>
+(display: &quot;look&quot;)]]]</tw-passagedata><tw-passagedata pid="211" name="secretExit" tags="" position="1900,400" size="100,100">(set: $tempDisplay to (a: &quot;The wall looked unusual because it is actually a door. You could (link-repeat: &#39;step through.&#39;)[(replace: ?observe)[&#39;&#39;Warning:&#39;&#39; If you take this shortcut, you to skip a significant chunk of this game.
+(link: &#39;*Proceed anyway.*&#39;)[(goto: &#39;levelSkip&#39;)]]]&quot;))(goto: $variant)</tw-passagedata><tw-passagedata pid="212" name="levelSkip" tags="" position="2300,275" size="100,200">{
+&lt;script&gt;A.stopAll()&lt;/script&gt;
+&lt;script&gt;window.localStorage.setItem(&#39;level&#39;, +localStorage.getItem(&#39;level&#39;) + 7);&lt;/script&gt;
+(set: $level to it + 7)
+(display: &quot;talk&quot;)
+	(replace: ?img)[&lt;img src=&quot;door.png&quot;&gt;]
+	(replace: ?dialogue)[*The door opens to a steep staircase. It spirals down into darkness.*]
+	(replace: ?reply)[(link: &quot;*Continue, fearlessly*&quot;)[(set: $tempDisplay to &quot;fearlessly&quot;)(goto: &quot;levelSkip2&quot;)]
+	(link: &quot;*Continue, fearfully*&quot;)[(set: $tempDisplay to &quot;fearfully&quot;)(goto: &quot;levelSkip2&quot;)]]}</tw-passagedata><tw-passagedata pid="213" name="levelSkip2" tags="" position="2300,500" size="100,100">(display: &quot;talk&quot;)
+	(replace: ?img)[&lt;img src=&quot;door.png&quot;&gt;]
+	(replace: ?dialogue)[*The floor evens out. You&#39;ve arrived, (print: $tempDisplay), in Some Place. There&#39;s a door in front of you.*]
+	(replace: ?reply)[(link: &quot;*Open it*&quot;)[(goto: (text: $level))]]
+	(set: $tempDisplay to false)</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
